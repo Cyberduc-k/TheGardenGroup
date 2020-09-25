@@ -14,14 +14,14 @@ namespace DAL
         private IMongoCollection<TEntity> collEntities;
         private string databaseName;
 
-        public EntityBaseRepository() : base()
+        public EntityBaseRepository(string collectionName) : base()
         {
-            string connectionString = "mongodb+srv://Tymo:&u8q1aXUj0u5@cluster0.pehwk.azure.mongodb.net/TheGardenGroup?retryWrites=true&w=majority";
+            string connectionString = "mongodb+srv://Tymo:ut2NkiYHUVmYpGfh@cluster0.pehwk.azure.mongodb.net/TheGardenGroup?retryWrites=true&w=majority";
             MongoClient client = new MongoClient(connectionString);
 
             databaseName = MongoUrl.Create(connectionString).DatabaseName;
             mongoDatabase = client.GetDatabase(databaseName);
-            collEntities = mongoDatabase.GetCollection<TEntity>(databaseName);
+            collEntities = mongoDatabase.GetCollection<TEntity>(collectionName);
         }
 
         public virtual IEnumerable<TEntity> GetAll()
@@ -76,12 +76,12 @@ namespace DAL
 
         public virtual void Delete(TEntity entity)
         {
-            collEntities.DeleteOne<TEntity>(x => x.Id == entity.Id);
+            collEntities.DeleteOne(x => x.Id == entity.Id);
         }
 
         public void DeleteBy(Expression<Func<TEntity, bool>> predicate)
         {
-            collEntities.DeleteMany<TEntity>(predicate);
+            collEntities.DeleteMany(predicate);
         }
     }
 }
