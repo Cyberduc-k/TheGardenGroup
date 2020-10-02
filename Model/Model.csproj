@@ -44,9 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Category.cs" />
+    <Compile Include="Enum\Category.cs" />
     <Compile Include="IEntityBase.cs" />
-    <Compile Include="Priority.cs" />
+    <Compile Include="Enum\Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
