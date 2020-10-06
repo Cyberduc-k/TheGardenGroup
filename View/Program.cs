@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DAL;
+using Service;
+using System;
 using System.Windows.Forms;
 using Microsoft.Extensions.DependencyInjection;
-using DAL;
 
 namespace View
 {
@@ -16,15 +14,16 @@ namespace View
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-
             IServiceCollection services = new ServiceCollection();
 
-            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
 
             ServiceProvider provider = services.BuildServiceProvider();
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Login(provider));
         }
     }
 }
