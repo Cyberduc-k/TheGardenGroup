@@ -19,11 +19,15 @@ namespace View
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
 
+            services.AddTransient<ITicketRepository, TicketRepository>();
+            services.AddScoped<ITicketService, TicketService>();
+
             ServiceProvider provider = services.BuildServiceProvider();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login(provider));
+            Application.Run(new Submit_Ticket(provider));
         }
     }
 }

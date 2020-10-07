@@ -1,10 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model
 {
@@ -26,11 +22,10 @@ namespace Model
         public Ticket() { }
 
         //A ticket created by the client
-        public Ticket(string id, string subject, Category category, Priority priority, 
+        public Ticket(string subject, Category category, Priority priority, 
                         int daysToSolve, string description, User client, 
                         DateTime dateOfIssueing)
         {
-            Id = id;
             Subject = subject;
             Category = category;
             Priority = priority;
