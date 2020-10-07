@@ -43,7 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandler.cs" />
+    <Compile Include="ErrorService.cs" />
     <Compile Include="IBaseService.cs" />
+    <Compile Include="IErrorService.cs" />
     <Compile Include="ITicketService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
