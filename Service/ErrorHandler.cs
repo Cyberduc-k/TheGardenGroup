@@ -33,7 +33,7 @@ namespace Service
             //Try to log the error to the database
             try
             {
-                errorService.LogError(new Error(e.GetType().Name, DateTime.Now, message, e.StackTrace));
+                //errorService.LogError(new Error(e.GetType().Name, DateTime.Now, message, e.StackTrace));
             }
             catch (Exception ex) //If there is an error while writing to the db
             {
