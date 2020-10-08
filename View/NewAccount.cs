@@ -12,9 +12,12 @@ namespace View
 {
     public partial class NewAccount : Form
     {
-        public NewAccount()
+        private IServiceProvider provider;
+
+        public NewAccount(IServiceProvider provider)
         {
             InitializeComponent();
+            this.provider = provider;
         }
     }
 }
