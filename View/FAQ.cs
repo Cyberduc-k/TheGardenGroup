@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +17,22 @@ namespace View
         {
             InitializeComponent();
 
-            treeView_FAQ.CollapseAll();
+            FAQ_comboCategory.Items.Clear();
 
-            TreeNode question2 = new TreeNode("Question 2");
-            TreeNode answer2 = new TreeNode("Answer 2");
-            treeView_FAQ.Nodes.Add(question2);
-            question2.Nodes.Add(answer2);
+            FAQ_comboCategory.Items.Add(Category.General);
+            FAQ_comboCategory.Items.Add(Category.Printers);
+            FAQ_comboCategory.Items.Add(Category.Computers);
+            FAQ_comboCategory.Items.Add(Category.Mail);         
+            FAQ_comboCategory.Items.Add(Category.Other);
+
+            FAQ_comboCategory.SelectedIndex = 0;
+
+            treeView_FAQ.Nodes.Clear();
+
+            TreeNode question1 = new TreeNode("Question 1");
+            TreeNode answer1 = new TreeNode("Answer 1");
+            treeView_FAQ.Nodes.Add(question1);
+            question1.Nodes.Add(answer1);
         }
     }
 }
