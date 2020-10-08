@@ -6,7 +6,7 @@ namespace Service
 {
     public class ErrorHandler //Class to handle all the errors thrown in the application
     {
-        private IErrorService _errorService;
+        private IErrorService errorService;
 
         //A singelton pattern to optimize overhead
         private static ErrorHandler instance;
@@ -24,6 +24,11 @@ namespace Service
 
         private ErrorHandler() { }
 
+        public void Setup(IServiceProvider provider)
+        {
+            errorService = provider.GetService(typeof(IErrorService)) as IErrorService;
+        }
+
         //Function to show and log the error
         public void HandleError(string message, string title, Exception e)
         {
@@ -33,7 +38,7 @@ namespace Service
             //Try to log the error to the database
             try
             {
-                //errorService.LogError(new Error(e.GetType().Name, DateTime.Now, message, e.StackTrace));
+                errorService.Add(new Error(e.GetType().Name, DateTime.Now, message, e.StackTrace));
             }
             catch (Exception ex) //If there is an error while writing to the db
             {

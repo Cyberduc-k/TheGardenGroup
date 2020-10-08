@@ -22,12 +22,20 @@ namespace View
             services.AddTransient<ITicketRepository, TicketRepository>();
             services.AddScoped<ITicketService, TicketService>();
 
+            services.AddTransient<IErrorRepository, ErrorRepository>();
+            services.AddScoped<IErrorService, ErrorService>();
+
+
             ServiceProvider provider = services.BuildServiceProvider();
+
+            //Make sure the ErrorHandler is initialized with a service provider
+            ErrorHandler.Instance.Setup(provider);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login(provider));
             Application.Run(new Submit_Ticket(provider));
+            Application.Run(new FAQ());
         }
     }
 }
