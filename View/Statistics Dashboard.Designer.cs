@@ -121,6 +121,7 @@
             this.Controls.Add(this.lbl_AmountOfActiveTickets);
             this.Name = "Tickets_Dashboard";
             this.Text = "Tickets_Dashboard";
+            this.Load += new System.EventHandler(this.Tickets_Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
