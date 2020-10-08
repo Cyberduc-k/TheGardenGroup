@@ -15,6 +15,13 @@ namespace View
         public FAQ()
         {
             InitializeComponent();
+
+            treeView_FAQ.CollapseAll();
+
+            TreeNode question2 = new TreeNode("Question 2");
+            TreeNode answer2 = new TreeNode("Answer 2");
+            treeView_FAQ.Nodes.Add(question2);
+            question2.Nodes.Add(answer2);
         }
     }
 }
