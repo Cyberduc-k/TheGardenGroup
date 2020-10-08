@@ -2,7 +2,7 @@
 
 namespace DAL
 {
-    class ErrorRepository : EntityBaseRepository<Error>, IErrorRepository
+    public class ErrorRepository : EntityBaseRepository<Error>, IErrorRepository
     {
         public ErrorRepository() : base("Errors") { }
     }

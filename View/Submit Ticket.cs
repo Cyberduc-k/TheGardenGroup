@@ -25,23 +25,29 @@ namespace View
 
         private void SubmitTicket_btnSubmit_Click(object sender, EventArgs e)
         {
-            string subject = SubmitTicket_txtSubject.Text;
+            try
+            {
+                string subject = SubmitTicket_txtSubject.Text;
 
-            Enum.TryParse(SubmitTicket_comboCategory.SelectedItem.ToString(), out Category category);
-            Enum.TryParse(ActiveForm.Controls.OfType<RadioButton>()
-                                      .FirstOrDefault(r => r.Checked).Tag.ToString(), out Priority priority);
+                Enum.TryParse(SubmitTicket_comboCategory.SelectedItem.ToString(), out Category category);
+                Enum.TryParse(ActiveForm.Controls.OfType<RadioButton>()
+                                          .FirstOrDefault(r => r.Checked).Tag.ToString(), out Priority priority);
 
-            int deadline = int.Parse(SubmitTicket_txtDeadline.Text);
-            string description = SubmitTicket_txtAreaDescription.Text;
+                int deadline = int.Parse(SubmitTicket_txtDeadline.Text);
+                string description = SubmitTicket_txtAreaDescription.Text;
 
-            Ticket ticket = new Ticket(subject, category, priority, deadline, description, null, DateTime.Now);
-            ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
+                Ticket ticket = new Ticket(subject, category, priority, deadline, description, null, DateTime.Now);
+                ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
-            ticketService.Add(ticket);
+                ticketService.Add(ticket);
 
-            //Just for testing
-            Console.WriteLine("Ticket added: " + subject);
-
+                //Just for testing
+                Console.WriteLine("Ticket added: " + subject);
+            } 
+            catch(Exception ex)
+            {
+                ErrorHandler.Instance.HandleError("Test error", "oops", ex);
+            }
         }
 
         private void SubmitTicket_btnCancel_Click(object sender, EventArgs e)
