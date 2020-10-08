@@ -20,14 +20,14 @@ namespace View
         private void btn_Login_Clicked(object caller, EventArgs e)
         {
             IUserService users = provider.GetService<IUserService>();
-            string email = input_Email.TextBox.Text;
-            string password = input_Password.TextBox.Text;
+            string email = input_Email.Text;
+            string password = input_Password.Text;
             User user = users.GetSingleBy(u => u.Email == email && u.Password == password);
 
             if (user == null)
             {
-                input_Email.TextBox.Clear();
-                input_Password.TextBox.Clear();
+                input_Email.Clear();
+                input_Password.Clear();
             } else
             {
                 LoggedInUser.Instance.User = user;

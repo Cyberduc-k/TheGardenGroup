@@ -62,9 +62,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BorderedTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="FAQ.cs">
       <SubType>Form</SubType>
     </Compile>

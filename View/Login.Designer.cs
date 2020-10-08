@@ -34,11 +34,11 @@
             this.btn_Login = new System.Windows.Forms.Button();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
-            this.input_Email = new View.BorderedTextBox();
-            this.input_Password = new View.BorderedTextBox();
+            this.input_Email = new System.Windows.Forms.TextBox();
+            this.input_Password = new System.Windows.Forms.TextBox();
             this.pnl_NewAccount = new System.Windows.Forms.Panel();
-            this.btn_New = new System.Windows.Forms.Button();
             this.lbl_New = new System.Windows.Forms.Label();
+            this.btn_New = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnl_Login.SuspendLayout();
             this.pnl_NewAccount.SuspendLayout();
@@ -120,30 +120,28 @@
             // 
             // input_Email
             // 
-            this.input_Email.BorderColor = System.Drawing.Color.FromArgb(78, 90, 98);
-            this.input_Email.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.input_Email.TextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.input_Email.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.input_Email.BackColor = System.Drawing.Color.White;
+            this.input_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.input_Email.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.input_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.input_Email.Location = new System.Drawing.Point(25, 45);
             this.input_Email.Margin = new System.Windows.Forms.Padding(0);
             this.input_Email.Name = "input_Email";
-            this.input_Email.Padding = new System.Windows.Forms.Padding(2);
-            this.input_Email.Size = new System.Drawing.Size(196, 27);
+            this.input_Email.Size = new System.Drawing.Size(196, 29);
             this.input_Email.TabIndex = 3;
             // 
             // input_Password
             // 
-            this.input_Password.BorderColor = System.Drawing.Color.FromArgb(78, 90, 98);
-            this.input_Password.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.input_Password.TextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.input_Password.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Password.TextBox.UseSystemPasswordChar = true;
+            this.input_Password.BackColor = System.Drawing.Color.White;
+            this.input_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.input_Password.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.input_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.input_Password.Location = new System.Drawing.Point(25, 122);
             this.input_Password.Margin = new System.Windows.Forms.Padding(0);
             this.input_Password.Name = "input_Password";
-            this.input_Password.Padding = new System.Windows.Forms.Padding(2);
-            this.input_Password.Size = new System.Drawing.Size(196, 27);
+            this.input_Password.Size = new System.Drawing.Size(196, 29);
             this.input_Password.TabIndex = 4;
+            this.input_Password.UseSystemPasswordChar = true;
             // 
             // pnl_NewAccount
             // 
@@ -155,6 +153,16 @@
             this.pnl_NewAccount.Name = "pnl_NewAccount";
             this.pnl_NewAccount.Size = new System.Drawing.Size(246, 39);
             this.pnl_NewAccount.TabIndex = 5;
+            // 
+            // lbl_New
+            // 
+            this.lbl_New.AutoSize = true;
+            this.lbl_New.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_New.Location = new System.Drawing.Point(34, 10);
+            this.lbl_New.Name = "lbl_New";
+            this.lbl_New.Size = new System.Drawing.Size(50, 17);
+            this.lbl_New.TabIndex = 0;
+            this.lbl_New.Text = "Nieuw?";
             // 
             // btn_New
             // 
@@ -172,16 +180,6 @@
             this.btn_New.Text = "Maak een account";
             this.btn_New.UseVisualStyleBackColor = true;
             this.btn_New.Click += this.btn_New_Clicked;
-            // 
-            // lbl_New
-            // 
-            this.lbl_New.AutoSize = true;
-            this.lbl_New.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_New.Location = new System.Drawing.Point(34, 10);
-            this.lbl_New.Name = "lbl_New";
-            this.lbl_New.Size = new System.Drawing.Size(50, 17);
-            this.lbl_New.TabIndex = 0;
-            this.lbl_New.Text = "Nieuw?";
             // 
             // Login
             // 
@@ -212,8 +210,8 @@
         private System.Windows.Forms.Panel pnl_Login;
         private System.Windows.Forms.Panel pnl_NewAccount;
         private System.Windows.Forms.Label lbl_Email;
-        private BorderedTextBox input_Email;
-        private BorderedTextBox input_Password;
+        private System.Windows.Forms.TextBox input_Email;
+        private System.Windows.Forms.TextBox input_Password;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Label lbl_New;
