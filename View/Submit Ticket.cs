@@ -42,7 +42,7 @@ namespace View
 
         private void SubmitTicket_btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
