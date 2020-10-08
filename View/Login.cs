@@ -19,7 +19,32 @@ namespace View
 
         private void btn_Login_Clicked(object caller, EventArgs e)
         {
-            Console.WriteLine("login");
+            IUserService users = provider.GetService<IUserService>();
+            string email = input_Email.TextBox.Text;
+            string password = input_Password.TextBox.Text;
+            User user = users.GetSingleBy(u => u.Email == email && u.Password == password);
+
+            if (user == null)
+            {
+                input_Email.TextBox.Clear();
+                input_Password.TextBox.Clear();
+            } else
+            {
+                LoggedInUser.Instance.User = user;
+
+                // TODO: open new form depending on user
+            }
+        }
+
+        private void btn_New_Clicked(object caller, EventArgs e)
+        {
+            NewAccount na = new NewAccount(provider);
+
+            na.StartPosition = FormStartPosition.Manual;
+            na.Location = this.Location;
+            this.Hide();
+            na.ShowDialog();
+            this.Show();
         }
     }
 }
@@ -33,11 +58,6 @@ this.input_Email.BorderColor = System.Drawing.Color.FromArgb(78, 90, 98);
 this.input_Email.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
 this.input_Email.TextBox.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
 this.input_Email.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-this.input_Email.Location = new System.Drawing.Point(37, 68);
-this.input_Email.Margin = new System.Windows.Forms.Padding(0);
-this.input_Email.Name = "input_Email";
-this.input_Email.Size = new System.Drawing.Size(294, 43);
-this.input_Email.TabIndex = 1;
 // 
 // input_Password
 // 
@@ -45,9 +65,4 @@ this.input_Password.BorderColor = System.Drawing.Color.FromArgb(78, 90, 98);
 this.input_Password.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
 this.input_Password.TextBox.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
 this.input_Password.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-this.input_Password.Location = new System.Drawing.Point(37, 183);
-this.input_Password.Margin = new System.Windows.Forms.Padding(0);
-this.input_Password.Name = "input_Email";
-this.input_Password.Size = new System.Drawing.Size(294, 43);
-this.input_Password.TabIndex = 1;
 */

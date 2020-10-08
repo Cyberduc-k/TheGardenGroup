@@ -94,6 +94,7 @@
             this.btn_Login.TabIndex = 1;
             this.btn_Login.Text = "Inloggen";
             this.btn_Login.UseVisualStyleBackColor = false;
+            this.btn_Login.Click += this.btn_Login_Clicked;
             // 
             // lbl_Password
             // 
@@ -136,6 +137,7 @@
             this.input_Password.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.input_Password.TextBox.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Password.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.input_Password.TextBox.UseSystemPasswordChar = true;
             this.input_Password.Location = new System.Drawing.Point(25, 122);
             this.input_Password.Margin = new System.Windows.Forms.Padding(0);
             this.input_Password.Name = "input_Password";
@@ -169,6 +171,7 @@
             this.btn_New.TabIndex = 6;
             this.btn_New.Text = "Maak een account";
             this.btn_New.UseVisualStyleBackColor = true;
+            this.btn_New.Click += this.btn_New_Clicked;
             // 
             // lbl_New
             // 
