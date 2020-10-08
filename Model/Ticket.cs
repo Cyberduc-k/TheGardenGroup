@@ -13,6 +13,7 @@ namespace Model
         public Priority Priority { get; set; }
         public int DaysToSolve { get; set; }
         public string Description { get; set; }
+        public string Solution { get; set; }
         public User Client { get; set; }
         public User Handler { get; set; }
         public DateTime DateOfIssueing { get; set; }
@@ -38,7 +39,7 @@ namespace Model
 
         //A full ticket
         public Ticket(string id, string subject, Category category, Priority priority, 
-                        int daysToSolve, string description, User client, User handler, 
+                        int daysToSolve, string description, string solution, User client, User handler, 
                         DateTime dateOfIssueing, DateTime dateOfSolving, bool solved)
         {
             Id = id;
@@ -47,6 +48,7 @@ namespace Model
             Priority = priority;
             DaysToSolve = daysToSolve;
             Description = description;
+            Solution = solution;
             Client = client;
             Handler = handler;
             DateOfIssueing = dateOfIssueing;

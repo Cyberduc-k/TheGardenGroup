@@ -33,6 +33,8 @@ namespace View
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Application.Run(new Resolve_Ticket(new Model.Ticket(), provider));
             Application.Run(new Login(provider));
             Application.Run(new Submit_Ticket(provider));
             Application.Run(new FAQ());

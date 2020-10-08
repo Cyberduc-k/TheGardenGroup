@@ -1,12 +1,6 @@
 ﻿using Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Service;
 
@@ -40,19 +34,16 @@ namespace View
                 ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
                 ticketService.Add(ticket);
-
-                //Just for testing
-                Console.WriteLine("Ticket added: " + subject);
             } 
             catch(Exception ex)
             {
-                ErrorHandler.Instance.HandleError("Test error", "oops", ex);
+                ErrorHandler.Instance.HandleError("Something went wrong while adding your ticket, try again please.", "Try again", ex);
             }
         }
 
         private void SubmitTicket_btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
