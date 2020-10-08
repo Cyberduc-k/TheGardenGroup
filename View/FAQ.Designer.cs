@@ -59,6 +59,7 @@
             this.FAQ_comboCategory.Name = "FAQ_comboCategory";
             this.FAQ_comboCategory.Size = new System.Drawing.Size(221, 24);
             this.FAQ_comboCategory.TabIndex = 11;
+            this.FAQ_comboCategory.SelectedIndexChanged += new System.EventHandler(this.FAQ_comboCategory_SelectedIndexChanged);
             // 
             // FAQ
             // 
