@@ -38,11 +38,15 @@ namespace View
             ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
             ticketService.Add(ticket);
+
+            //Just for testing
+            Console.WriteLine("Ticket added: " + subject);
+
         }
 
         private void SubmitTicket_btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
