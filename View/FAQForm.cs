@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace View
 {
@@ -88,7 +89,7 @@ namespace View
                 Category category = (Category)FAQ_comboCategory.SelectedItem;
 
                 FAQ newQuestion = new FAQ(question, answer, category);
-                IFAQService faqService = provider.GetService(typeof(IFAQService)) as IFAQService;
+                IFAQService faqService = provider.GetService<IFAQService>();
 
                 faqService.Add(newQuestion);
             }
