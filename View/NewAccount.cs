@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
+using Service;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace View
 {
@@ -73,6 +76,47 @@ namespace View
         {
             pnl_MakeAccount5.Hide();
             pnl_MakeAccount3.Show();
+        }
+
+        // Create new Customer
+        private void btn_MakeAccount1_Click(object sender, EventArgs e)
+        {
+            string firstName = input_FirstName.Text;
+            string lastName = input_LastName.Text;
+            string company = input_Company.Text;
+            string occupation = input_Occupation.Text;
+            DateTime birthDate = input_BirthDate.Value;
+            string email = input_Email1.Text;
+            string password = input_Password1.Text;
+            string password2 = input_PasswordRepeat1.Text;
+
+            // TODO: check if password == password2
+
+            Customer customer = new Customer(firstName, lastName, birthDate, email, password, company, occupation);
+            IUserService service = provider.GetService<IUserService>();
+
+            service.Add(customer);
+            Close();
+        }
+
+        // Create new Employee
+        private void btn_MakeAccount2_Click(object sender, EventArgs e)
+        {
+            string firstName = input_FirstName.Text;
+            string lastName = input_LastName.Text;
+            Category category = (Category)input_Category.SelectedIndex;
+            DateTime birthDate = input_BirthDate.Value;
+            string email = input_Email2.Text;
+            string password = input_Password2.Text;
+            string password2 = input_PasswordRepeat2.Text;
+
+            // TODO: check if password == password2
+
+            Employee employee = new Employee(firstName, lastName, birthDate, email, password, category);
+            IUserService service = provider.GetService<IUserService>();
+
+            service.Add(employee);
+            Close();
         }
     }
 }
