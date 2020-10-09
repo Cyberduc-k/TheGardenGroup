@@ -25,6 +25,7 @@ namespace View
 
             FillCategoryCombobox();
             FillTreeView((Category)FAQ_comboCategory.SelectedItem);
+            FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
         }
 
         private void FillCategoryCombobox()
@@ -40,9 +41,24 @@ namespace View
             FAQ_comboCategory.SelectedIndex = 3;
         }
 
+        private void FillQuestionsCombobox(Category category)
+        {
+            cmb_Questions.Items.Clear();
+
+            List<FAQ> faqs = GetFAQs();
+
+            foreach(FAQ f in faqs)
+            {
+                if (f.Category == category)
+                {
+                    cmb_Questions.Items.Add(f.Question);
+                }
+            }
+        }
+
         private void FAQ_comboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            treeView_FAQ.Nodes.Clear();
+            FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
             FillTreeView((Category)FAQ_comboCategory.SelectedItem);
         }
 
@@ -71,10 +87,16 @@ namespace View
 
         }
 
+        private void btn_DeleteQuestion_Click(object sender, EventArgs e)
+        {
+            faqService.Delete((FAQ)cmb_Questions.SelectedItem);
+        }
+
         private void FillTreeView(Category category)
         {
-            faqService = provider.GetService<IFAQService>();
-            List<FAQ> faqs = (List<FAQ>)faqService.GetAll();
+            treeView_FAQ.Nodes.Clear();
+
+            List<FAQ> faqs = GetFAQs();
 
             foreach (FAQ f in faqs)
             {
@@ -86,6 +108,14 @@ namespace View
                     question.Nodes.Add(answer);
                 }
             }
+        }
+
+        private List<FAQ> GetFAQs()
+        {
+            faqService = provider.GetService<IFAQService>();
+            List<FAQ> faqs = (List<FAQ>)faqService.GetAll();
+
+            return faqs;
         }
     }
 }

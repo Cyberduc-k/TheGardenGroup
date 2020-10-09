@@ -92,6 +92,7 @@
             this.btn_DeleteQuestion.TabIndex = 14;
             this.btn_DeleteQuestion.Text = "Delete Question";
             this.btn_DeleteQuestion.UseVisualStyleBackColor = true;
+            this.btn_DeleteQuestion.Click += new System.EventHandler(this.btn_DeleteQuestion_Click);
             // 
             // txt_QuestionAdd
             // 
@@ -118,7 +119,7 @@
             this.btn_AddQuestion.UseVisualStyleBackColor = true;
             this.btn_AddQuestion.Click += new System.EventHandler(this.btn_AddQuestion_Click);
             // 
-            // FAQ
+            // FAQForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +133,7 @@
             this.Controls.Add(this.FAQ_comboCategory);
             this.Controls.Add(this.lbl_FAQ);
             this.Controls.Add(this.treeView_FAQ);
-            this.Name = "FAQ";
+            this.Name = "FAQForm";
             this.Text = "FAQ";
             this.ResumeLayout(false);
             this.PerformLayout();
