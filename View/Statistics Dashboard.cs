@@ -12,11 +12,11 @@ using Model;
 
 namespace View
 {
-    public partial class Tickets_Dashboard : Form
+    public partial class Statistics_Dashboard : Form
     {
         private IServiceProvider provider;
 
-        public Tickets_Dashboard(IServiceProvider provider)
+        public Statistics_Dashboard(IServiceProvider provider)
         {
             this.provider = provider;
 

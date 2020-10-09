@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class Tickets_Dashboard
+    partial class Statistics_Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -39,23 +39,23 @@
             // 
             // lbl_AmountOfActiveTickets
             // 
-            this.lbl_AmountOfActiveTickets.AutoSize = true;
             this.lbl_AmountOfActiveTickets.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AmountOfActiveTickets.Location = new System.Drawing.Point(373, 328);
             this.lbl_AmountOfActiveTickets.Name = "lbl_AmountOfActiveTickets";
             this.lbl_AmountOfActiveTickets.Size = new System.Drawing.Size(98, 32);
             this.lbl_AmountOfActiveTickets.TabIndex = 0;
             this.lbl_AmountOfActiveTickets.Text = "AOAT";
+            this.lbl_AmountOfActiveTickets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbl_AmountOfImmediateAttentionTickets
             // 
-            this.lbl_AmountOfImmediateAttentionTickets.AutoSize = true;
             this.lbl_AmountOfImmediateAttentionTickets.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AmountOfImmediateAttentionTickets.Location = new System.Drawing.Point(796, 328);
             this.lbl_AmountOfImmediateAttentionTickets.Name = "lbl_AmountOfImmediateAttentionTickets";
             this.lbl_AmountOfImmediateAttentionTickets.Size = new System.Drawing.Size(113, 32);
             this.lbl_AmountOfImmediateAttentionTickets.TabIndex = 1;
             this.lbl_AmountOfImmediateAttentionTickets.Text = "AOIAT";
+            this.lbl_AmountOfImmediateAttentionTickets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label1
             // 
@@ -107,7 +107,7 @@
     "s these tickets need to be processed ASAP.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Tickets_Dashboard
+            // Statistics_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_AmountOfImmediateAttentionTickets);
             this.Controls.Add(this.lbl_AmountOfActiveTickets);
-            this.Name = "Tickets_Dashboard";
-            this.Text = "Tickets_Dashboard";
+            this.Name = "Statistics_Dashboard";
+            this.Text = "Statistics_Dashboard";
             this.Load += new System.EventHandler(this.Tickets_Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
