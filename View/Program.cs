@@ -22,6 +22,9 @@ namespace View
             services.AddTransient<ITicketRepository, TicketRepository>();
             services.AddScoped<ITicketService, TicketService>();
 
+            services.AddTransient<IFAQRepository, FAQRepository>();
+            services.AddScoped<IFAQService, FAQService>();
+
             services.AddTransient<IErrorRepository, ErrorRepository>();
             services.AddScoped<IErrorService, ErrorService>();
 
