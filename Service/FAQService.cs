@@ -1,59 +1,63 @@
-﻿using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using Model;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using DAL;
 
 namespace Service
 {
     public class FAQService : IFAQService
     {
+        private readonly IFAQRepository _faq;
 
-        public void Add(FAQ entity)
+        public FAQService(IFAQRepository faq)
         {
-            throw new NotImplementedException();
+            _faq = faq;
         }
 
         public long Count()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(FAQ entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteBy(Expression<Func<FAQ, bool>> predicate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<FAQ> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<FAQ> GetAllBy(Expression<Func<FAQ, bool>> predicate)
-        {
-            throw new NotImplementedException();
+            return _faq.Count();
         }
 
         public FAQ GetSingle(string id)
         {
-            throw new NotImplementedException();
+            return _faq.GetSingle(id);
         }
 
         public FAQ GetSingleBy(Expression<Func<FAQ, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return _faq.GetSingleBy(predicate);
         }
 
-        public void Update(FAQ entity)
+        public IEnumerable<FAQ> GetAll()
         {
-            throw new NotImplementedException();
+            return _faq.GetAll();
+        }
+
+        public IEnumerable<FAQ> GetAllBy(Expression<Func<FAQ, bool>> predicate)
+        {
+            return _faq.GetAllBy(predicate);
+        }
+
+        public void Add(FAQ faq)
+        {
+            _faq.Add(faq);
+        }
+
+        public void Update(FAQ faq)
+        {
+            _faq.Update(faq);
+        }
+
+        public void Delete(FAQ faq)
+        {
+            _faq.Delete(faq);
+        }
+
+        public void DeleteBy(Expression<Func<FAQ, bool>> predicate)
+        {
+            _faq.DeleteBy(predicate);
         }
     }
 }

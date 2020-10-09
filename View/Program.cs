@@ -36,7 +36,7 @@ namespace View
 
             Application.Run(new Login(provider));
             Application.Run(new Submit_Ticket(provider));
-            Application.Run(new FAQ());
+            Application.Run(new FAQForm(provider));
         }
     }
 }

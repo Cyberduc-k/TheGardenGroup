@@ -1,4 +1,5 @@
 ﻿using Model;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,14 +12,16 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class FAQ : Form
+    public partial class FAQForm : Form
     {
-        public FAQ()
+        private IServiceProvider provider;
+
+        public FAQForm(IServiceProvider provider)
         {
+            this.provider = provider;
             InitializeComponent();
 
             CategoryCombobox();
-
         }
 
         private void CategoryCombobox()
@@ -74,6 +77,26 @@ namespace View
                 treeView_FAQ.Nodes.Add(otherQuestion1);
                 otherQuestion1.Nodes.Add(answer1);
             }
+        }
+
+        private void btn_AddQuestion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string question = txt_QuestionAdd.Text;
+                string answer = txt_AnswerAdd.Text;
+                Category category = (Category)FAQ_comboCategory.SelectedItem;
+
+                FAQ newQuestion = new FAQ(question, answer, category);
+                IFAQService faqService = provider.GetService(typeof(IFAQService)) as IFAQService;
+
+                faqService.Add(newQuestion);
+            }
+            catch(Exception ex)
+            {
+                ErrorHandler.Instance.HandleError("Something went wrong while adding your question, try again please.", "Try again", ex);
+            }
+
         }
     }
 }

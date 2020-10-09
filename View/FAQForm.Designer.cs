@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class FAQ
+    partial class FAQForm
     {
         /// <summary>
         /// Required designer variable.
@@ -116,6 +116,7 @@
             this.btn_AddQuestion.TabIndex = 17;
             this.btn_AddQuestion.Text = "Add Question";
             this.btn_AddQuestion.UseVisualStyleBackColor = true;
+            this.btn_AddQuestion.Click += new System.EventHandler(this.btn_AddQuestion_Click);
             // 
             // FAQ
             // 
