@@ -33,7 +33,7 @@ namespace Model
             DaysToSolve = daysToSolve;
             Description = description;
             Client = client;
-            DateOfIssueing = dateOfIssueing;
+            DateOfIssueing = DateTime.Now;
             Solved = false;
         }
 
@@ -51,7 +51,7 @@ namespace Model
             Solution = solution;
             Client = client;
             Handler = handler;
-            DateOfIssueing = dateOfIssueing;
+            DateOfIssueing = DateTime.Now;
             DateOfSolving = dateOfSolving;
             Solved = solved;
         }

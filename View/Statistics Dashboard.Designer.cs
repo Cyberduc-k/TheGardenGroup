@@ -1,6 +1,6 @@
 ﻿namespace View
 {
-    partial class Tickets_Dashboard
+    partial class Statistics_Dashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@
     "s these tickets need to be processed ASAP.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Tickets_Dashboard
+            // Statistics_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -119,8 +119,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_AmountOfImmediateAttentionTickets);
             this.Controls.Add(this.lbl_AmountOfActiveTickets);
-            this.Name = "Tickets_Dashboard";
-            this.Text = "Tickets_Dashboard";
+            this.Name = "Statistics_Dashboard";
+            this.Text = "Statistics_Dashboard";
             this.Load += new System.EventHandler(this.Tickets_Dashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
