@@ -48,6 +48,7 @@
     <Compile Include="Employee.cs" />
     <Compile Include="Enum\Category.cs" />
     <Compile Include="Error.cs" />
+    <Compile Include="FAQ.cs" />
     <Compile Include="IEntityBase.cs" />
     <Compile Include="Enum\Priority.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

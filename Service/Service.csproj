@@ -45,8 +45,10 @@
   <ItemGroup>
     <Compile Include="ErrorHandler.cs" />
     <Compile Include="ErrorService.cs" />
+    <Compile Include="FAQService.cs" />
     <Compile Include="IBaseService.cs" />
     <Compile Include="IErrorService.cs" />
+    <Compile Include="IFAQService.cs" />
     <Compile Include="ITicketService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="LoggedInUser.cs" />

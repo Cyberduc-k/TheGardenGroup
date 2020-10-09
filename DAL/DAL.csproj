@@ -95,8 +95,10 @@
   <ItemGroup>
     <Compile Include="EntityBaseRepository.cs" />
     <Compile Include="ErrorRepository.cs" />
+    <Compile Include="FAQRepository.cs" />
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="IErrorRepository.cs" />
+    <Compile Include="IFAQRepository.cs" />
     <Compile Include="ITicketRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
