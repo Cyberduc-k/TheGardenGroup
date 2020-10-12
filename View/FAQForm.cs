@@ -17,6 +17,7 @@ namespace View
     {
         private IServiceProvider provider;
         private IFAQService faqService;
+        private FAQ selectedFAQ;
 
         public FAQForm(IServiceProvider provider)
         {
@@ -52,6 +53,7 @@ namespace View
                 if (f.Category == category)
                 {
                     cmb_Questions.Items.Add(f.Question);
+                    selectedFAQ = f;
                 }
             }
         }
@@ -70,10 +72,18 @@ namespace View
                 string answer = txt_AnswerAdd.Text;
                 Category category = (Category)FAQ_comboCategory.SelectedItem;
 
-                FAQ newQuestion = new FAQ(question, answer, category);
-                faqService = provider.GetService<IFAQService>();
+                if (question != "" && answer != "")
+                {
+                    FAQ newQuestion = new FAQ(question, answer, category);
+                    faqService = provider.GetService<IFAQService>();
 
-                faqService.Add(newQuestion);
+                    faqService.Add(newQuestion);
+                }
+                else
+                {
+                    MessageBox.Show("Question and/or answer cannot be empty");
+                }
+                
             }
             catch(Exception ex)
             {
@@ -83,13 +93,16 @@ namespace View
             {
                 txt_AnswerAdd.Clear();
                 txt_QuestionAdd.Clear();
+                FillTreeView((Category)FAQ_comboCategory.SelectedItem);
             }
 
         }
 
         private void btn_DeleteQuestion_Click(object sender, EventArgs e)
         {
-            faqService.Delete((FAQ)cmb_Questions.SelectedItem);
+            faqService.Delete(selectedFAQ);
+            FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
+            FillTreeView((Category)FAQ_comboCategory.SelectedItem);
         }
 
         private void FillTreeView(Category category)
