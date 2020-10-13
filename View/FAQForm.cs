@@ -16,16 +16,20 @@ namespace View
     public partial class FAQForm : Form
     {
         private IServiceProvider provider;
+        private IFAQService faqService;
+        private FAQ selectedFAQ;
 
         public FAQForm(IServiceProvider provider)
         {
             this.provider = provider;
             InitializeComponent();
 
-            CategoryCombobox();
+            FillCategoryCombobox();
+            FillTreeView((Category)FAQ_comboCategory.SelectedItem);
+            FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
         }
 
-        private void CategoryCombobox()
+        private void FillCategoryCombobox()
         {
             FAQ_comboCategory.Items.Clear();
 
@@ -38,46 +42,26 @@ namespace View
             FAQ_comboCategory.SelectedIndex = 3;
         }
 
+        private void FillQuestionsCombobox(Category category)
+        {
+            cmb_Questions.Items.Clear();
+
+            List<FAQ> faqs = GetFAQs();
+
+            foreach(FAQ f in faqs)
+            {
+                if (f.Category == category)
+                {
+                    cmb_Questions.Items.Add(f.Question);
+                    selectedFAQ = f;
+                }
+            }
+        }
+
         private void FAQ_comboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            treeView_FAQ.Nodes.Clear();
-
-            if ((Category)FAQ_comboCategory.SelectedItem == Category.General)
-            {
-                TreeNode generalQuestion1 = new TreeNode("General Question 1");
-                TreeNode answer1 = new TreeNode("Answer");
-                treeView_FAQ.Nodes.Add(generalQuestion1);
-                generalQuestion1.Nodes.Add(answer1);
-            }
-            else if ((Category)FAQ_comboCategory.SelectedItem == Category.Printers)
-            {
-                TreeNode printerQuestion1 = new TreeNode("Printer Question 1");
-                TreeNode answer1 = new TreeNode("Answer");
-                treeView_FAQ.Nodes.Add(printerQuestion1);
-                printerQuestion1.Nodes.Add(answer1);
-            }
-            else if ((Category)FAQ_comboCategory.SelectedItem == Category.Computers)
-            {
-                TreeNode computerQuestion1 = new TreeNode("Computer Question 1");
-                TreeNode answer1 = new TreeNode("Answer");
-                treeView_FAQ.Nodes.Add(computerQuestion1);
-                computerQuestion1.Nodes.Add(answer1);
-            }
-            else if ((Category)FAQ_comboCategory.SelectedItem == Category.Mail)
-            {
-                TreeNode mailQuestion1 = new TreeNode("Mail Question 1");
-                TreeNode answer1 = new TreeNode("Answer");
-                treeView_FAQ.Nodes.Add(mailQuestion1);
-                mailQuestion1.Nodes.Add(answer1);
-            }
-            else if ((Category)FAQ_comboCategory.SelectedItem == Category.Other)
-            {
-                TreeNode otherQuestion1 = new TreeNode("Other Question 1");
-                TreeNode answer1 = new TreeNode("Answer");
-                treeView_FAQ.Nodes.Add(otherQuestion1);
-                otherQuestion1.Nodes.Add(answer1);
-            }
+            FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
+            FillTreeView((Category)FAQ_comboCategory.SelectedItem);
         }
 
         private void btn_AddQuestion_Click(object sender, EventArgs e)
@@ -88,16 +72,63 @@ namespace View
                 string answer = txt_AnswerAdd.Text;
                 Category category = (Category)FAQ_comboCategory.SelectedItem;
 
-                FAQ newQuestion = new FAQ(question, answer, category);
-                IFAQService faqService = provider.GetService<IFAQService>();
+                if (question != "" && answer != "")
+                {
+                    FAQ newQuestion = new FAQ(question, answer, category);
+                    faqService = provider.GetService<IFAQService>();
 
-                faqService.Add(newQuestion);
+                    faqService.Add(newQuestion);
+                }
+                else
+                {
+                    MessageBox.Show("Question and/or answer cannot be empty");
+                }
+                
             }
             catch(Exception ex)
             {
                 ErrorHandler.Instance.HandleError("Something went wrong while adding your question, try again please.", "Try again", ex);
             }
+            finally
+            {
+                txt_AnswerAdd.Clear();
+                txt_QuestionAdd.Clear();
+                FillTreeView((Category)FAQ_comboCategory.SelectedItem);
+            }
 
+        }
+
+        private void btn_DeleteQuestion_Click(object sender, EventArgs e)
+        {
+            faqService.Delete(selectedFAQ);
+            FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
+            FillTreeView((Category)FAQ_comboCategory.SelectedItem);
+        }
+
+        private void FillTreeView(Category category)
+        {
+            treeView_FAQ.Nodes.Clear();
+
+            List<FAQ> faqs = GetFAQs();
+
+            foreach (FAQ f in faqs)
+            {
+                if (f.Category == category)
+                {
+                    TreeNode question = new TreeNode(f.Question);
+                    TreeNode answer = new TreeNode(f.Answer);
+                    treeView_FAQ.Nodes.Add(question);
+                    question.Nodes.Add(answer);
+                }
+            }
+        }
+
+        private List<FAQ> GetFAQs()
+        {
+            faqService = provider.GetService<IFAQService>();
+            List<FAQ> faqs = (List<FAQ>)faqService.GetAll();
+
+            return faqs;
         }
     }
 }
