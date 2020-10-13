@@ -88,9 +88,6 @@ namespace View
             DateTime birthDate = input_BirthDate.Value;
             string email = input_Email1.Text;
             string password = input_Password1.Text;
-            string password2 = input_PasswordRepeat1.Text;
-
-            // TODO: check if password == password2
 
             Customer customer = new Customer(firstName, lastName, birthDate, email, password, company, occupation);
             IUserService service = provider.GetService<IUserService>();
@@ -108,15 +105,37 @@ namespace View
             DateTime birthDate = input_BirthDate.Value;
             string email = input_Email2.Text;
             string password = input_Password2.Text;
-            string password2 = input_PasswordRepeat2.Text;
-
-            // TODO: check if password == password2
 
             Employee employee = new Employee(firstName, lastName, birthDate, email, password, category);
             IUserService service = provider.GetService<IUserService>();
 
             service.Add(employee);
             Close();
+        }
+
+        // check if the two password fields are equal and non-empty
+        private void input_Password1_TextChanged(object sender, EventArgs e)
+        {
+            if (input_Password1.Text.Length > 0 && input_Password1.Text == input_PasswordRepeat1.Text)
+            {
+                btn_MakeAccount1.Enabled = true;
+            }
+            else
+            {
+                btn_MakeAccount1.Enabled = false;
+            }
+        }
+
+        // check if the two password fields are equal and non-empty
+        private void input_Password2_TextChanged(object sender, EventArgs e)
+        {
+            if (input_Password2.Text.Length > 0 && input_Password2.Text == input_PasswordRepeat2.Text)
+            {
+                btn_MakeAccount2.Enabled = true;
+            } else
+            {
+                btn_MakeAccount2.Enabled = false;
+            }
         }
     }
 }

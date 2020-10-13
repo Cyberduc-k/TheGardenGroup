@@ -81,10 +81,9 @@
             // logo
             // 
             this.logo.Image = global::View.Properties.Resources.GGLogoTM;
-            this.logo.Location = new System.Drawing.Point(761, 60);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
+            this.logo.Location = new System.Drawing.Point(571, 49);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(184, 170);
+            this.logo.Size = new System.Drawing.Size(138, 138);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
@@ -94,10 +93,9 @@
             this.lbl_MakeAccount.AutoSize = true;
             this.lbl_MakeAccount.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_MakeAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.lbl_MakeAccount.Location = new System.Drawing.Point(720, 262);
-            this.lbl_MakeAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_MakeAccount.Location = new System.Drawing.Point(540, 213);
             this.lbl_MakeAccount.Name = "lbl_MakeAccount";
-            this.lbl_MakeAccount.Size = new System.Drawing.Size(211, 32);
+            this.lbl_MakeAccount.Size = new System.Drawing.Size(200, 31);
             this.lbl_MakeAccount.TabIndex = 1;
             this.lbl_MakeAccount.Text = "Maak een account";
             // 
@@ -107,10 +105,9 @@
             this.pnl_MakeAccount1.Controls.Add(this.btn_Employee);
             this.pnl_MakeAccount1.Controls.Add(this.btn_Customer);
             this.pnl_MakeAccount1.Controls.Add(this.lbl_Job);
-            this.pnl_MakeAccount1.Location = new System.Drawing.Point(691, 338);
-            this.pnl_MakeAccount1.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MakeAccount1.Location = new System.Drawing.Point(518, 275);
             this.pnl_MakeAccount1.Name = "pnl_MakeAccount1";
-            this.pnl_MakeAccount1.Size = new System.Drawing.Size(327, 188);
+            this.pnl_MakeAccount1.Size = new System.Drawing.Size(245, 153);
             this.pnl_MakeAccount1.TabIndex = 2;
             // 
             // btn_Employee
@@ -119,10 +116,9 @@
             this.btn_Employee.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Employee.ForeColor = System.Drawing.Color.White;
-            this.btn_Employee.Location = new System.Drawing.Point(32, 130);
-            this.btn_Employee.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Employee.Location = new System.Drawing.Point(24, 106);
             this.btn_Employee.Name = "btn_Employee";
-            this.btn_Employee.Size = new System.Drawing.Size(261, 32);
+            this.btn_Employee.Size = new System.Drawing.Size(196, 26);
             this.btn_Employee.TabIndex = 1;
             this.btn_Employee.Text = "Medewerker";
             this.btn_Employee.UseVisualStyleBackColor = false;
@@ -134,10 +130,9 @@
             this.btn_Customer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Customer.ForeColor = System.Drawing.Color.White;
-            this.btn_Customer.Location = new System.Drawing.Point(32, 74);
-            this.btn_Customer.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Customer.Location = new System.Drawing.Point(24, 60);
             this.btn_Customer.Name = "btn_Customer";
-            this.btn_Customer.Size = new System.Drawing.Size(261, 32);
+            this.btn_Customer.Size = new System.Drawing.Size(196, 26);
             this.btn_Customer.TabIndex = 1;
             this.btn_Customer.Text = "Klant";
             this.btn_Customer.UseVisualStyleBackColor = false;
@@ -148,10 +143,9 @@
             this.lbl_Job.AutoSize = true;
             this.lbl_Job.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Job.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.lbl_Job.Location = new System.Drawing.Point(32, 22);
-            this.lbl_Job.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Job.Location = new System.Drawing.Point(24, 18);
             this.lbl_Job.Name = "lbl_Job";
-            this.lbl_Job.Size = new System.Drawing.Size(94, 23);
+            this.lbl_Job.Size = new System.Drawing.Size(84, 21);
             this.lbl_Job.TabIndex = 0;
             this.lbl_Job.Text = "Ben je een:";
             // 
@@ -166,10 +160,9 @@
             this.pnl_MakeAccount2.Controls.Add(this.lbl_BirthDate);
             this.pnl_MakeAccount2.Controls.Add(this.lbl_LastName);
             this.pnl_MakeAccount2.Controls.Add(this.lbl_FirstName);
-            this.pnl_MakeAccount2.Location = new System.Drawing.Point(691, 338);
-            this.pnl_MakeAccount2.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MakeAccount2.Location = new System.Drawing.Point(518, 275);
             this.pnl_MakeAccount2.Name = "pnl_MakeAccount2";
-            this.pnl_MakeAccount2.Size = new System.Drawing.Size(327, 369);
+            this.pnl_MakeAccount2.Size = new System.Drawing.Size(245, 300);
             this.pnl_MakeAccount2.TabIndex = 3;
             this.pnl_MakeAccount2.Visible = false;
             // 
@@ -179,10 +172,9 @@
             this.input_LastName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_LastName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_LastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_LastName.Location = new System.Drawing.Point(32, 153);
-            this.input_LastName.Margin = new System.Windows.Forms.Padding(4);
+            this.input_LastName.Location = new System.Drawing.Point(24, 124);
             this.input_LastName.Name = "input_LastName";
-            this.input_LastName.Size = new System.Drawing.Size(261, 29);
+            this.input_LastName.Size = new System.Drawing.Size(196, 29);
             this.input_LastName.TabIndex = 3;
             // 
             // input_FirstName
@@ -191,10 +183,9 @@
             this.input_FirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_FirstName.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_FirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_FirstName.Location = new System.Drawing.Point(33, 55);
-            this.input_FirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.input_FirstName.Location = new System.Drawing.Point(25, 45);
             this.input_FirstName.Name = "input_FirstName";
-            this.input_FirstName.Size = new System.Drawing.Size(261, 29);
+            this.input_FirstName.Size = new System.Drawing.Size(196, 29);
             this.input_FirstName.TabIndex = 3;
             // 
             // btn_Next1
@@ -203,10 +194,9 @@
             this.btn_Next1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Next1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Next1.ForeColor = System.Drawing.Color.White;
-            this.btn_Next1.Location = new System.Drawing.Point(172, 310);
-            this.btn_Next1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Next1.Location = new System.Drawing.Point(129, 252);
             this.btn_Next1.Name = "btn_Next1";
-            this.btn_Next1.Size = new System.Drawing.Size(124, 32);
+            this.btn_Next1.Size = new System.Drawing.Size(93, 26);
             this.btn_Next1.TabIndex = 2;
             this.btn_Next1.Text = "Verder";
             this.btn_Next1.UseVisualStyleBackColor = false;
@@ -218,10 +208,9 @@
             this.btn_Back1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Back1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back1.ForeColor = System.Drawing.Color.White;
-            this.btn_Back1.Location = new System.Drawing.Point(33, 310);
-            this.btn_Back1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Back1.Location = new System.Drawing.Point(25, 252);
             this.btn_Back1.Name = "btn_Back1";
-            this.btn_Back1.Size = new System.Drawing.Size(124, 32);
+            this.btn_Back1.Size = new System.Drawing.Size(93, 26);
             this.btn_Back1.TabIndex = 2;
             this.btn_Back1.Text = "Terug";
             this.btn_Back1.UseVisualStyleBackColor = false;
@@ -231,10 +220,9 @@
             // 
             this.input_BirthDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.input_BirthDate.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.input_BirthDate.Location = new System.Drawing.Point(33, 244);
-            this.input_BirthDate.Margin = new System.Windows.Forms.Padding(4);
+            this.input_BirthDate.Location = new System.Drawing.Point(25, 198);
             this.input_BirthDate.Name = "input_BirthDate";
-            this.input_BirthDate.Size = new System.Drawing.Size(260, 29);
+            this.input_BirthDate.Size = new System.Drawing.Size(196, 29);
             this.input_BirthDate.TabIndex = 1;
             // 
             // lbl_BirthDate
@@ -242,10 +230,9 @@
             this.lbl_BirthDate.AutoSize = true;
             this.lbl_BirthDate.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_BirthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_BirthDate.Location = new System.Drawing.Point(33, 215);
-            this.lbl_BirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_BirthDate.Location = new System.Drawing.Point(25, 175);
             this.lbl_BirthDate.Name = "lbl_BirthDate";
-            this.lbl_BirthDate.Size = new System.Drawing.Size(107, 19);
+            this.lbl_BirthDate.Size = new System.Drawing.Size(101, 17);
             this.lbl_BirthDate.TabIndex = 0;
             this.lbl_BirthDate.Text = "Geboortedatum";
             // 
@@ -254,10 +241,9 @@
             this.lbl_LastName.AutoSize = true;
             this.lbl_LastName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_LastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_LastName.Location = new System.Drawing.Point(33, 121);
-            this.lbl_LastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_LastName.Location = new System.Drawing.Point(25, 98);
             this.lbl_LastName.Name = "lbl_LastName";
-            this.lbl_LastName.Size = new System.Drawing.Size(83, 19);
+            this.lbl_LastName.Size = new System.Drawing.Size(77, 17);
             this.lbl_LastName.TabIndex = 0;
             this.lbl_LastName.Text = "Achternaam";
             // 
@@ -266,10 +252,9 @@
             this.lbl_FirstName.AutoSize = true;
             this.lbl_FirstName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_FirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_FirstName.Location = new System.Drawing.Point(33, 27);
-            this.lbl_FirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FirstName.Location = new System.Drawing.Point(25, 22);
             this.lbl_FirstName.Name = "lbl_FirstName";
-            this.lbl_FirstName.Size = new System.Drawing.Size(72, 19);
+            this.lbl_FirstName.Size = new System.Drawing.Size(68, 17);
             this.lbl_FirstName.TabIndex = 0;
             this.lbl_FirstName.Text = "Voornaam";
             // 
@@ -282,10 +267,9 @@
             this.pnl_MakeAccount3.Controls.Add(this.lbl_Company);
             this.pnl_MakeAccount3.Controls.Add(this.btn_Back2);
             this.pnl_MakeAccount3.Controls.Add(this.btn_Next2);
-            this.pnl_MakeAccount3.Location = new System.Drawing.Point(691, 338);
-            this.pnl_MakeAccount3.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MakeAccount3.Location = new System.Drawing.Point(518, 275);
             this.pnl_MakeAccount3.Name = "pnl_MakeAccount3";
-            this.pnl_MakeAccount3.Size = new System.Drawing.Size(327, 276);
+            this.pnl_MakeAccount3.Size = new System.Drawing.Size(245, 224);
             this.pnl_MakeAccount3.TabIndex = 4;
             this.pnl_MakeAccount3.Visible = false;
             // 
@@ -295,10 +279,9 @@
             this.input_Occupation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_Occupation.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Occupation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Occupation.Location = new System.Drawing.Point(33, 149);
-            this.input_Occupation.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Occupation.Location = new System.Drawing.Point(25, 121);
             this.input_Occupation.Name = "input_Occupation";
-            this.input_Occupation.Size = new System.Drawing.Size(261, 29);
+            this.input_Occupation.Size = new System.Drawing.Size(196, 29);
             this.input_Occupation.TabIndex = 4;
             // 
             // input_Company
@@ -307,10 +290,9 @@
             this.input_Company.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_Company.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Company.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Company.Location = new System.Drawing.Point(33, 55);
-            this.input_Company.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Company.Location = new System.Drawing.Point(25, 45);
             this.input_Company.Name = "input_Company";
-            this.input_Company.Size = new System.Drawing.Size(261, 29);
+            this.input_Company.Size = new System.Drawing.Size(196, 29);
             this.input_Company.TabIndex = 4;
             // 
             // lbl_Occupation
@@ -318,10 +300,9 @@
             this.lbl_Occupation.AutoSize = true;
             this.lbl_Occupation.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Occupation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Occupation.Location = new System.Drawing.Point(33, 121);
-            this.lbl_Occupation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Occupation.Location = new System.Drawing.Point(25, 98);
             this.lbl_Occupation.Name = "lbl_Occupation";
-            this.lbl_Occupation.Size = new System.Drawing.Size(110, 19);
+            this.lbl_Occupation.Size = new System.Drawing.Size(104, 17);
             this.lbl_Occupation.TabIndex = 3;
             this.lbl_Occupation.Text = "Werkzaamheden";
             // 
@@ -330,10 +311,9 @@
             this.lbl_Company.AutoSize = true;
             this.lbl_Company.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Company.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Company.Location = new System.Drawing.Point(33, 27);
-            this.lbl_Company.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Company.Location = new System.Drawing.Point(25, 22);
             this.lbl_Company.Name = "lbl_Company";
-            this.lbl_Company.Size = new System.Drawing.Size(90, 19);
+            this.lbl_Company.Size = new System.Drawing.Size(86, 17);
             this.lbl_Company.TabIndex = 3;
             this.lbl_Company.Text = "Werkzaam bij";
             // 
@@ -343,10 +323,9 @@
             this.btn_Back2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Back2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back2.ForeColor = System.Drawing.Color.White;
-            this.btn_Back2.Location = new System.Drawing.Point(32, 215);
-            this.btn_Back2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Back2.Location = new System.Drawing.Point(24, 175);
             this.btn_Back2.Name = "btn_Back2";
-            this.btn_Back2.Size = new System.Drawing.Size(124, 32);
+            this.btn_Back2.Size = new System.Drawing.Size(93, 26);
             this.btn_Back2.TabIndex = 2;
             this.btn_Back2.Text = "Terug";
             this.btn_Back2.UseVisualStyleBackColor = false;
@@ -358,10 +337,9 @@
             this.btn_Next2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Next2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Next2.ForeColor = System.Drawing.Color.White;
-            this.btn_Next2.Location = new System.Drawing.Point(172, 215);
-            this.btn_Next2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Next2.Location = new System.Drawing.Point(129, 175);
             this.btn_Next2.Name = "btn_Next2";
-            this.btn_Next2.Size = new System.Drawing.Size(124, 32);
+            this.btn_Next2.Size = new System.Drawing.Size(93, 26);
             this.btn_Next2.TabIndex = 2;
             this.btn_Next2.Text = "Verder";
             this.btn_Next2.UseVisualStyleBackColor = false;
@@ -378,23 +356,22 @@
             this.pnl_MakeAccount4.Controls.Add(this.lbl_PasswordRepeat1);
             this.pnl_MakeAccount4.Controls.Add(this.lbl_Password1);
             this.pnl_MakeAccount4.Controls.Add(this.lbl_Email1);
-            this.pnl_MakeAccount4.Location = new System.Drawing.Point(691, 338);
-            this.pnl_MakeAccount4.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MakeAccount4.Location = new System.Drawing.Point(518, 275);
             this.pnl_MakeAccount4.Name = "pnl_MakeAccount4";
-            this.pnl_MakeAccount4.Size = new System.Drawing.Size(327, 367);
+            this.pnl_MakeAccount4.Size = new System.Drawing.Size(245, 298);
             this.pnl_MakeAccount4.TabIndex = 5;
             this.pnl_MakeAccount4.Visible = false;
             // 
             // btn_MakeAccount1
             // 
             this.btn_MakeAccount1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_MakeAccount1.Enabled = false;
             this.btn_MakeAccount1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_MakeAccount1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MakeAccount1.ForeColor = System.Drawing.Color.White;
-            this.btn_MakeAccount1.Location = new System.Drawing.Point(153, 310);
-            this.btn_MakeAccount1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_MakeAccount1.Location = new System.Drawing.Point(115, 252);
             this.btn_MakeAccount1.Name = "btn_MakeAccount1";
-            this.btn_MakeAccount1.Size = new System.Drawing.Size(140, 32);
+            this.btn_MakeAccount1.Size = new System.Drawing.Size(105, 26);
             this.btn_MakeAccount1.TabIndex = 2;
             this.btn_MakeAccount1.Text = "Account Maken";
             this.btn_MakeAccount1.UseVisualStyleBackColor = false;
@@ -406,10 +383,9 @@
             this.btn_Back3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Back3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back3.ForeColor = System.Drawing.Color.White;
-            this.btn_Back3.Location = new System.Drawing.Point(33, 310);
-            this.btn_Back3.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Back3.Location = new System.Drawing.Point(25, 252);
             this.btn_Back3.Name = "btn_Back3";
-            this.btn_Back3.Size = new System.Drawing.Size(107, 32);
+            this.btn_Back3.Size = new System.Drawing.Size(80, 26);
             this.btn_Back3.TabIndex = 2;
             this.btn_Back3.Text = "Terug";
             this.btn_Back3.UseVisualStyleBackColor = false;
@@ -421,12 +397,12 @@
             this.input_PasswordRepeat1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_PasswordRepeat1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_PasswordRepeat1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_PasswordRepeat1.Location = new System.Drawing.Point(33, 244);
-            this.input_PasswordRepeat1.Margin = new System.Windows.Forms.Padding(4);
+            this.input_PasswordRepeat1.Location = new System.Drawing.Point(25, 198);
             this.input_PasswordRepeat1.Name = "input_PasswordRepeat1";
-            this.input_PasswordRepeat1.Size = new System.Drawing.Size(261, 29);
+            this.input_PasswordRepeat1.Size = new System.Drawing.Size(196, 29);
             this.input_PasswordRepeat1.TabIndex = 1;
             this.input_PasswordRepeat1.UseSystemPasswordChar = true;
+            this.input_PasswordRepeat1.TextChanged += new System.EventHandler(this.input_Password1_TextChanged);
             // 
             // input_Password1
             // 
@@ -434,12 +410,12 @@
             this.input_Password1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_Password1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Password1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Password1.Location = new System.Drawing.Point(33, 149);
-            this.input_Password1.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Password1.Location = new System.Drawing.Point(25, 121);
             this.input_Password1.Name = "input_Password1";
-            this.input_Password1.Size = new System.Drawing.Size(261, 29);
+            this.input_Password1.Size = new System.Drawing.Size(196, 29);
             this.input_Password1.TabIndex = 1;
             this.input_Password1.UseSystemPasswordChar = true;
+            this.input_Password1.TextChanged += new System.EventHandler(this.input_Password1_TextChanged);
             // 
             // input_Email1
             // 
@@ -447,10 +423,9 @@
             this.input_Email1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_Email1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Email1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Email1.Location = new System.Drawing.Point(33, 55);
-            this.input_Email1.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Email1.Location = new System.Drawing.Point(25, 45);
             this.input_Email1.Name = "input_Email1";
-            this.input_Email1.Size = new System.Drawing.Size(261, 29);
+            this.input_Email1.Size = new System.Drawing.Size(196, 29);
             this.input_Email1.TabIndex = 1;
             // 
             // lbl_PasswordRepeat1
@@ -458,10 +433,9 @@
             this.lbl_PasswordRepeat1.AutoSize = true;
             this.lbl_PasswordRepeat1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_PasswordRepeat1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_PasswordRepeat1.Location = new System.Drawing.Point(33, 215);
-            this.lbl_PasswordRepeat1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_PasswordRepeat1.Location = new System.Drawing.Point(25, 175);
             this.lbl_PasswordRepeat1.Name = "lbl_PasswordRepeat1";
-            this.lbl_PasswordRepeat1.Size = new System.Drawing.Size(143, 19);
+            this.lbl_PasswordRepeat1.Size = new System.Drawing.Size(135, 17);
             this.lbl_PasswordRepeat1.TabIndex = 0;
             this.lbl_PasswordRepeat1.Text = "Wachtwoord herhalen";
             // 
@@ -470,10 +444,9 @@
             this.lbl_Password1.AutoSize = true;
             this.lbl_Password1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Password1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Password1.Location = new System.Drawing.Point(33, 121);
-            this.lbl_Password1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Password1.Location = new System.Drawing.Point(25, 98);
             this.lbl_Password1.Name = "lbl_Password1";
-            this.lbl_Password1.Size = new System.Drawing.Size(86, 19);
+            this.lbl_Password1.Size = new System.Drawing.Size(81, 17);
             this.lbl_Password1.TabIndex = 0;
             this.lbl_Password1.Text = "Wachtwoord";
             // 
@@ -482,10 +455,9 @@
             this.lbl_Email1.AutoSize = true;
             this.lbl_Email1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Email1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Email1.Location = new System.Drawing.Point(33, 27);
-            this.lbl_Email1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Email1.Location = new System.Drawing.Point(25, 22);
             this.lbl_Email1.Name = "lbl_Email1";
-            this.lbl_Email1.Size = new System.Drawing.Size(41, 19);
+            this.lbl_Email1.Size = new System.Drawing.Size(39, 17);
             this.lbl_Email1.TabIndex = 0;
             this.lbl_Email1.Text = "Email";
             // 
@@ -502,10 +474,9 @@
             this.pnl_MakeAccount5.Controls.Add(this.lbl_Category);
             this.pnl_MakeAccount5.Controls.Add(this.btn_MakeAccount2);
             this.pnl_MakeAccount5.Controls.Add(this.btn_Back4);
-            this.pnl_MakeAccount5.Location = new System.Drawing.Point(691, 338);
-            this.pnl_MakeAccount5.Margin = new System.Windows.Forms.Padding(4);
+            this.pnl_MakeAccount5.Location = new System.Drawing.Point(518, 275);
             this.pnl_MakeAccount5.Name = "pnl_MakeAccount5";
-            this.pnl_MakeAccount5.Size = new System.Drawing.Size(327, 462);
+            this.pnl_MakeAccount5.Size = new System.Drawing.Size(245, 375);
             this.pnl_MakeAccount5.TabIndex = 6;
             this.pnl_MakeAccount5.Visible = false;
             // 
@@ -521,10 +492,9 @@
             "Mail",
             "General",
             "Other"});
-            this.input_Category.Location = new System.Drawing.Point(32, 55);
-            this.input_Category.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Category.Location = new System.Drawing.Point(24, 45);
             this.input_Category.Name = "input_Category";
-            this.input_Category.Size = new System.Drawing.Size(260, 29);
+            this.input_Category.Size = new System.Drawing.Size(196, 29);
             this.input_Category.TabIndex = 7;
             // 
             // input_PasswordRepeat2
@@ -533,11 +503,12 @@
             this.input_PasswordRepeat2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_PasswordRepeat2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_PasswordRepeat2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_PasswordRepeat2.Location = new System.Drawing.Point(32, 338);
-            this.input_PasswordRepeat2.Margin = new System.Windows.Forms.Padding(4);
+            this.input_PasswordRepeat2.Location = new System.Drawing.Point(24, 275);
             this.input_PasswordRepeat2.Name = "input_PasswordRepeat2";
-            this.input_PasswordRepeat2.Size = new System.Drawing.Size(261, 29);
+            this.input_PasswordRepeat2.Size = new System.Drawing.Size(196, 29);
             this.input_PasswordRepeat2.TabIndex = 6;
+            this.input_PasswordRepeat2.UseSystemPasswordChar = true;
+            this.input_PasswordRepeat2.TextChanged += new System.EventHandler(this.input_Password2_TextChanged);
             // 
             // input_Password2
             // 
@@ -545,11 +516,12 @@
             this.input_Password2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_Password2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Password2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Password2.Location = new System.Drawing.Point(32, 244);
-            this.input_Password2.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Password2.Location = new System.Drawing.Point(24, 198);
             this.input_Password2.Name = "input_Password2";
-            this.input_Password2.Size = new System.Drawing.Size(261, 29);
+            this.input_Password2.Size = new System.Drawing.Size(196, 29);
             this.input_Password2.TabIndex = 6;
+            this.input_Password2.UseSystemPasswordChar = true;
+            this.input_Password2.TextChanged += new System.EventHandler(this.input_Password2_TextChanged);
             // 
             // input_Email2
             // 
@@ -557,10 +529,9 @@
             this.input_Email2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.input_Email2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Email2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Email2.Location = new System.Drawing.Point(32, 153);
-            this.input_Email2.Margin = new System.Windows.Forms.Padding(4);
+            this.input_Email2.Location = new System.Drawing.Point(24, 124);
             this.input_Email2.Name = "input_Email2";
-            this.input_Email2.Size = new System.Drawing.Size(261, 29);
+            this.input_Email2.Size = new System.Drawing.Size(196, 29);
             this.input_Email2.TabIndex = 6;
             // 
             // lbl_PasswordRepeat2
@@ -568,10 +539,9 @@
             this.lbl_PasswordRepeat2.AutoSize = true;
             this.lbl_PasswordRepeat2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_PasswordRepeat2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_PasswordRepeat2.Location = new System.Drawing.Point(32, 310);
-            this.lbl_PasswordRepeat2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_PasswordRepeat2.Location = new System.Drawing.Point(24, 252);
             this.lbl_PasswordRepeat2.Name = "lbl_PasswordRepeat2";
-            this.lbl_PasswordRepeat2.Size = new System.Drawing.Size(143, 19);
+            this.lbl_PasswordRepeat2.Size = new System.Drawing.Size(135, 17);
             this.lbl_PasswordRepeat2.TabIndex = 5;
             this.lbl_PasswordRepeat2.Text = "Wachtwoord herhalen";
             // 
@@ -580,10 +550,9 @@
             this.lbl_Password2.AutoSize = true;
             this.lbl_Password2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Password2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Password2.Location = new System.Drawing.Point(32, 215);
-            this.lbl_Password2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Password2.Location = new System.Drawing.Point(24, 175);
             this.lbl_Password2.Name = "lbl_Password2";
-            this.lbl_Password2.Size = new System.Drawing.Size(86, 19);
+            this.lbl_Password2.Size = new System.Drawing.Size(81, 17);
             this.lbl_Password2.TabIndex = 5;
             this.lbl_Password2.Text = "Wachtwoord";
             // 
@@ -592,10 +561,9 @@
             this.lbl_Email2.AutoSize = true;
             this.lbl_Email2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Email2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Email2.Location = new System.Drawing.Point(32, 121);
-            this.lbl_Email2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Email2.Location = new System.Drawing.Point(24, 98);
             this.lbl_Email2.Name = "lbl_Email2";
-            this.lbl_Email2.Size = new System.Drawing.Size(41, 19);
+            this.lbl_Email2.Size = new System.Drawing.Size(39, 17);
             this.lbl_Email2.TabIndex = 5;
             this.lbl_Email2.Text = "Email";
             // 
@@ -604,23 +572,22 @@
             this.lbl_Category.AutoSize = true;
             this.lbl_Category.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Category.Location = new System.Drawing.Point(32, 27);
-            this.lbl_Category.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Category.Location = new System.Drawing.Point(24, 22);
             this.lbl_Category.Name = "lbl_Category";
-            this.lbl_Category.Size = new System.Drawing.Size(68, 19);
+            this.lbl_Category.Size = new System.Drawing.Size(65, 17);
             this.lbl_Category.TabIndex = 5;
             this.lbl_Category.Text = "Categorie";
             // 
             // btn_MakeAccount2
             // 
             this.btn_MakeAccount2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_MakeAccount2.Enabled = false;
             this.btn_MakeAccount2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_MakeAccount2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MakeAccount2.ForeColor = System.Drawing.Color.White;
-            this.btn_MakeAccount2.Location = new System.Drawing.Point(153, 404);
-            this.btn_MakeAccount2.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_MakeAccount2.Location = new System.Drawing.Point(115, 328);
             this.btn_MakeAccount2.Name = "btn_MakeAccount2";
-            this.btn_MakeAccount2.Size = new System.Drawing.Size(140, 32);
+            this.btn_MakeAccount2.Size = new System.Drawing.Size(105, 26);
             this.btn_MakeAccount2.TabIndex = 4;
             this.btn_MakeAccount2.Text = "Account Maken";
             this.btn_MakeAccount2.UseVisualStyleBackColor = false;
@@ -632,10 +599,9 @@
             this.btn_Back4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Back4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back4.ForeColor = System.Drawing.Color.White;
-            this.btn_Back4.Location = new System.Drawing.Point(32, 404);
-            this.btn_Back4.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Back4.Location = new System.Drawing.Point(24, 328);
             this.btn_Back4.Name = "btn_Back4";
-            this.btn_Back4.Size = new System.Drawing.Size(107, 32);
+            this.btn_Back4.Size = new System.Drawing.Size(80, 26);
             this.btn_Back4.TabIndex = 3;
             this.btn_Back4.Text = "Terug";
             this.btn_Back4.UseVisualStyleBackColor = false;
@@ -643,18 +609,17 @@
             // 
             // NewAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
-            this.Controls.Add(this.pnl_MakeAccount5);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnl_MakeAccount4);
+            this.Controls.Add(this.pnl_MakeAccount5);
             this.Controls.Add(this.pnl_MakeAccount3);
             this.Controls.Add(this.pnl_MakeAccount2);
             this.Controls.Add(this.pnl_MakeAccount1);
             this.Controls.Add(this.lbl_MakeAccount);
             this.Controls.Add(this.logo);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewAccount";
             this.Text = "NewAccount";
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
