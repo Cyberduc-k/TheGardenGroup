@@ -11,7 +11,7 @@ namespace DAL
     public class EntityBaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity: class, IEntityBase, new()
     {
         private IMongoDatabase mongoDatabase;
-        private IMongoCollection<TEntity> collEntities;
+        protected IMongoCollection<TEntity> collEntities;
         private string databaseName;
 
         public EntityBaseRepository(string collectionName) : base()

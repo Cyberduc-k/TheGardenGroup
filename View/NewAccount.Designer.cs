@@ -613,8 +613,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.pnl_MakeAccount4);
             this.Controls.Add(this.pnl_MakeAccount5);
+            this.Controls.Add(this.pnl_MakeAccount4);
             this.Controls.Add(this.pnl_MakeAccount3);
             this.Controls.Add(this.pnl_MakeAccount2);
             this.Controls.Add(this.pnl_MakeAccount1);

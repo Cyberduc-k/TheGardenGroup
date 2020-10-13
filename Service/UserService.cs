@@ -40,6 +40,16 @@ namespace Service
             return _users.GetAllBy(predicate);
         }
 
+        public IEnumerable<Customer> GetAllCustomers()
+        {
+            return _users.GetAllCustomers();
+        }
+
+        public IEnumerable<Employee> GetAllEmployees()
+        {
+            return _users.GetAllEmployees();
+        }
+
         public void Add(User user)
         {
             _users.Add(user);
