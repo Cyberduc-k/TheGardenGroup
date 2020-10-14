@@ -106,6 +106,12 @@
     <Compile Include="Submit Ticket.Designer.cs">
       <DependentUpon>Submit Ticket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tickets Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tickets Dashboard.Designer.cs">
+      <DependentUpon>Tickets Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Submit Ticket.resx">
       <DependentUpon>Submit Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tickets Dashboard.resx">
+      <DependentUpon>Tickets Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Dashboard.resx">
       <DependentUpon>User Dashboard.cs</DependentUpon>

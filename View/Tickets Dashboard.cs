@@ -12,8 +12,12 @@ namespace View
 {
     public partial class Tickets_Dashboard : Form
     {
-        public Tickets_Dashboard()
+        private IServiceProvider provider;
+
+        public Tickets_Dashboard(IServiceProvider provider)
         {
+            this.provider = provider;
+
             InitializeComponent();
         }
     }
