@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lv_Users = new System.Windows.Forms.ListView();
-            this.ch_FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ch_LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ch_Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ch_BirthDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ch_Company = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ch_Occupation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ch_Tickets = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lv_Tickets = new System.Windows.Forms.ListView();
+            this.ch_Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ch_Subject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ch_Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ch_DateOfIssueing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_Header = new System.Windows.Forms.Panel();
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
@@ -45,61 +42,44 @@
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // lv_Users
+            // lv_Tickets
             // 
-            this.lv_Users.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.lv_Users.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lv_Users.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ch_FirstName,
-            this.ch_LastName,
-            this.ch_Email,
-            this.ch_BirthDate,
-            this.ch_Company,
-            this.ch_Occupation,
-            this.ch_Tickets});
-            this.lv_Users.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lv_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lv_Users.HideSelection = false;
-            this.lv_Users.Location = new System.Drawing.Point(95, 152);
-            this.lv_Users.Name = "lv_Users";
-            this.lv_Users.Size = new System.Drawing.Size(1080, 505);
-            this.lv_Users.TabIndex = 3;
-            this.lv_Users.UseCompatibleStateImageBehavior = false;
-            this.lv_Users.View = System.Windows.Forms.View.Details;
+            this.lv_Tickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.lv_Tickets.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lv_Tickets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ch_DateOfIssueing,
+            this.ch_Category,
+            this.ch_Subject,
+            this.ch_Priority});
+            this.lv_Tickets.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lv_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lv_Tickets.HideSelection = false;
+            this.lv_Tickets.Location = new System.Drawing.Point(95, 152);
+            this.lv_Tickets.Name = "lv_Tickets";
+            this.lv_Tickets.Size = new System.Drawing.Size(1080, 505);
+            this.lv_Tickets.TabIndex = 3;
+            this.lv_Tickets.UseCompatibleStateImageBehavior = false;
+            this.lv_Tickets.View = System.Windows.Forms.View.Details;
             // 
-            // ch_FirstName
+            // ch_Category
             // 
-            this.ch_FirstName.Text = "Voornaam";
-            this.ch_FirstName.Width = 150;
+            this.ch_Category.Text = "Category";
+            this.ch_Category.Width = 160;
             // 
-            // ch_LastName
+            // ch_Subject
             // 
-            this.ch_LastName.Text = "Achternaam";
-            this.ch_LastName.Width = 200;
+            this.ch_Subject.Text = "Subject";
+            this.ch_Subject.Width = 500;
             // 
-            // ch_Email
+            // ch_Priority
             // 
-            this.ch_Email.Text = "Email";
-            this.ch_Email.Width = 220;
+            this.ch_Priority.Text = "Priority";
+            this.ch_Priority.Width = 120;
             // 
-            // ch_BirthDate
+            // ch_DateOfIssueing
             // 
-            this.ch_BirthDate.Text = "Geboortedatum";
-            this.ch_BirthDate.Width = 126;
-            // 
-            // ch_Company
-            // 
-            this.ch_Company.Text = "Werkzaam Bij";
-            this.ch_Company.Width = 120;
-            // 
-            // ch_Occupation
-            // 
-            this.ch_Occupation.Text = "Werkzaamheden";
-            this.ch_Occupation.Width = 204;
-            // 
-            // ch_Tickets
-            // 
-            this.ch_Tickets.Text = "Tickets";
+            this.ch_DateOfIssueing.Text = "Date of issueing";
+            this.ch_DateOfIssueing.Width = 160;
             // 
             // panel_Header
             // 
@@ -162,7 +142,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panel_Header);
-            this.Controls.Add(this.lv_Users);
+            this.Controls.Add(this.lv_Tickets);
             this.Name = "Tickets_Dashboard";
             this.Text = "Tickets_Dashboard";
             this.panel_Header.ResumeLayout(false);
@@ -174,14 +154,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView lv_Users;
-        private System.Windows.Forms.ColumnHeader ch_FirstName;
-        private System.Windows.Forms.ColumnHeader ch_LastName;
-        private System.Windows.Forms.ColumnHeader ch_Email;
-        private System.Windows.Forms.ColumnHeader ch_BirthDate;
-        private System.Windows.Forms.ColumnHeader ch_Company;
-        private System.Windows.Forms.ColumnHeader ch_Occupation;
-        private System.Windows.Forms.ColumnHeader ch_Tickets;
+        private System.Windows.Forms.ListView lv_Tickets;
+        private System.Windows.Forms.ColumnHeader ch_Category;
+        private System.Windows.Forms.ColumnHeader ch_Subject;
+        private System.Windows.Forms.ColumnHeader ch_Priority;
+        private System.Windows.Forms.ColumnHeader ch_DateOfIssueing;
         private System.Windows.Forms.Panel panel_Header;
         private System.Windows.Forms.Panel current_stripe;
         private System.Windows.Forms.Button btn_Logout;

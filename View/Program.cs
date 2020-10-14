@@ -42,6 +42,7 @@ namespace View
             Application.Run(new FAQForm(provider));
             Application.Run(new Statistics_Dashboard(provider));
             Application.Run(new User_Dashboard(provider));
+            Application.Run(new Tickets_Dashboard(provider));
         }
     }
 }
