@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edit Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit Ticket.Designer.cs">
+      <DependentUpon>Edit Ticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAQForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="User Dashboard.Designer.cs">
       <DependentUpon>User Dashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Edit Ticket.resx">
+      <DependentUpon>Edit Ticket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FAQForm.resx">
       <DependentUpon>FAQForm.cs</DependentUpon>
     </EmbeddedResource>
