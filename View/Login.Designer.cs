@@ -99,6 +99,7 @@
             // btn_Login
             // 
             this.btn_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Login.Enabled = false;
             this.btn_Login.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Login.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -144,6 +145,7 @@
             this.input_Email.Name = "input_Email";
             this.input_Email.Size = new System.Drawing.Size(196, 29);
             this.input_Email.TabIndex = 3;
+            this.input_Email.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // input_Password
             // 
@@ -157,6 +159,7 @@
             this.input_Password.Size = new System.Drawing.Size(196, 29);
             this.input_Password.TabIndex = 4;
             this.input_Password.UseSystemPasswordChar = true;
+            this.input_Password.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // pnl_NewAccount
             // 

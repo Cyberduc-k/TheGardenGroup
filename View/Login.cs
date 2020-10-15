@@ -2,7 +2,6 @@
 using Model;
 using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace View
@@ -51,9 +50,17 @@ namespace View
 
             na.StartPosition = FormStartPosition.Manual;
             na.Location = this.Location;
-            this.Hide();
+            Hide();
             na.ShowDialog();
-            this.Show();
+            Show();
+        }
+
+        private void input_TextChanged(object sender, EventArgs e)
+        {
+            if (input_Email.Text.Length > 0 && input_Password.Text.Length > 0)
+                btn_Login.Enabled = true;
+            else
+                btn_Login.Enabled = false;
         }
     }
 }
