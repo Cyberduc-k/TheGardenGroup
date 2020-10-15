@@ -60,5 +60,10 @@ namespace View
             ticketService.Update(ticket);
             Close();
         }
+
+        private void ResolveTicket_txtAreaSolution_TextChanged(object sender, EventArgs e)
+        {
+            ResolveTicket_btnResolve.Enabled = ResolveTicket_txtAreaSolution.Text.Length > 0;
+        }
     }
 }

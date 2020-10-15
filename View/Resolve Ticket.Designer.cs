@@ -56,6 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ResolveTicket_lblSolution = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnl_Login.SuspendLayout();
@@ -64,6 +65,7 @@
             // ResolveTicket_btnResolve
             // 
             this.ResolveTicket_btnResolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.ResolveTicket_btnResolve.Enabled = false;
             this.ResolveTicket_btnResolve.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResolveTicket_btnResolve.ForeColor = System.Drawing.Color.White;
             this.ResolveTicket_btnResolve.Location = new System.Drawing.Point(1137, 631);
@@ -159,6 +161,7 @@
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_Login.Controls.Add(this.ResolveTicket_lblSolution);
             this.pnl_Login.Controls.Add(this.label3);
             this.pnl_Login.Controls.Add(this.label2);
             this.pnl_Login.Controls.Add(this.label1);
@@ -203,6 +206,7 @@
             this.ResolveTicket_txtAreaSolution.Name = "ResolveTicket_txtAreaSolution";
             this.ResolveTicket_txtAreaSolution.Size = new System.Drawing.Size(598, 405);
             this.ResolveTicket_txtAreaSolution.TabIndex = 35;
+            this.ResolveTicket_txtAreaSolution.TextChanged += new System.EventHandler(this.ResolveTicket_txtAreaSolution_TextChanged);
             // 
             // ResolveTicket_lblDate
             // 
@@ -391,6 +395,18 @@
             this.label3.TabIndex = 39;
             this.label3.Text = "Description";
             // 
+            // ResolveTicket_lblSolution
+            // 
+            this.ResolveTicket_lblSolution.AutoSize = true;
+            this.ResolveTicket_lblSolution.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ResolveTicket_lblSolution.ForeColor = System.Drawing.Color.Red;
+            this.ResolveTicket_lblSolution.Location = new System.Drawing.Point(619, 514);
+            this.ResolveTicket_lblSolution.Name = "ResolveTicket_lblSolution";
+            this.ResolveTicket_lblSolution.Size = new System.Drawing.Size(121, 12);
+            this.ResolveTicket_lblSolution.TabIndex = 40;
+            this.ResolveTicket_lblSolution.Text = "Please enter a solution first";
+            this.ResolveTicket_lblSolution.Visible = false;
+            // 
             // Resolve_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,5 +458,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ResolveTicket_lblSolution;
     }
 }
