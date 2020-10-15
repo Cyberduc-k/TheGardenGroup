@@ -36,6 +36,19 @@ namespace View
             EditTicket_lblTicketPriority.Text = this.ticket.Priority.ToString();
             EditTicket_lblTicketDeadline.Text = this.ticket.DaysToSolve.ToString() + " days";
             EditTicket_lblTicketDescription.Text = this.ticket.Description;
+
+            FillCategoryCombobox();
+        }
+
+        private void FillCategoryCombobox()
+        {
+            EditTicket_cmbCategory.Items.Clear();
+
+            EditTicket_cmbCategory.Items.Add(Category.Printers);
+            EditTicket_cmbCategory.Items.Add(Category.Computers);
+            EditTicket_cmbCategory.Items.Add(Category.Mail);
+            EditTicket_cmbCategory.Items.Add(Category.General);
+            EditTicket_cmbCategory.Items.Add(Category.Other);
         }
 
         private void EditTicket_btnEdit_Click(object sender, EventArgs e)
@@ -44,7 +57,7 @@ namespace View
             {
                 ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
-                if (EditTicket_txtSubject != null)
+                if (EditTicket_txtSubject.Text != "")
                 {
                     this.ticket.Subject = EditTicket_txtSubject.Text;
                 }
@@ -62,12 +75,12 @@ namespace View
                     this.ticket.Priority = priority;
                 }
 
-                if (EditTicket_txtDeadline != null)
+                if (EditTicket_txtDeadline.Text != "")
                 {
                     this.ticket.DaysToSolve = int.Parse(EditTicket_txtDeadline.Text);
                 }
 
-                if (EditTicket_txtAreaDescription != null)
+                if (EditTicket_txtAreaDescription.Text != "")
                 {
                     this.ticket.Description = EditTicket_txtAreaDescription.Text;
                 }

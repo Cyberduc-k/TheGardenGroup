@@ -16,6 +16,7 @@ namespace View
     public partial class Tickets_Dashboard : Form
     {
         private IServiceProvider provider;
+        private Ticket selectedTicket;
 
         public Tickets_Dashboard(IServiceProvider provider)
         {
@@ -51,5 +52,31 @@ namespace View
             }
         }
 
+        private void btn_editTicket_Click(object sender, EventArgs e)
+        {
+            if (lv_Tickets.SelectedItems ==  null)
+            {
+                MessageBox.Show("Please select a ticket to edit");
+                return;
+            }
+
+            Edit_Ticket editTicket = new Edit_Ticket(selectedTicket, provider);
+            editTicket.ShowDialog();
+
+            FillTickets();
+        }
+
+        private void btn_deleteTicket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv_Tickets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lv_Tickets.SelectedItems.Count <= 0)
+                return;
+
+            selectedTicket = (Ticket)lv_Tickets.SelectedItems[0].Tag;
+        }
     }
 }

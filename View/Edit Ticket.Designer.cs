@@ -212,12 +212,6 @@
             // EditTicket_cmbCategory
             // 
             this.EditTicket_cmbCategory.FormattingEnabled = true;
-            this.EditTicket_cmbCategory.Items.AddRange(new object[] {
-            "Printers",
-            "Computers",
-            "Mail",
-            "General",
-            "Other"});
             this.EditTicket_cmbCategory.Location = new System.Drawing.Point(475, 182);
             this.EditTicket_cmbCategory.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_cmbCategory.Name = "EditTicket_cmbCategory";
