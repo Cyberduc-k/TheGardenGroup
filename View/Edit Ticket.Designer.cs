@@ -67,6 +67,7 @@
             // 
             this.lbl_editTicket.AutoSize = true;
             this.lbl_editTicket.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_editTicket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_editTicket.Location = new System.Drawing.Point(789, 82);
             this.lbl_editTicket.Name = "lbl_editTicket";
             this.lbl_editTicket.Size = new System.Drawing.Size(128, 35);
@@ -77,6 +78,7 @@
             // 
             this.EditTicket_lblSubjectText.AutoSize = true;
             this.EditTicket_lblSubjectText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblSubjectText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblSubjectText.Location = new System.Drawing.Point(420, 243);
             this.EditTicket_lblSubjectText.Name = "EditTicket_lblSubjectText";
             this.EditTicket_lblSubjectText.Size = new System.Drawing.Size(58, 20);
@@ -87,6 +89,7 @@
             // 
             this.EditTicket_lblCategoryText.AutoSize = true;
             this.EditTicket_lblCategoryText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblCategoryText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblCategoryText.Location = new System.Drawing.Point(420, 280);
             this.EditTicket_lblCategoryText.Name = "EditTicket_lblCategoryText";
             this.EditTicket_lblCategoryText.Size = new System.Drawing.Size(69, 20);
@@ -97,6 +100,7 @@
             // 
             this.EditTicket_lblPriorityText.AutoSize = true;
             this.EditTicket_lblPriorityText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblPriorityText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblPriorityText.Location = new System.Drawing.Point(420, 320);
             this.EditTicket_lblPriorityText.Name = "EditTicket_lblPriorityText";
             this.EditTicket_lblPriorityText.Size = new System.Drawing.Size(56, 20);
@@ -107,6 +111,7 @@
             // 
             this.EditTicket_lblDeadlineText.AutoSize = true;
             this.EditTicket_lblDeadlineText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblDeadlineText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblDeadlineText.Location = new System.Drawing.Point(420, 353);
             this.EditTicket_lblDeadlineText.Name = "EditTicket_lblDeadlineText";
             this.EditTicket_lblDeadlineText.Size = new System.Drawing.Size(129, 20);
@@ -117,6 +122,7 @@
             // 
             this.EditTicket_lblDescriptionText.AutoSize = true;
             this.EditTicket_lblDescriptionText.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblDescriptionText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblDescriptionText.Location = new System.Drawing.Point(420, 398);
             this.EditTicket_lblDescriptionText.Name = "EditTicket_lblDescriptionText";
             this.EditTicket_lblDescriptionText.Size = new System.Drawing.Size(85, 20);
@@ -127,6 +133,7 @@
             // 
             this.EditTicket_lblTicketSubject.AutoSize = true;
             this.EditTicket_lblTicketSubject.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblTicketSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblTicketSubject.Location = new System.Drawing.Point(632, 243);
             this.EditTicket_lblTicketSubject.Name = "EditTicket_lblTicketSubject";
             this.EditTicket_lblTicketSubject.Size = new System.Drawing.Size(50, 20);
@@ -137,6 +144,7 @@
             // 
             this.EditTicket_lblTicketCategory.AutoSize = true;
             this.EditTicket_lblTicketCategory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblTicketCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblTicketCategory.Location = new System.Drawing.Point(632, 280);
             this.EditTicket_lblTicketCategory.Name = "EditTicket_lblTicketCategory";
             this.EditTicket_lblTicketCategory.Size = new System.Drawing.Size(50, 20);
@@ -147,6 +155,7 @@
             // 
             this.EditTicket_lblTicketPriority.AutoSize = true;
             this.EditTicket_lblTicketPriority.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblTicketPriority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblTicketPriority.Location = new System.Drawing.Point(632, 320);
             this.EditTicket_lblTicketPriority.Name = "EditTicket_lblTicketPriority";
             this.EditTicket_lblTicketPriority.Size = new System.Drawing.Size(50, 20);
@@ -157,6 +166,7 @@
             // 
             this.EditTicket_lblTicketDeadline.AutoSize = true;
             this.EditTicket_lblTicketDeadline.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblTicketDeadline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblTicketDeadline.Location = new System.Drawing.Point(632, 353);
             this.EditTicket_lblTicketDeadline.Name = "EditTicket_lblTicketDeadline";
             this.EditTicket_lblTicketDeadline.Size = new System.Drawing.Size(50, 20);
@@ -166,6 +176,7 @@
             // EditTicket_lblTicketDescription
             // 
             this.EditTicket_lblTicketDescription.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblTicketDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblTicketDescription.Location = new System.Drawing.Point(632, 398);
             this.EditTicket_lblTicketDescription.Name = "EditTicket_lblTicketDescription";
             this.EditTicket_lblTicketDescription.Size = new System.Drawing.Size(221, 121);
@@ -175,6 +186,7 @@
             // EditTicket_txtAreaDescription
             // 
             this.EditTicket_txtAreaDescription.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_txtAreaDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_txtAreaDescription.Location = new System.Drawing.Point(896, 398);
             this.EditTicket_txtAreaDescription.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_txtAreaDescription.Multiline = true;
@@ -185,6 +197,7 @@
             // EditTicket_txtDeadline
             // 
             this.EditTicket_txtDeadline.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_txtDeadline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_txtDeadline.Location = new System.Drawing.Point(896, 353);
             this.EditTicket_txtDeadline.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_txtDeadline.Name = "EditTicket_txtDeadline";
@@ -195,6 +208,7 @@
             // 
             this.EditTicket_rBtnHighPriority.AutoSize = true;
             this.EditTicket_rBtnHighPriority.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_rBtnHighPriority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_rBtnHighPriority.Location = new System.Drawing.Point(1056, 320);
             this.EditTicket_rBtnHighPriority.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_rBtnHighPriority.Name = "EditTicket_rBtnHighPriority";
@@ -209,6 +223,7 @@
             // 
             this.EditTicket_rBtnMediumPriority.AutoSize = true;
             this.EditTicket_rBtnMediumPriority.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_rBtnMediumPriority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_rBtnMediumPriority.Location = new System.Drawing.Point(962, 320);
             this.EditTicket_rBtnMediumPriority.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_rBtnMediumPriority.Name = "EditTicket_rBtnMediumPriority";
@@ -223,6 +238,7 @@
             // 
             this.EditTicket_rBtnLowPriority.AutoSize = true;
             this.EditTicket_rBtnLowPriority.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_rBtnLowPriority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_rBtnLowPriority.Location = new System.Drawing.Point(897, 320);
             this.EditTicket_rBtnLowPriority.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_rBtnLowPriority.Name = "EditTicket_rBtnLowPriority";
@@ -236,6 +252,7 @@
             // EditTicket_cmbCategory
             // 
             this.EditTicket_cmbCategory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_cmbCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_cmbCategory.FormattingEnabled = true;
             this.EditTicket_cmbCategory.Location = new System.Drawing.Point(897, 280);
             this.EditTicket_cmbCategory.Margin = new System.Windows.Forms.Padding(4);
@@ -246,6 +263,7 @@
             // EditTicket_txtSubject
             // 
             this.EditTicket_txtSubject.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_txtSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_txtSubject.Location = new System.Drawing.Point(897, 240);
             this.EditTicket_txtSubject.Margin = new System.Windows.Forms.Padding(4);
             this.EditTicket_txtSubject.Name = "EditTicket_txtSubject";
@@ -284,6 +302,7 @@
             // 
             this.EditTicket_lblMail.AutoSize = true;
             this.EditTicket_lblMail.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblMail.Location = new System.Drawing.Point(632, 199);
             this.EditTicket_lblMail.Name = "EditTicket_lblMail";
             this.EditTicket_lblMail.Size = new System.Drawing.Size(157, 20);
@@ -294,6 +313,7 @@
             // 
             this.EditTicket_lblName.AutoSize = true;
             this.EditTicket_lblName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblName.Location = new System.Drawing.Point(632, 179);
             this.EditTicket_lblName.Name = "EditTicket_lblName";
             this.EditTicket_lblName.Size = new System.Drawing.Size(99, 20);
@@ -303,6 +323,7 @@
             // EditTicket_lblTicketID
             // 
             this.EditTicket_lblTicketID.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblTicketID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblTicketID.Location = new System.Drawing.Point(420, 162);
             this.EditTicket_lblTicketID.Name = "EditTicket_lblTicketID";
             this.EditTicket_lblTicketID.Size = new System.Drawing.Size(174, 57);
@@ -312,6 +333,7 @@
             // EditTicket_lblEdit
             // 
             this.EditTicket_lblEdit.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_lblEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.EditTicket_lblEdit.Location = new System.Drawing.Point(893, 162);
             this.EditTicket_lblEdit.Name = "EditTicket_lblEdit";
             this.EditTicket_lblEdit.Size = new System.Drawing.Size(44, 20);
@@ -381,6 +403,7 @@
             // 
             this.lbl_submittedBY.AutoSize = true;
             this.lbl_submittedBY.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_submittedBY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_submittedBY.Location = new System.Drawing.Point(633, 162);
             this.lbl_submittedBY.Name = "lbl_submittedBY";
             this.lbl_submittedBY.Size = new System.Drawing.Size(101, 20);
@@ -390,6 +413,7 @@
             // lbl_editInfo
             // 
             this.lbl_editInfo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_editInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_editInfo.Location = new System.Drawing.Point(892, 182);
             this.lbl_editInfo.Name = "lbl_editInfo";
             this.lbl_editInfo.Size = new System.Drawing.Size(339, 51);
