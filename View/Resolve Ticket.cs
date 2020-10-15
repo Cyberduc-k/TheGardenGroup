@@ -8,6 +8,7 @@ namespace View
     public partial class Resolve_Ticket : Form
     {
         private IServiceProvider provider;
+        ITicketService ticketService;
         private Ticket ticket;
 
         public Resolve_Ticket(Ticket ticket, IServiceProvider provider)
@@ -28,27 +29,35 @@ namespace View
             ResolveTicket_lblStatus.Text = ticket.Solved.ToString().ToUpper();
             ResolveTicket_lblDescription.Text = ticket.Description;
 
-            //ResolveTicket_lblName.Text = ticket.Client.Name;
-            //ResolveTicket_lblMail.Text = ticket.Client.Email;
+            ResolveTicket_lblName.Text = ticket.Client.Name;
+            ResolveTicket_lblMail.Text = ticket.Client.Email;
 
             ResolveTicket_lblCategory.Text = ticket.Category.ToString();
             ResolveTicket_lblPriority.Text = ticket.Priority.ToString();
             ResolveTicket_lblDeadline.Text = ticket.DaysToSolve.ToString();
             ResolveTicket_lblDate.Text = ticket.DateOfIssueing.ToString("dd-MM-yyyy");
+
+            ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
         }
 
         private void ResolveTicket_btnResolve_Click(object sender, EventArgs e)
         {
-            ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
-
             ticket.Solution = ResolveTicket_txtAreaSolution.Text;
             ticket.Solved = true;
 
             ticketService.Update(ticket);
+            Close();
         }
 
         private void ResolveTicket_btnCancel_Click(object sender, EventArgs e)
         {
+            Close();
+        }
+
+        private void ResolveTicket_btnPassOn_Click(object sender, EventArgs e)
+        {
+            ticket.PassedOn = true;
+            ticketService.Update(ticket);
             Close();
         }
     }

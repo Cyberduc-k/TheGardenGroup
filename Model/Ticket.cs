@@ -18,6 +18,7 @@ namespace Model
         public User Handler { get; set; }
         public DateTime DateOfIssueing { get; set; }
         public DateTime DateOfSolving { get; set; }
+        public bool PassedOn { get; set; }
         public bool Solved { get; set; }
 
         public Ticket() { }
@@ -34,13 +35,14 @@ namespace Model
             Description = description;
             Client = client;
             DateOfIssueing = DateTime.Now;
+            PassedOn = false;
             Solved = false;
         }
 
         //A full ticket
         public Ticket(string id, string subject, Category category, Priority priority, 
                         int daysToSolve, string description, string solution, User client, User handler, 
-                        DateTime dateOfIssueing, DateTime dateOfSolving, bool solved)
+                        DateTime dateOfIssueing, DateTime dateOfSolving, bool passedOn, bool solved)
         {
             Id = id;
             Subject = subject;
@@ -51,8 +53,9 @@ namespace Model
             Solution = solution;
             Client = client;
             Handler = handler;
-            DateOfIssueing = DateTime.Now;
+            DateOfIssueing = dateOfIssueing;
             DateOfSolving = dateOfSolving;
+            PassedOn = passedOn;
             Solved = solved;
         }
     }   

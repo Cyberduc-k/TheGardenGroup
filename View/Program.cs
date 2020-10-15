@@ -28,7 +28,6 @@ namespace View
             services.AddTransient<IErrorRepository, ErrorRepository>();
             services.AddScoped<IErrorService, ErrorService>();
 
-
             ServiceProvider provider = services.BuildServiceProvider();
 
             //Make sure the ErrorHandler is initialized with a service provider
