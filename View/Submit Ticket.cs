@@ -30,7 +30,7 @@ namespace View
                 int deadline = int.Parse(SubmitTicket_txtDeadline.Text);
                 string description = SubmitTicket_txtAreaDescription.Text;
 
-                Ticket ticket = new Ticket(subject, category, priority, deadline, description, null, DateTime.Now);
+                Ticket ticket = new Ticket(subject, category, priority, deadline, description, LoggedInUser.Instance.User, DateTime.Now);
                 ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
                 ticketService.Add(ticket);
