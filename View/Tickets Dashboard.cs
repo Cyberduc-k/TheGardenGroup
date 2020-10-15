@@ -68,7 +68,10 @@ namespace View
 
         private void btn_deleteTicket_Click(object sender, EventArgs e)
         {
+            ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
+            ticketService.Delete(selectedTicket);
 
+            FillTickets();
         }
 
         private void lv_Tickets_SelectedIndexChanged(object sender, EventArgs e)
