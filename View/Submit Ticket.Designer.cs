@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnl_Login = new System.Windows.Forms.Panel();
+            this.SubmitTicket_lblDescription = new System.Windows.Forms.Label();
+            this.SubmitTicket_lblDeadline = new System.Windows.Forms.Label();
+            this.SubmitTicket_lblSubject = new System.Windows.Forms.Label();
             this.SubmitTicket_txtAreaDescription = new System.Windows.Forms.TextBox();
             this.SubmitTicket_txtDeadline = new System.Windows.Forms.TextBox();
             this.SubmitTicket_rBtnHighPriority = new System.Windows.Forms.RadioButton();
@@ -57,6 +60,9 @@
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_Login.Controls.Add(this.SubmitTicket_lblDescription);
+            this.pnl_Login.Controls.Add(this.SubmitTicket_lblDeadline);
+            this.pnl_Login.Controls.Add(this.SubmitTicket_lblSubject);
             this.pnl_Login.Controls.Add(this.SubmitTicket_txtAreaDescription);
             this.pnl_Login.Controls.Add(this.SubmitTicket_txtDeadline);
             this.pnl_Login.Controls.Add(this.SubmitTicket_rBtnHighPriority);
@@ -76,6 +82,42 @@
             this.pnl_Login.Size = new System.Drawing.Size(1239, 528);
             this.pnl_Login.TabIndex = 24;
             // 
+            // SubmitTicket_lblDescription
+            // 
+            this.SubmitTicket_lblDescription.AutoSize = true;
+            this.SubmitTicket_lblDescription.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SubmitTicket_lblDescription.ForeColor = System.Drawing.Color.Red;
+            this.SubmitTicket_lblDescription.Location = new System.Drawing.Point(574, 430);
+            this.SubmitTicket_lblDescription.Name = "SubmitTicket_lblDescription";
+            this.SubmitTicket_lblDescription.Size = new System.Drawing.Size(116, 12);
+            this.SubmitTicket_lblDescription.TabIndex = 34;
+            this.SubmitTicket_lblDescription.Text = "Please enter a description";
+            this.SubmitTicket_lblDescription.Visible = false;
+            // 
+            // SubmitTicket_lblDeadline
+            // 
+            this.SubmitTicket_lblDeadline.AutoSize = true;
+            this.SubmitTicket_lblDeadline.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SubmitTicket_lblDeadline.ForeColor = System.Drawing.Color.Red;
+            this.SubmitTicket_lblDeadline.Location = new System.Drawing.Point(572, 214);
+            this.SubmitTicket_lblDeadline.Name = "SubmitTicket_lblDeadline";
+            this.SubmitTicket_lblDeadline.Size = new System.Drawing.Size(103, 12);
+            this.SubmitTicket_lblDeadline.TabIndex = 33;
+            this.SubmitTicket_lblDeadline.Text = "Please enter a number";
+            this.SubmitTicket_lblDeadline.Visible = false;
+            // 
+            // SubmitTicket_lblSubject
+            // 
+            this.SubmitTicket_lblSubject.AutoSize = true;
+            this.SubmitTicket_lblSubject.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SubmitTicket_lblSubject.ForeColor = System.Drawing.Color.Red;
+            this.SubmitTicket_lblSubject.Location = new System.Drawing.Point(572, 85);
+            this.SubmitTicket_lblSubject.Name = "SubmitTicket_lblSubject";
+            this.SubmitTicket_lblSubject.Size = new System.Drawing.Size(99, 12);
+            this.SubmitTicket_lblSubject.TabIndex = 31;
+            this.SubmitTicket_lblSubject.Text = "Please enter a subject";
+            this.SubmitTicket_lblSubject.Visible = false;
+            // 
             // SubmitTicket_txtAreaDescription
             // 
             this.SubmitTicket_txtAreaDescription.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -84,6 +126,7 @@
             this.SubmitTicket_txtAreaDescription.Name = "SubmitTicket_txtAreaDescription";
             this.SubmitTicket_txtAreaDescription.Size = new System.Drawing.Size(430, 196);
             this.SubmitTicket_txtAreaDescription.TabIndex = 30;
+            this.SubmitTicket_txtAreaDescription.TextChanged += new System.EventHandler(this.SubmitTicket_txtAreaDescription_TextChanged);
             // 
             // SubmitTicket_txtDeadline
             // 
@@ -92,6 +135,7 @@
             this.SubmitTicket_txtDeadline.Name = "SubmitTicket_txtDeadline";
             this.SubmitTicket_txtDeadline.Size = new System.Drawing.Size(430, 25);
             this.SubmitTicket_txtDeadline.TabIndex = 29;
+            this.SubmitTicket_txtDeadline.TextChanged += new System.EventHandler(this.SubmitTicket_txtDeadline_TextChanged);
             // 
             // SubmitTicket_rBtnHighPriority
             // 
@@ -101,7 +145,6 @@
             this.SubmitTicket_rBtnHighPriority.Name = "SubmitTicket_rBtnHighPriority";
             this.SubmitTicket_rBtnHighPriority.Size = new System.Drawing.Size(53, 21);
             this.SubmitTicket_rBtnHighPriority.TabIndex = 28;
-            this.SubmitTicket_rBtnHighPriority.TabStop = true;
             this.SubmitTicket_rBtnHighPriority.Tag = "High";
             this.SubmitTicket_rBtnHighPriority.Text = "High";
             this.SubmitTicket_rBtnHighPriority.UseVisualStyleBackColor = true;
@@ -114,7 +157,6 @@
             this.SubmitTicket_rBtnMediumPriority.Name = "SubmitTicket_rBtnMediumPriority";
             this.SubmitTicket_rBtnMediumPriority.Size = new System.Drawing.Size(74, 21);
             this.SubmitTicket_rBtnMediumPriority.TabIndex = 27;
-            this.SubmitTicket_rBtnMediumPriority.TabStop = true;
             this.SubmitTicket_rBtnMediumPriority.Tag = "Medium";
             this.SubmitTicket_rBtnMediumPriority.Text = "Medium";
             this.SubmitTicket_rBtnMediumPriority.UseVisualStyleBackColor = true;
@@ -122,6 +164,7 @@
             // SubmitTicket_rBtnLowPriority
             // 
             this.SubmitTicket_rBtnLowPriority.AutoSize = true;
+            this.SubmitTicket_rBtnLowPriority.Checked = true;
             this.SubmitTicket_rBtnLowPriority.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SubmitTicket_rBtnLowPriority.Location = new System.Drawing.Point(576, 144);
             this.SubmitTicket_rBtnLowPriority.Name = "SubmitTicket_rBtnLowPriority";
@@ -134,14 +177,15 @@
             // 
             // SubmitTicket_comboCategory
             // 
+            this.SubmitTicket_comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SubmitTicket_comboCategory.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SubmitTicket_comboCategory.FormattingEnabled = true;
             this.SubmitTicket_comboCategory.Items.AddRange(new object[] {
+            "Other",
             "Printers",
             "Computers",
             "Mail",
-            "General",
-            "Other"});
+            "General"});
             this.SubmitTicket_comboCategory.Location = new System.Drawing.Point(572, 103);
             this.SubmitTicket_comboCategory.Name = "SubmitTicket_comboCategory";
             this.SubmitTicket_comboCategory.Size = new System.Drawing.Size(430, 25);
@@ -154,6 +198,7 @@
             this.SubmitTicket_txtSubject.Name = "SubmitTicket_txtSubject";
             this.SubmitTicket_txtSubject.Size = new System.Drawing.Size(430, 25);
             this.SubmitTicket_txtSubject.TabIndex = 24;
+            this.SubmitTicket_txtSubject.TextChanged += new System.EventHandler(this.SubmitTicket_txtSubject_TextChanged);
             // 
             // label6
             // 
@@ -286,6 +331,7 @@
             // SubmitTicket_btnSubmit
             // 
             this.SubmitTicket_btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.SubmitTicket_btnSubmit.Enabled = false;
             this.SubmitTicket_btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitTicket_btnSubmit.ForeColor = System.Drawing.Color.White;
             this.SubmitTicket_btnSubmit.Location = new System.Drawing.Point(1137, 631);
@@ -340,5 +386,8 @@
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button SubmitTicket_btnCancel;
         private System.Windows.Forms.Button SubmitTicket_btnSubmit;
+        private System.Windows.Forms.Label SubmitTicket_lblDescription;
+        private System.Windows.Forms.Label SubmitTicket_lblDeadline;
+        private System.Windows.Forms.Label SubmitTicket_lblSubject;
     }
 }
