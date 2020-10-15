@@ -29,5 +29,16 @@ namespace View
 
             lbl_AmountOfActiveTickets.Text = ticketService.Count().ToString();
         }
+
+        private void Btn_TicketList_Click(object sender, EventArgs e)
+        {
+            Tickets_Dashboard dashboard = new Tickets_Dashboard(provider);
+            Hide();
+            dashboard.StartPosition = FormStartPosition.Manual;
+            dashboard.Location = Location;
+            dashboard.ShowDialog();
+            Show();
+            this.Close();
+        }
     }
 }
