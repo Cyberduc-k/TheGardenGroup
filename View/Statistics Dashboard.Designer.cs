@@ -87,6 +87,7 @@
             this.btn_TicketList.TabIndex = 4;
             this.btn_TicketList.Text = "Ticket list";
             this.btn_TicketList.UseVisualStyleBackColor = false;
+            this.btn_TicketList.Click += new System.EventHandler(this.Btn_TicketList_Click);
             // 
             // label3
             // 
