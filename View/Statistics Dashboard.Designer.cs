@@ -35,6 +35,7 @@
             this.btn_TicketList = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Btn_UserList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_AmountOfActiveTickets
@@ -81,9 +82,10 @@
             // 
             this.btn_TicketList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.btn_TicketList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_TicketList.Location = new System.Drawing.Point(512, 535);
+            this.btn_TicketList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TicketList.Location = new System.Drawing.Point(478, 516);
             this.btn_TicketList.Name = "btn_TicketList";
-            this.btn_TicketList.Size = new System.Drawing.Size(232, 39);
+            this.btn_TicketList.Size = new System.Drawing.Size(297, 62);
             this.btn_TicketList.TabIndex = 4;
             this.btn_TicketList.Text = "Ticket list";
             this.btn_TicketList.UseVisualStyleBackColor = false;
@@ -108,11 +110,24 @@
     "s these tickets need to be processed ASAP.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Btn_UserList
+            // 
+            this.Btn_UserList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.Btn_UserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_UserList.Location = new System.Drawing.Point(530, 152);
+            this.Btn_UserList.Name = "Btn_UserList";
+            this.Btn_UserList.Size = new System.Drawing.Size(191, 36);
+            this.Btn_UserList.TabIndex = 7;
+            this.Btn_UserList.Text = "User list";
+            this.Btn_UserList.UseVisualStyleBackColor = false;
+            this.Btn_UserList.Click += new System.EventHandler(this.Btn_UserList_Click);
+            // 
             // Statistics_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.Btn_UserList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_TicketList);
@@ -137,5 +152,6 @@
         private System.Windows.Forms.Button btn_TicketList;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Btn_UserList;
     }
 }
