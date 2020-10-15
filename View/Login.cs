@@ -28,11 +28,13 @@ namespace View
             {
                 input_Email.Clear();
                 input_Password.Clear();
+                lbl_WrongCredentials.Show();
             } else
             {
                 LoggedInUser.Instance.User = user;
                 Tickets_Dashboard dashboard = new Tickets_Dashboard(provider);
-                
+
+                lbl_WrongCredentials.Hide();
                 input_Email.Clear();
                 input_Password.Clear();
                 Hide();

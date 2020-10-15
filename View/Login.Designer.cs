@@ -31,6 +31,7 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.lbl_Inloggen = new System.Windows.Forms.Label();
             this.pnl_Login = new System.Windows.Forms.Panel();
+            this.lbl_WrongCredentials = new System.Windows.Forms.Label();
             this.btn_Login = new System.Windows.Forms.Button();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_Login.Controls.Add(this.lbl_WrongCredentials);
             this.pnl_Login.Controls.Add(this.btn_Login);
             this.pnl_Login.Controls.Add(this.lbl_Password);
             this.pnl_Login.Controls.Add(this.lbl_Email);
@@ -80,6 +82,19 @@
             this.pnl_Login.Name = "pnl_Login";
             this.pnl_Login.Size = new System.Drawing.Size(246, 226);
             this.pnl_Login.TabIndex = 2;
+            // 
+            // lbl_WrongCredentials
+            // 
+            this.lbl_WrongCredentials.AutoSize = true;
+            this.lbl_WrongCredentials.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_WrongCredentials.ForeColor = System.Drawing.Color.Red;
+            this.lbl_WrongCredentials.Location = new System.Drawing.Point(25, 158);
+            this.lbl_WrongCredentials.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_WrongCredentials.Name = "lbl_WrongCredentials";
+            this.lbl_WrongCredentials.Size = new System.Drawing.Size(163, 12);
+            this.lbl_WrongCredentials.TabIndex = 5;
+            this.lbl_WrongCredentials.Text = "Verkeerd email adres of wachtwoord";
+            this.lbl_WrongCredentials.Visible = false;
             // 
             // btn_Login
             // 
@@ -94,7 +109,7 @@
             this.btn_Login.TabIndex = 1;
             this.btn_Login.Text = "Inloggen";
             this.btn_Login.UseVisualStyleBackColor = false;
-            this.btn_Login.Click += this.btn_Login_Clicked;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Clicked);
             // 
             // lbl_Password
             // 
@@ -179,7 +194,7 @@
             this.btn_New.TabIndex = 6;
             this.btn_New.Text = "Maak een account";
             this.btn_New.UseVisualStyleBackColor = true;
-            this.btn_New.Click += this.btn_New_Clicked;
+            this.btn_New.Click += new System.EventHandler(this.btn_New_Clicked);
             // 
             // Login
             // 
@@ -216,5 +231,6 @@
         private System.Windows.Forms.Button btn_Login;
         private System.Windows.Forms.Label lbl_New;
         private System.Windows.Forms.Button btn_New;
+        private System.Windows.Forms.Label lbl_WrongCredentials;
     }
 }
