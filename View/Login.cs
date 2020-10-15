@@ -31,8 +31,15 @@ namespace View
             } else
             {
                 LoggedInUser.Instance.User = user;
-
-                // TODO: open new form depending on user
+                Tickets_Dashboard dashboard = new Tickets_Dashboard(provider);
+                
+                input_Email.Clear();
+                input_Password.Clear();
+                Hide();
+                dashboard.StartPosition = FormStartPosition.Manual;
+                dashboard.Location = Location;
+                dashboard.ShowDialog();
+                Show();
             }
         }
 
@@ -48,21 +55,3 @@ namespace View
         }
     }
 }
-
-/*
-When the designer is opened, visual studio will remove this code on save.
-// 
-// input_Email
-// 
-this.input_Email.BorderColor = System.Drawing.Color.FromArgb(78, 90, 98);
-this.input_Email.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-this.input_Email.TextBox.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-this.input_Email.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-// 
-// input_Password
-// 
-this.input_Password.BorderColor = System.Drawing.Color.FromArgb(78, 90, 98);
-this.input_Password.TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-this.input_Password.TextBox.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-this.input_Password.TextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-*/
