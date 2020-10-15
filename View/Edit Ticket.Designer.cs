@@ -254,7 +254,7 @@
             // 
             // EditTicket_btnEdit
             // 
-            this.EditTicket_btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.EditTicket_btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.EditTicket_btnEdit.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_btnEdit.ForeColor = System.Drawing.Color.White;
             this.EditTicket_btnEdit.Location = new System.Drawing.Point(1500, 777);
@@ -268,7 +268,7 @@
             // 
             // EditTicket_btnCancel
             // 
-            this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
+            this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.EditTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.White;
             this.EditTicket_btnCancel.Location = new System.Drawing.Point(30, 777);
