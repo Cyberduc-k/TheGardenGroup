@@ -40,5 +40,16 @@ namespace View
             Show();
             this.Close();
         }
+
+        private void Btn_UserList_Click(object sender, EventArgs e)
+        {
+            User_Dashboard dashboard = new User_Dashboard(provider);
+            Hide();
+            dashboard.StartPosition = FormStartPosition.Manual;
+            dashboard.Location = Location;
+            dashboard.ShowDialog();
+            Show();
+            this.Close();
+        }
     }
 }
