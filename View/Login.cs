@@ -31,16 +31,31 @@ namespace View
             } else
             {
                 LoggedInUser.Instance.User = user;
-                Tickets_Dashboard dashboard = new Tickets_Dashboard(provider);
 
                 lbl_WrongCredentials.Hide();
                 input_Email.Clear();
                 input_Password.Clear();
-                Hide();
-                dashboard.StartPosition = FormStartPosition.Manual;
-                dashboard.Location = Location;
-                dashboard.ShowDialog();
-                Show();
+
+                if (user is Customer)
+                {
+                    Tickets_Dashboard dashboard = new Tickets_Dashboard(provider);
+
+                    Hide();
+                    dashboard.StartPosition = FormStartPosition.Manual;
+                    dashboard.Location = Location;
+                    dashboard.ShowDialog();
+                    Show();
+                }
+                else
+                {
+                    Statistics_Dashboard dashboard = new Statistics_Dashboard(provider);
+
+                    Hide();
+                    dashboard.StartPosition = FormStartPosition.Manual;
+                    dashboard.Location = Location;
+                    dashboard.ShowDialog();
+                    Show();
+                }
             }
         }
 
