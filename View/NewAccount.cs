@@ -92,6 +92,7 @@ namespace View
             Customer customer = new Customer(firstName, lastName, birthDate, email, password, company, occupation);
             IUserService service = provider.GetService<IUserService>();
 
+            customer.Alias = customer.Name;
             service.Add(customer);
             Close();
         }
@@ -109,6 +110,7 @@ namespace View
             Employee employee = new Employee(firstName, lastName, birthDate, email, password, category);
             IUserService service = provider.GetService<IUserService>();
 
+            employee.Alias = employee.Name;
             service.Add(employee);
             Close();
         }

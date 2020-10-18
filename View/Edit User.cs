@@ -9,14 +9,21 @@ namespace View
     public partial class Edit_User : Form
     {
         IServiceProvider provider;
-        User user = LoggedInUser.Instance.User;
+        User user;
 
-        public Edit_User(IServiceProvider provider)
+        public Edit_User(IServiceProvider provider, User user)
         {
             InitializeComponent();
             this.provider = provider;
+            this.user = user;
 
-            if (user is Employee)
+            input_FirstName.Text = user.FirstName;
+            input_LastName.Text = user.LastName;
+            input_Email.Text = user.Email;
+            input_DisplayName.Text = user.Alias;
+            input_BirthDate.Value = user.BirthDate;
+
+            if (user is Employee employee)
             {
                 lbl_Company.Hide();
                 input_Company.Hide();
@@ -24,6 +31,13 @@ namespace View
                 input_Occupation.Hide();
                 lbl_Expertise.Show();
                 input_Expertise.Show();
+                input_Expertise.SelectedIndex = (int)employee.Expertise;
+            } else
+            {
+                Customer customer = (Customer)user;
+
+                input_Company.Text = customer.Company;
+                input_Occupation.Text = customer.Occupation;
             }
         }
 
