@@ -44,8 +44,11 @@ namespace View
         {
             ticket.Solution = ResolveTicket_txtAreaSolution.Text;
             ticket.Solved = true;
+            ticket.Handler = LoggedInUser.Instance.User;
 
             ticketService.Update(ticket);
+
+            MessageBox.Show("The ticket has successfully been resolved", "Resolved!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 

@@ -106,7 +106,7 @@ namespace View
         private void TicketsDashboard_btnResolve_Click(object sender, EventArgs e)
         {
             Resolve_Ticket resolveForm = new Resolve_Ticket(selectedTicket, provider);
-            resolveForm.ShowDialog();
+            resolveForm.Show();
         }
     }
 }
