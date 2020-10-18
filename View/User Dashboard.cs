@@ -16,15 +16,22 @@ namespace View
     public partial class User_Dashboard : Form
     {
         IServiceProvider provider;
+        User selectedUser;
 
         public User_Dashboard(IServiceProvider provider)
         {
             InitializeComponent();
             this.provider = provider;
+            filter.SelectedIndex = 0;
             FillCustomers();
         }
 
         private void filter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillUsers();
+        }
+
+        private void FillUsers()
         {
             if (filter.SelectedIndex == 0)
                 FillCustomers();
@@ -95,6 +102,40 @@ namespace View
 
                 lv_Users.Items.Add(li);
             }
+        }
+
+        private void btn_editTicket_Click(object sender, EventArgs e)
+        {
+            if (lv_Users.SelectedItems == null)
+            {
+                MessageBox.Show("Please select a user to edit");
+                return;
+            }
+
+            Edit_User editUser = new Edit_User(provider, selectedUser);
+
+            Hide();
+            editUser.StartPosition = FormStartPosition.Manual;
+            editUser.Location = Location;
+            editUser.ShowDialog();
+            Show();
+
+            FillUsers();
+        }
+
+        private void btn_deleteTicket_Click(object sender, EventArgs e)
+        {
+            IUserService service = provider.GetService<IUserService>();
+
+            service.Delete(selectedUser);
+        }
+
+        private void lv_Users_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lv_Users.SelectedItems.Count <= 0)
+                return;
+
+            selectedUser = (User)lv_Users.SelectedItems[0].Tag;
         }
     }
 }

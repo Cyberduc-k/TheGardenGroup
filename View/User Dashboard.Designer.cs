@@ -45,6 +45,8 @@
             this.ch_ReviewScore = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_TicketsHelped = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_TicketsNotHelped = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_editTicket = new System.Windows.Forms.Button();
+            this.btn_deleteTicket = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -74,10 +76,11 @@
             this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1180, 20);
+            this.btn_Logout.Location = new System.Drawing.Point(1172, 21);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(67, 27);
+            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
             this.btn_Logout.TabIndex = 3;
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
@@ -111,7 +114,6 @@
             this.filter.Items.AddRange(new object[] {
             "Klanten",
             "Medewerkers"});
-            this.filter.SelectedIndex = 0;
             this.filter.Location = new System.Drawing.Point(95, 99);
             this.filter.Name = "filter";
             this.filter.Size = new System.Drawing.Size(196, 29);
@@ -132,13 +134,16 @@
             this.ch_Tickets});
             this.lv_Users.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lv_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lv_Users.FullRowSelect = true;
             this.lv_Users.HideSelection = false;
             this.lv_Users.Location = new System.Drawing.Point(95, 152);
+            this.lv_Users.MultiSelect = false;
             this.lv_Users.Name = "lv_Users";
-            this.lv_Users.Size = new System.Drawing.Size(1080, 505);
+            this.lv_Users.Size = new System.Drawing.Size(1080, 454);
             this.lv_Users.TabIndex = 2;
             this.lv_Users.UseCompatibleStateImageBehavior = false;
             this.lv_Users.View = System.Windows.Forms.View.Details;
+            this.lv_Users.SelectedIndexChanged += new System.EventHandler(this.lv_Users_SelectedIndexChanged);
             // 
             // ch_FirstName
             // 
@@ -189,12 +194,46 @@
             this.ch_TicketsNotHelped.Text = "Niet Verholpen";
             this.ch_TicketsNotHelped.Width = 130;
             // 
+            // btn_editTicket
+            // 
+            this.btn_editTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_editTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_editTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_editTicket.ForeColor = System.Drawing.Color.White;
+            this.btn_editTicket.Location = new System.Drawing.Point(964, 627);
+            this.btn_editTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_editTicket.Name = "btn_editTicket";
+            this.btn_editTicket.Size = new System.Drawing.Size(97, 32);
+            this.btn_editTicket.TabIndex = 8;
+            this.btn_editTicket.Text = "Edit";
+            this.btn_editTicket.UseVisualStyleBackColor = false;
+            this.btn_editTicket.Click += new System.EventHandler(this.btn_editTicket_Click);
+            // 
+            // btn_deleteTicket
+            // 
+            this.btn_deleteTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.btn_deleteTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btn_deleteTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_deleteTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_deleteTicket.ForeColor = System.Drawing.Color.White;
+            this.btn_deleteTicket.Location = new System.Drawing.Point(1078, 627);
+            this.btn_deleteTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deleteTicket.Name = "btn_deleteTicket";
+            this.btn_deleteTicket.Size = new System.Drawing.Size(97, 32);
+            this.btn_deleteTicket.TabIndex = 7;
+            this.btn_deleteTicket.Text = "Delete";
+            this.btn_deleteTicket.UseVisualStyleBackColor = false;
+            this.btn_deleteTicket.Click += new System.EventHandler(this.btn_deleteTicket_Click);
+            // 
             // User_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btn_editTicket);
+            this.Controls.Add(this.btn_deleteTicket);
             this.Controls.Add(this.lv_Users);
             this.Controls.Add(this.filter);
             this.Controls.Add(this.panel_Header);
@@ -226,5 +265,7 @@
         private System.Windows.Forms.ColumnHeader ch_TicketsNotHelped;
         private System.Windows.Forms.ColumnHeader ch_Company;
         private System.Windows.Forms.ColumnHeader ch_Occupation;
+        private System.Windows.Forms.Button btn_editTicket;
+        private System.Windows.Forms.Button btn_deleteTicket;
     }
 }

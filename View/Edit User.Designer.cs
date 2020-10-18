@@ -117,6 +117,7 @@
             this.input_Expertise.Name = "input_Expertise";
             this.input_Expertise.Size = new System.Drawing.Size(196, 29);
             this.input_Expertise.TabIndex = 5;
+            this.input_Expertise.Visible = false;
             // 
             // lbl_Expertise
             // 
