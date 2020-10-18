@@ -198,6 +198,7 @@
             // 
             this.TicketsDashboard_btnResolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.TicketsDashboard_btnResolve.Enabled = false;
+            this.TicketsDashboard_btnResolve.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.TicketsDashboard_btnResolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TicketsDashboard_btnResolve.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.TicketsDashboard_btnResolve.ForeColor = System.Drawing.Color.White;
