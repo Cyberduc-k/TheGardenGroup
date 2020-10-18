@@ -125,6 +125,7 @@
             this.btn_Logout.TabIndex = 3;
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // lbl_Users
             // 

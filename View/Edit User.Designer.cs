@@ -113,6 +113,12 @@
             this.input_Expertise.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Expertise.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.input_Expertise.FormattingEnabled = true;
+            this.input_Expertise.Items.AddRange(new object[] {
+            "Printers",
+            "Computers",
+            "Mail",
+            "General",
+            "Other"});
             this.input_Expertise.Location = new System.Drawing.Point(244, 124);
             this.input_Expertise.Name = "input_Expertise";
             this.input_Expertise.Size = new System.Drawing.Size(196, 29);

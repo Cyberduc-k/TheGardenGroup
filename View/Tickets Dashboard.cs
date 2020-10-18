@@ -44,7 +44,7 @@ namespace View
             if (LoggedInUser.Instance.User is Customer)
             {
                 //Hier gaat iets mis aaaah
-                //FillListView(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id), preferredCategory);
+                FillListView(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id), preferredCategory);
             }
             else
             {
@@ -154,6 +154,22 @@ namespace View
             users.Show();
             users.Activate();
             Hide();
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Login login = Application.OpenForms.OfType<Login>().FirstOrDefault();
+
+            if (login == null)
+            {
+                login = new Login(provider);
+            }
+
+            login.StartPosition = FormStartPosition.Manual;
+            login.Location = Location;
+            login.Show();
+            login.Activate();
+            Close();
         }
     }
 }
