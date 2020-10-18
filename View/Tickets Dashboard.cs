@@ -38,20 +38,19 @@ namespace View
 
             ITicketService ticketService = provider.GetService<ITicketService>();
 
-            Category preferredCategory = Category.Computers; //TODO: Remove        Wat is standard voor customer tho?
+            Category preferredCategory = Category.Computers; //TODO: Remove
 
             //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
             {
-                //Hier gaat iets mis aaaah
-                FillListView(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id), preferredCategory);
+                FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id));
             }
             else
             {
                 try
                 {
                     preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;
-                    FillListView(ticketService.GetAll(), preferredCategory);
+                    FillListViewEmployee(ticketService.GetAll(), preferredCategory);
                 }
                 catch (Exception e)
                 {
@@ -61,7 +60,7 @@ namespace View
         }
 
         //Fill in the listview
-        void FillListView(IEnumerable<Ticket> tickets, Category preferredCategory)
+        void FillListViewEmployee(IEnumerable<Ticket> tickets, Category preferredCategory)
         {
             foreach (Ticket ticket in tickets)
             {
@@ -80,6 +79,21 @@ namespace View
                 }
                 else
                     lv_Tickets.Items.Add(li);
+            }
+        }
+
+        void FillListViewCustomer(IEnumerable<Ticket> tickets)
+        {
+            foreach (Ticket ticket in tickets)
+            {
+                ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
+
+                li.SubItems.Add(ticket.Category.ToString());
+                li.SubItems.Add(ticket.Subject);
+                li.SubItems.Add(ticket.Priority.ToString());
+                li.Tag = ticket;
+
+                lv_Tickets.Items.Add(li);
             }
         }
 
