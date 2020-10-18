@@ -43,7 +43,8 @@ namespace View
             //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
             {
-                FillListView(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id), preferredCategory);
+                //Hier gaat iets mis aaaah
+                //FillListView(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id), preferredCategory);
             }
             else
             {
