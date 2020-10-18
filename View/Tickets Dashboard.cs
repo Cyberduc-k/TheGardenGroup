@@ -43,6 +43,10 @@ namespace View
             //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
             {
+                lbl_Statistics.Hide();
+                lbl_Users.Hide();
+                lbl_Tickets.Left = 95;
+                current_stripe.Left = 95;
                 FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id));
             }
             else
