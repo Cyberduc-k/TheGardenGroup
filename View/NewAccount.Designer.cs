@@ -574,9 +574,9 @@
             this.lbl_Category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_Category.Location = new System.Drawing.Point(24, 22);
             this.lbl_Category.Name = "lbl_Category";
-            this.lbl_Category.Size = new System.Drawing.Size(65, 17);
+            this.lbl_Category.Size = new System.Drawing.Size(61, 17);
             this.lbl_Category.TabIndex = 5;
-            this.lbl_Category.Text = "Categorie";
+            this.lbl_Category.Text = "Expertise";
             // 
             // btn_MakeAccount2
             // 
@@ -584,6 +584,7 @@
             this.btn_MakeAccount2.Enabled = false;
             this.btn_MakeAccount2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_MakeAccount2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MakeAccount2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_MakeAccount2.ForeColor = System.Drawing.Color.White;
             this.btn_MakeAccount2.Location = new System.Drawing.Point(115, 328);
             this.btn_MakeAccount2.Name = "btn_MakeAccount2";
@@ -598,7 +599,8 @@
             this.btn_Back4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.btn_Back4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Back4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Back4.ForeColor = System.Drawing.Color.White;
+            this.btn_Back4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Back4.ForeColor = System.Drawing.Color.Black;
             this.btn_Back4.Location = new System.Drawing.Point(24, 328);
             this.btn_Back4.Name = "btn_Back4";
             this.btn_Back4.Size = new System.Drawing.Size(80, 26);

@@ -68,6 +68,12 @@
     <Compile Include="Edit Ticket.Designer.cs">
       <DependentUpon>Edit Ticket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit User.Designer.cs">
+      <DependentUpon>Edit User.cs</DependentUpon>
+    </Compile>
     <Compile Include="FAQForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="Edit Ticket.resx">
       <DependentUpon>Edit Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit User.resx">
+      <DependentUpon>Edit User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FAQForm.resx">
       <DependentUpon>FAQForm.cs</DependentUpon>
