@@ -57,13 +57,6 @@ namespace View
             Close();
         }
 
-        private void ResolveTicket_btnPassOn_Click(object sender, EventArgs e)
-        {
-            ticket.PassedOn = true;
-            ticketService.Update(ticket);
-            Close();
-        }
-
         private void ResolveTicket_txtAreaSolution_TextChanged(object sender, EventArgs e)
         {
             ResolveTicket_btnResolve.Enabled = ResolveTicket_txtAreaSolution.Text.Length > 0;

@@ -25,8 +25,7 @@ namespace Model
 
         //A ticket created by the client
         public Ticket(string subject, Category category, Priority priority, 
-                        int daysToSolve, string description, User client, 
-                        DateTime dateOfIssueing)
+                        int daysToSolve, string description, User client, DateTime dateOfIssueing)
         {
             Subject = subject;
             Category = category;
@@ -34,15 +33,14 @@ namespace Model
             DaysToSolve = daysToSolve;
             Description = description;
             Client = client;
-            DateOfIssueing = DateTime.Now;
-            PassedOn = false;
+            DateOfIssueing = dateOfIssueing;
             Solved = false;
         }
 
         //A full ticket
         public Ticket(string id, string subject, Category category, Priority priority, 
                         int daysToSolve, string description, string solution, User client, User handler, 
-                        DateTime dateOfIssueing, DateTime dateOfSolving, bool passedOn, bool solved)
+                        DateTime dateOfIssueing, DateTime dateOfSolving, bool solved)
         {
             Id = id;
             Subject = subject;
@@ -55,7 +53,6 @@ namespace Model
             Handler = handler;
             DateOfIssueing = dateOfIssueing;
             DateOfSolving = dateOfSolving;
-            PassedOn = passedOn;
             Solved = solved;
         }
     }   

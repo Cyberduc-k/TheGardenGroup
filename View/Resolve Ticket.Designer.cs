@@ -30,13 +30,16 @@
         {
             this.ResolveTicket_btnResolve = new System.Windows.Forms.Button();
             this.ResolveTicket_btnCancel = new System.Windows.Forms.Button();
-            this.ResolveTicket_btnPassOn = new System.Windows.Forms.Button();
             this.panel_Header = new System.Windows.Forms.Panel();
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.lbl_Users = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.pnl_Login = new System.Windows.Forms.Panel();
+            this.ResolveTicket_lblSolution = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.ResolveTicket_txtAreaSolution = new System.Windows.Forms.TextBox();
             this.ResolveTicket_lblDate = new System.Windows.Forms.Label();
@@ -53,10 +56,6 @@
             this.ResolveTicket_lblMail = new System.Windows.Forms.Label();
             this.ResolveTicket_lblName = new System.Windows.Forms.Label();
             this.ResolveTicket_lblTicketID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.ResolveTicket_lblSolution = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnl_Login.SuspendLayout();
@@ -69,7 +68,7 @@
             this.ResolveTicket_btnResolve.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResolveTicket_btnResolve.ForeColor = System.Drawing.Color.White;
             this.ResolveTicket_btnResolve.Location = new System.Drawing.Point(1137, 631);
-            this.ResolveTicket_btnResolve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResolveTicket_btnResolve.Margin = new System.Windows.Forms.Padding(2);
             this.ResolveTicket_btnResolve.Name = "ResolveTicket_btnResolve";
             this.ResolveTicket_btnResolve.Size = new System.Drawing.Size(116, 39);
             this.ResolveTicket_btnResolve.TabIndex = 7;
@@ -83,26 +82,13 @@
             this.ResolveTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ResolveTicket_btnCancel.ForeColor = System.Drawing.Color.White;
             this.ResolveTicket_btnCancel.Location = new System.Drawing.Point(14, 631);
-            this.ResolveTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ResolveTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.ResolveTicket_btnCancel.Name = "ResolveTicket_btnCancel";
             this.ResolveTicket_btnCancel.Size = new System.Drawing.Size(122, 39);
             this.ResolveTicket_btnCancel.TabIndex = 8;
             this.ResolveTicket_btnCancel.Text = "Cancel";
             this.ResolveTicket_btnCancel.UseVisualStyleBackColor = false;
             this.ResolveTicket_btnCancel.Click += new System.EventHandler(this.ResolveTicket_btnCancel_Click);
-            // 
-            // ResolveTicket_btnPassOn
-            // 
-            this.ResolveTicket_btnPassOn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.ResolveTicket_btnPassOn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ResolveTicket_btnPassOn.ForeColor = System.Drawing.Color.White;
-            this.ResolveTicket_btnPassOn.Location = new System.Drawing.Point(1016, 631);
-            this.ResolveTicket_btnPassOn.Name = "ResolveTicket_btnPassOn";
-            this.ResolveTicket_btnPassOn.Size = new System.Drawing.Size(116, 39);
-            this.ResolveTicket_btnPassOn.TabIndex = 21;
-            this.ResolveTicket_btnPassOn.Text = "Pass on";
-            this.ResolveTicket_btnPassOn.UseVisualStyleBackColor = false;
-            this.ResolveTicket_btnPassOn.Click += new System.EventHandler(this.ResolveTicket_btnPassOn_Click);
             // 
             // panel_Header
             // 
@@ -186,6 +172,51 @@
             this.pnl_Login.Name = "pnl_Login";
             this.pnl_Login.Size = new System.Drawing.Size(1239, 533);
             this.pnl_Login.TabIndex = 23;
+            // 
+            // ResolveTicket_lblSolution
+            // 
+            this.ResolveTicket_lblSolution.AutoSize = true;
+            this.ResolveTicket_lblSolution.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ResolveTicket_lblSolution.ForeColor = System.Drawing.Color.Red;
+            this.ResolveTicket_lblSolution.Location = new System.Drawing.Point(619, 514);
+            this.ResolveTicket_lblSolution.Name = "ResolveTicket_lblSolution";
+            this.ResolveTicket_lblSolution.Size = new System.Drawing.Size(121, 12);
+            this.ResolveTicket_lblSolution.TabIndex = 40;
+            this.ResolveTicket_lblSolution.Text = "Please enter a solution first";
+            this.ResolveTicket_lblSolution.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.Location = new System.Drawing.Point(12, 344);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 30);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Description";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label2.Location = new System.Drawing.Point(12, 179);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(206, 30);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "General information";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Location = new System.Drawing.Point(12, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 30);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Submitted by";
             // 
             // label18
             // 
@@ -362,51 +393,6 @@
             this.ResolveTicket_lblTicketID.TabIndex = 21;
             this.ResolveTicket_lblTicketID.Text = "Ticket #xxxxxxx";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.Location = new System.Drawing.Point(12, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 30);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Submitted by";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Location = new System.Drawing.Point(12, 179);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 30);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "General information";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.Location = new System.Drawing.Point(12, 344);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 30);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Description";
-            // 
-            // ResolveTicket_lblSolution
-            // 
-            this.ResolveTicket_lblSolution.AutoSize = true;
-            this.ResolveTicket_lblSolution.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ResolveTicket_lblSolution.ForeColor = System.Drawing.Color.Red;
-            this.ResolveTicket_lblSolution.Location = new System.Drawing.Point(619, 514);
-            this.ResolveTicket_lblSolution.Name = "ResolveTicket_lblSolution";
-            this.ResolveTicket_lblSolution.Size = new System.Drawing.Size(121, 12);
-            this.ResolveTicket_lblSolution.TabIndex = 40;
-            this.ResolveTicket_lblSolution.Text = "Please enter a solution first";
-            this.ResolveTicket_lblSolution.Visible = false;
-            // 
             // Resolve_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -414,10 +400,9 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnl_Login);
             this.Controls.Add(this.panel_Header);
-            this.Controls.Add(this.ResolveTicket_btnPassOn);
             this.Controls.Add(this.ResolveTicket_btnCancel);
             this.Controls.Add(this.ResolveTicket_btnResolve);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Resolve_Ticket";
             this.Text = "Resolve_Ticket";
             this.panel_Header.ResumeLayout(false);
@@ -432,7 +417,6 @@
         #endregion
         private System.Windows.Forms.Button ResolveTicket_btnResolve;
         private System.Windows.Forms.Button ResolveTicket_btnCancel;
-        private System.Windows.Forms.Button ResolveTicket_btnPassOn;
         private System.Windows.Forms.Panel panel_Header;
         private System.Windows.Forms.Panel current_stripe;
         private System.Windows.Forms.Button btn_Logout;
