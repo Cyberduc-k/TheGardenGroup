@@ -137,5 +137,44 @@ namespace View
 
             selectedUser = (User)lv_Users.SelectedItems[0].Tag;
         }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lbl_Statistics_Click(object sender, EventArgs e)
+        {
+            Statistics_Dashboard stats = Application.OpenForms.OfType<Statistics_Dashboard>().FirstOrDefault();
+
+            if (stats == null)
+            {
+                stats = new Statistics_Dashboard(provider);
+                stats.FormClosed += (_1, _2) => Close();
+            }
+
+            stats.StartPosition = FormStartPosition.Manual;
+            stats.Location = Location;
+            stats.Show();
+            stats.Activate();
+            Hide();
+        }
+
+        private void lbl_Ticketrs_Click(object sender, EventArgs e)
+        {
+            Tickets_Dashboard tickets = Application.OpenForms.OfType<Tickets_Dashboard>().FirstOrDefault();
+
+            if (tickets == null)
+            {
+                tickets = new Tickets_Dashboard(provider);
+                tickets.FormClosed += (_1, _2) => Close();
+            }
+
+            tickets.StartPosition = FormStartPosition.Manual;
+            tickets.Location = Location;
+            tickets.Show();
+            tickets.Activate();
+            Hide();
+        }
     }
 }

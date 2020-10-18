@@ -99,5 +99,39 @@ namespace View
 
             selectedTicket = (Ticket)lv_Tickets.SelectedItems[0].Tag;
         }
+
+        private void lbl_Statistics_Click(object sender, EventArgs e)
+        {
+            Statistics_Dashboard stats = Application.OpenForms.OfType<Statistics_Dashboard>().FirstOrDefault();
+
+            if (stats == null)
+            {
+                stats = new Statistics_Dashboard(provider);
+                stats.FormClosed += (_1, _2) => Close();
+            }
+
+            stats.StartPosition = FormStartPosition.Manual;
+            stats.Location = Location;
+            stats.Show();
+            stats.Activate();
+            Hide();
+        }
+
+        private void lbl_Users_Click(object sender, EventArgs e)
+        {
+            User_Dashboard users = Application.OpenForms.OfType<User_Dashboard>().FirstOrDefault();
+
+            if (users == null)
+            {
+                users = new User_Dashboard(provider);
+                users.FormClosed += (_1, _2) => Close();
+            }
+
+            users.StartPosition = FormStartPosition.Manual;
+            users.Location = Location;
+            users.Show();
+            users.Activate();
+            Hide();
+        }
     }
 }
