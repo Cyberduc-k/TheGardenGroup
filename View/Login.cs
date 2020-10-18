@@ -40,21 +40,19 @@ namespace View
                 {
                     Tickets_Dashboard dashboard = new Tickets_Dashboard(provider);
 
-                    Hide();
                     dashboard.StartPosition = FormStartPosition.Manual;
                     dashboard.Location = Location;
-                    dashboard.ShowDialog();
-                    Show();
+                    dashboard.Show();
+                    Hide();
                 }
                 else
                 {
                     Statistics_Dashboard dashboard = new Statistics_Dashboard(provider);
 
-                    Hide();
                     dashboard.StartPosition = FormStartPosition.Manual;
                     dashboard.Location = Location;
-                    dashboard.ShowDialog();
-                    Show();
+                    dashboard.Show();
+                    Hide();
                 }
             }
         }
