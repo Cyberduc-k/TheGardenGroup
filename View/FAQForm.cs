@@ -93,7 +93,7 @@ namespace View
                 }
                 else
                 {
-                    MessageBox.Show("Question and/or answer cannot be empty");
+                    ErrorHandler.Instance.HandleError("Question and/or answer cannot be empty", "Can't be null", new ArgumentNullException());
                 }
                 
             }

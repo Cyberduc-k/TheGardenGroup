@@ -74,7 +74,7 @@ namespace View
         {
             if (lv_Tickets.SelectedItems ==  null)
             {
-                MessageBox.Show("Please select a ticket to edit");
+                ErrorHandler.Instance.HandleError("Ticket can't be null. Please select a ticket to edit", "Can't be null", new ArgumentNullException());
                 return;
             }
 
