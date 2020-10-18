@@ -30,9 +30,15 @@ namespace View
                 string subject = SubmitTicket_txtSubject.Text;
 
                 Enum.TryParse(SubmitTicket_comboCategory.SelectedItem.ToString(), out Category category);
-                Enum.TryParse(ActiveForm.Controls.OfType<RadioButton>()
-                                          .FirstOrDefault(r => r.Checked).Tag.ToString(), out Priority priority);
 
+                Priority priority;
+                if (SubmitTicket_rBtnLowPriority.Checked)
+                    priority = Priority.Low;
+                else if (SubmitTicket_rBtnMediumPriority.Checked)
+                    priority = Priority.Medium;
+                else
+                    priority = Priority.High;
+                    
                 int deadline = int.Parse(SubmitTicket_txtDeadline.Text);
                 string description = SubmitTicket_txtAreaDescription.Text;
 
