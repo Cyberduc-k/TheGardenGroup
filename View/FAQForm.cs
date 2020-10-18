@@ -18,15 +18,27 @@ namespace View
         private IServiceProvider provider;
         private IFAQService faqService;
         private FAQ selectedFAQ;
+        private User user;
 
         public FAQForm(IServiceProvider provider)
         {
             this.provider = provider;
             InitializeComponent();
+            user = LoggedInUser.Instance.User;
 
+            UserDisplay();
             FillCategoryCombobox();
             FillTreeView((Category)FAQ_comboCategory.SelectedItem);
             FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
+        }
+
+        private void UserDisplay()
+        {
+            if(user is Customer)
+            {
+                pnl_EditFAQ.Hide();
+                treeView_FAQ.Left= 490;
+            }
         }
 
         private void FillCategoryCombobox()
