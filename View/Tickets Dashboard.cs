@@ -39,17 +39,30 @@ namespace View
             ITicketService ticketService = provider.GetService<ITicketService>();
             IEnumerable<Ticket> tickets = ticketService.GetAll();
 
-            //Make sure the logged in user is an employee
             Category preferredCategory = Category.Computers; //TODO: Remove
-            try
-            {
-                preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;           
-            }
-            catch (Exception e)
-            {
-                ErrorHandler.Instance.HandleError("You are not logged in as an employee", "Wrong user type", e);
-            }
 
+            //Check if the logged in user is an employee or a customer
+            if (LoggedInUser.Instance.User is Customer)
+            {
+                FillLVCustomer();
+            }
+            else
+            {
+                try
+                {
+                    preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;
+                    FillLVEmployee(tickets, preferredCategory);
+                }
+                catch (Exception e)
+                {
+                    ErrorHandler.Instance.HandleError("Something went wrong with knowing which kind of account you are using.", "Unknown user type", e);
+                }
+            }
+        }
+
+        //Fill in the listview with all the tickets
+        void FillLVEmployee(IEnumerable<Ticket> tickets, Category preferredCategory)
+        {
             foreach (Ticket ticket in tickets)
             {
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
@@ -66,8 +79,14 @@ namespace View
                     lv_Tickets.Items.Insert(0, li);
                 }
                 else
-                    lv_Tickets.Items.Add(li);          
+                    lv_Tickets.Items.Add(li);
             }
+        }
+
+        //Fill in the listview with only the tickets this customer has posted
+        void FillLVCustomer()
+        {
+            //Dit moet nog
         }
 
         private void btn_editTicket_Click(object sender, EventArgs e)
