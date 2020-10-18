@@ -39,6 +39,17 @@ namespace View
             ITicketService ticketService = provider.GetService<ITicketService>();
             IEnumerable<Ticket> tickets = ticketService.GetAll();
 
+            //Make sure the logged in user is an employee
+            Category preferredCategory = Category.Computers; //TODO: Remove
+            try
+            {
+                preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;           
+            }
+            catch (Exception e)
+            {
+                ErrorHandler.Instance.HandleError("You are not logged in as an employee", "Wrong user type", e);
+            }
+
             foreach (Ticket ticket in tickets)
             {
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
@@ -48,7 +59,14 @@ namespace View
                 li.SubItems.Add(ticket.Priority.ToString());
                 li.Tag = ticket;
 
-                lv_Tickets.Items.Add(li);
+                if (ticket.Category == preferredCategory)
+                {
+                    li.BackColor = Color.FromArgb(95, 194, 129);
+                    li.ForeColor = Color.White;
+                    lv_Tickets.Items.Insert(0, li);
+                }
+                else
+                    lv_Tickets.Items.Add(li);          
             }
         }
 
