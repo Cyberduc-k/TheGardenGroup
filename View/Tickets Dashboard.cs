@@ -95,9 +95,18 @@ namespace View
         private void lv_Tickets_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lv_Tickets.SelectedItems.Count <= 0)
-                return;
+                TicketsDashboard_btnResolve.Enabled = false;
+            else
+            {
+                selectedTicket = (Ticket)lv_Tickets.SelectedItems[0].Tag;
+                TicketsDashboard_btnResolve.Enabled = true;
+            }
+        }
 
-            selectedTicket = (Ticket)lv_Tickets.SelectedItems[0].Tag;
+        private void TicketsDashboard_btnResolve_Click(object sender, EventArgs e)
+        {
+            Resolve_Ticket resolveForm = new Resolve_Ticket(selectedTicket, provider);
+            resolveForm.ShowDialog();
         }
     }
 }
