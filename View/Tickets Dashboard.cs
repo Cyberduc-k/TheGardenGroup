@@ -37,31 +37,30 @@ namespace View
 
 
             ITicketService ticketService = provider.GetService<ITicketService>();
-            IEnumerable<Ticket> tickets = ticketService.GetAll();
 
-            Category preferredCategory = Category.Computers; //TODO: Remove
+            Category preferredCategory = Category.Computers; //TODO: Remove        Wat is standard voor customer tho?
 
-            //Check if the logged in user is an employee or a customer
+            //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
             {
-                FillLVCustomer();
+                FillListView(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id), preferredCategory);
             }
             else
             {
                 try
                 {
                     preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;
-                    FillLVEmployee(tickets, preferredCategory);
+                    FillListView(ticketService.GetAll(), preferredCategory);
                 }
                 catch (Exception e)
                 {
-                    ErrorHandler.Instance.HandleError("Something went wrong with knowing which kind of account you are using.", "Unknown user type", e);
+                    ErrorHandler.Instance.HandleError("Something went wrong with knowing which kind of account you are using. Please log in as a customer or an employee.", "Unknown user type", e);
                 }
             }
         }
 
-        //Fill in the listview with all the tickets
-        void FillLVEmployee(IEnumerable<Ticket> tickets, Category preferredCategory)
+        //Fill in the listview
+        void FillListView(IEnumerable<Ticket> tickets, Category preferredCategory)
         {
             foreach (Ticket ticket in tickets)
             {
@@ -81,12 +80,6 @@ namespace View
                 else
                     lv_Tickets.Items.Add(li);
             }
-        }
-
-        //Fill in the listview with only the tickets this customer has posted
-        void FillLVCustomer()
-        {
-            //Dit moet nog
         }
 
         private void btn_editTicket_Click(object sender, EventArgs e)
