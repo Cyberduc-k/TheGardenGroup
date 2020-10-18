@@ -36,13 +36,13 @@
             this.panel_Header = new System.Windows.Forms.Panel();
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
+            this.lbl_Users = new System.Windows.Forms.Label();
+            this.lbl_Tickets = new System.Windows.Forms.Label();
             this.lbl_Statistics = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.btn_deleteTicket = new System.Windows.Forms.Button();
             this.btn_editTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnResolve = new System.Windows.Forms.Button();
-            this.lbl_Tickets = new System.Windows.Forms.Label();
-            this.lbl_Users = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -117,13 +117,37 @@
             this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1180, 20);
+            this.btn_Logout.Location = new System.Drawing.Point(1172, 20);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(67, 27);
+            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
             this.btn_Logout.TabIndex = 3;
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
+            // 
+            // lbl_Users
+            // 
+            this.lbl_Users.AutoSize = true;
+            this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Users.Location = new System.Drawing.Point(308, 17);
+            this.lbl_Users.Name = "lbl_Users";
+            this.lbl_Users.Size = new System.Drawing.Size(118, 30);
+            this.lbl_Users.TabIndex = 2;
+            this.lbl_Users.Text = "Gebruikers";
+            this.lbl_Users.Click += new System.EventHandler(this.lbl_Users_Click);
+            // 
+            // lbl_Tickets
+            // 
+            this.lbl_Tickets.AutoSize = true;
+            this.lbl_Tickets.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Tickets.Location = new System.Drawing.Point(223, 17);
+            this.lbl_Tickets.Name = "lbl_Tickets";
+            this.lbl_Tickets.Size = new System.Drawing.Size(79, 30);
+            this.lbl_Tickets.TabIndex = 2;
+            this.lbl_Tickets.Text = "Tickets";
             // 
             // lbl_Statistics
             // 
@@ -173,39 +197,17 @@
             // 
             this.TicketsDashboard_btnResolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.TicketsDashboard_btnResolve.Enabled = false;
-            this.TicketsDashboard_btnResolve.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketsDashboard_btnResolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TicketsDashboard_btnResolve.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.TicketsDashboard_btnResolve.ForeColor = System.Drawing.Color.White;
-            this.TicketsDashboard_btnResolve.Location = new System.Drawing.Point(1059, 631);
+            this.TicketsDashboard_btnResolve.Location = new System.Drawing.Point(850, 627);
             this.TicketsDashboard_btnResolve.Margin = new System.Windows.Forms.Padding(2);
             this.TicketsDashboard_btnResolve.Name = "TicketsDashboard_btnResolve";
-            this.TicketsDashboard_btnResolve.Size = new System.Drawing.Size(116, 39);
+            this.TicketsDashboard_btnResolve.Size = new System.Drawing.Size(97, 32);
             this.TicketsDashboard_btnResolve.TabIndex = 8;
             this.TicketsDashboard_btnResolve.Text = "Resolve";
             this.TicketsDashboard_btnResolve.UseVisualStyleBackColor = false;
             this.TicketsDashboard_btnResolve.Click += new System.EventHandler(this.TicketsDashboard_btnResolve_Click);
-            // 
-            // lbl_Tickets
-            // 
-            this.lbl_Tickets.AutoSize = true;
-            this.lbl_Tickets.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Tickets.Location = new System.Drawing.Point(223, 17);
-            this.lbl_Tickets.Name = "lbl_Tickets";
-            this.lbl_Tickets.Size = new System.Drawing.Size(79, 30);
-            this.lbl_Tickets.TabIndex = 2;
-            this.lbl_Tickets.Text = "Tickets";
-            // 
-            // lbl_Users
-            // 
-            this.lbl_Users.AutoSize = true;
-            this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Users.Location = new System.Drawing.Point(308, 17);
-            this.lbl_Users.Name = "lbl_Users";
-            this.lbl_Users.Size = new System.Drawing.Size(118, 30);
-            this.lbl_Users.TabIndex = 2;
-            this.lbl_Users.Text = "Gebruikers";
-            this.lbl_Users.Click += new System.EventHandler(this.lbl_Users_Click);
             // 
             // Tickets_Dashboard
             // 
