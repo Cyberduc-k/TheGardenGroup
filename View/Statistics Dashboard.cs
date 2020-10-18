@@ -52,6 +52,17 @@ namespace View
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
+            Login login = Application.OpenForms.OfType<Login>().FirstOrDefault();
+
+            if (login == null)
+            {
+                login = new Login(provider);
+            }
+
+            login.StartPosition = FormStartPosition.Manual;
+            login.Location = Location;
+            login.Show();
+            login.Activate();
             Close();
         }
 
