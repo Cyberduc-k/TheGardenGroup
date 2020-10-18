@@ -31,6 +31,8 @@
             this.panel_Header = new System.Windows.Forms.Panel();
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
+            this.lbl_Statistics = new System.Windows.Forms.Label();
+            this.lbl_Ticketrs = new System.Windows.Forms.Label();
             this.lbl_Users = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.filter = new System.Windows.Forms.ComboBox();
@@ -56,6 +58,8 @@
             this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Header.Controls.Add(this.current_stripe);
             this.panel_Header.Controls.Add(this.btn_Logout);
+            this.panel_Header.Controls.Add(this.lbl_Statistics);
+            this.panel_Header.Controls.Add(this.lbl_Ticketrs);
             this.panel_Header.Controls.Add(this.lbl_Users);
             this.panel_Header.Controls.Add(this.logo);
             this.panel_Header.Location = new System.Drawing.Point(-1, -1);
@@ -66,9 +70,9 @@
             // current_stripe
             // 
             this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(95, 62);
+            this.current_stripe.Location = new System.Drawing.Point(308, 62);
             this.current_stripe.Name = "current_stripe";
-            this.current_stripe.Size = new System.Drawing.Size(108, 5);
+            this.current_stripe.Size = new System.Drawing.Size(118, 5);
             this.current_stripe.TabIndex = 4;
             // 
             // btn_Logout
@@ -84,13 +88,38 @@
             this.btn_Logout.TabIndex = 3;
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
+            // lbl_Statistics
+            // 
+            this.lbl_Statistics.AutoSize = true;
+            this.lbl_Statistics.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Statistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Statistics.Location = new System.Drawing.Point(95, 16);
+            this.lbl_Statistics.Name = "lbl_Statistics";
+            this.lbl_Statistics.Size = new System.Drawing.Size(122, 30);
+            this.lbl_Statistics.TabIndex = 2;
+            this.lbl_Statistics.Text = "Statistieken";
+            this.lbl_Statistics.Click += new System.EventHandler(this.lbl_Statistics_Click);
+            // 
+            // lbl_Ticketrs
+            // 
+            this.lbl_Ticketrs.AutoSize = true;
+            this.lbl_Ticketrs.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Ticketrs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Ticketrs.Location = new System.Drawing.Point(223, 16);
+            this.lbl_Ticketrs.Name = "lbl_Ticketrs";
+            this.lbl_Ticketrs.Size = new System.Drawing.Size(79, 30);
+            this.lbl_Ticketrs.TabIndex = 2;
+            this.lbl_Ticketrs.Text = "Tickets";
+            this.lbl_Ticketrs.Click += new System.EventHandler(this.lbl_Ticketrs_Click);
             // 
             // lbl_Users
             // 
             this.lbl_Users.AutoSize = true;
             this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Users.Location = new System.Drawing.Point(90, 18);
+            this.lbl_Users.Location = new System.Drawing.Point(308, 16);
             this.lbl_Users.Name = "lbl_Users";
             this.lbl_Users.Size = new System.Drawing.Size(118, 30);
             this.lbl_Users.TabIndex = 2;
@@ -267,5 +296,7 @@
         private System.Windows.Forms.ColumnHeader ch_Occupation;
         private System.Windows.Forms.Button btn_editTicket;
         private System.Windows.Forms.Button btn_deleteTicket;
+        private System.Windows.Forms.Label lbl_Statistics;
+        private System.Windows.Forms.Label lbl_Ticketrs;
     }
 }

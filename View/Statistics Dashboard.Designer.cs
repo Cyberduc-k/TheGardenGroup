@@ -36,6 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Btn_UserList = new System.Windows.Forms.Button();
+            this.panel_Header = new System.Windows.Forms.Panel();
+            this.current_stripe = new System.Windows.Forms.Panel();
+            this.btn_Logout = new System.Windows.Forms.Button();
+            this.lbl_Statistics = new System.Windows.Forms.Label();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.lbl_Tickets = new System.Windows.Forms.Label();
+            this.lbl_Users = new System.Windows.Forms.Label();
+            this.panel_Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_AmountOfActiveTickets
@@ -122,11 +131,95 @@
             this.Btn_UserList.UseVisualStyleBackColor = false;
             this.Btn_UserList.Click += new System.EventHandler(this.Btn_UserList_Click);
             // 
+            // panel_Header
+            // 
+            this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Header.Controls.Add(this.current_stripe);
+            this.panel_Header.Controls.Add(this.btn_Logout);
+            this.panel_Header.Controls.Add(this.lbl_Users);
+            this.panel_Header.Controls.Add(this.lbl_Tickets);
+            this.panel_Header.Controls.Add(this.lbl_Statistics);
+            this.panel_Header.Controls.Add(this.logo);
+            this.panel_Header.Location = new System.Drawing.Point(-1, -1);
+            this.panel_Header.Name = "panel_Header";
+            this.panel_Header.Size = new System.Drawing.Size(1266, 69);
+            this.panel_Header.TabIndex = 8;
+            // 
+            // current_stripe
+            // 
+            this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
+            this.current_stripe.Location = new System.Drawing.Point(95, 62);
+            this.current_stripe.Margin = new System.Windows.Forms.Padding(0);
+            this.current_stripe.Name = "current_stripe";
+            this.current_stripe.Size = new System.Drawing.Size(122, 5);
+            this.current_stripe.TabIndex = 4;
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Logout.ForeColor = System.Drawing.Color.White;
+            this.btn_Logout.Location = new System.Drawing.Point(1172, 20);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
+            this.btn_Logout.TabIndex = 3;
+            this.btn_Logout.Text = "Uitloggen";
+            this.btn_Logout.UseVisualStyleBackColor = false;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
+            // lbl_Statistics
+            // 
+            this.lbl_Statistics.AutoSize = true;
+            this.lbl_Statistics.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Statistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Statistics.Location = new System.Drawing.Point(95, 17);
+            this.lbl_Statistics.Name = "lbl_Statistics";
+            this.lbl_Statistics.Size = new System.Drawing.Size(122, 30);
+            this.lbl_Statistics.TabIndex = 2;
+            this.lbl_Statistics.Text = "Statistieken";
+            // 
+            // logo
+            // 
+            this.logo.Image = global::View.Properties.Resources.GGLogoTM;
+            this.logo.Location = new System.Drawing.Point(7, 7);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(53, 53);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 1;
+            this.logo.TabStop = false;
+            // 
+            // lbl_Tickets
+            // 
+            this.lbl_Tickets.AutoSize = true;
+            this.lbl_Tickets.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Tickets.Location = new System.Drawing.Point(223, 17);
+            this.lbl_Tickets.Name = "lbl_Tickets";
+            this.lbl_Tickets.Size = new System.Drawing.Size(79, 30);
+            this.lbl_Tickets.TabIndex = 2;
+            this.lbl_Tickets.Text = "Tickets";
+            this.lbl_Tickets.Click += new System.EventHandler(this.lbl_Tickets_Click);
+            // 
+            // lbl_Users
+            // 
+            this.lbl_Users.AutoSize = true;
+            this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Users.Location = new System.Drawing.Point(308, 17);
+            this.lbl_Users.Name = "lbl_Users";
+            this.lbl_Users.Size = new System.Drawing.Size(118, 30);
+            this.lbl_Users.TabIndex = 2;
+            this.lbl_Users.Text = "Gebruikers";
+            this.lbl_Users.Click += new System.EventHandler(this.lbl_Users_Click);
+            // 
             // Statistics_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.Btn_UserList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -138,6 +231,9 @@
             this.Name = "Statistics_Dashboard";
             this.Text = "Statistics_Dashboard";
             this.Load += new System.EventHandler(this.Tickets_Dashboard_Load);
+            this.panel_Header.ResumeLayout(false);
+            this.panel_Header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +249,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Btn_UserList;
+        private System.Windows.Forms.Panel panel_Header;
+        private System.Windows.Forms.Panel current_stripe;
+        private System.Windows.Forms.Button btn_Logout;
+        private System.Windows.Forms.Label lbl_Statistics;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label lbl_Tickets;
+        private System.Windows.Forms.Label lbl_Users;
     }
 }

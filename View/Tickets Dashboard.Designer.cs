@@ -37,6 +37,8 @@
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.lbl_Users = new System.Windows.Forms.Label();
+            this.lbl_Tickets = new System.Windows.Forms.Label();
+            this.lbl_Statistics = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.btn_deleteTicket = new System.Windows.Forms.Button();
             this.btn_editTicket = new System.Windows.Forms.Button();
@@ -94,6 +96,8 @@
             this.panel_Header.Controls.Add(this.current_stripe);
             this.panel_Header.Controls.Add(this.btn_Logout);
             this.panel_Header.Controls.Add(this.lbl_Users);
+            this.panel_Header.Controls.Add(this.lbl_Tickets);
+            this.panel_Header.Controls.Add(this.lbl_Statistics);
             this.panel_Header.Controls.Add(this.logo);
             this.panel_Header.Location = new System.Drawing.Point(-1, -1);
             this.panel_Header.Name = "panel_Header";
@@ -103,9 +107,9 @@
             // current_stripe
             // 
             this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(95, 62);
+            this.current_stripe.Location = new System.Drawing.Point(223, 62);
             this.current_stripe.Name = "current_stripe";
-            this.current_stripe.Size = new System.Drawing.Size(108, 5);
+            this.current_stripe.Size = new System.Drawing.Size(79, 5);
             this.current_stripe.TabIndex = 4;
             // 
             // btn_Logout
@@ -113,10 +117,11 @@
             this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1180, 20);
+            this.btn_Logout.Location = new System.Drawing.Point(1172, 20);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(67, 27);
+            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
             this.btn_Logout.TabIndex = 3;
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
@@ -126,11 +131,35 @@
             this.lbl_Users.AutoSize = true;
             this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Users.Location = new System.Drawing.Point(110, 17);
+            this.lbl_Users.Location = new System.Drawing.Point(308, 17);
             this.lbl_Users.Name = "lbl_Users";
-            this.lbl_Users.Size = new System.Drawing.Size(79, 30);
+            this.lbl_Users.Size = new System.Drawing.Size(118, 30);
             this.lbl_Users.TabIndex = 2;
-            this.lbl_Users.Text = "Tickets";
+            this.lbl_Users.Text = "Gebruikers";
+            this.lbl_Users.Click += new System.EventHandler(this.lbl_Users_Click);
+            // 
+            // lbl_Tickets
+            // 
+            this.lbl_Tickets.AutoSize = true;
+            this.lbl_Tickets.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Tickets.Location = new System.Drawing.Point(223, 17);
+            this.lbl_Tickets.Name = "lbl_Tickets";
+            this.lbl_Tickets.Size = new System.Drawing.Size(79, 30);
+            this.lbl_Tickets.TabIndex = 2;
+            this.lbl_Tickets.Text = "Tickets";
+            // 
+            // lbl_Statistics
+            // 
+            this.lbl_Statistics.AutoSize = true;
+            this.lbl_Statistics.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Statistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Statistics.Location = new System.Drawing.Point(95, 17);
+            this.lbl_Statistics.Name = "lbl_Statistics";
+            this.lbl_Statistics.Size = new System.Drawing.Size(122, 30);
+            this.lbl_Statistics.TabIndex = 2;
+            this.lbl_Statistics.Text = "Statistieken";
+            this.lbl_Statistics.Click += new System.EventHandler(this.lbl_Statistics_Click);
             // 
             // logo
             // 
@@ -144,8 +173,8 @@
             // 
             // btn_deleteTicket
             // 
-            this.btn_deleteTicket.Location = new System.Drawing.Point(209, 638);
-            this.btn_deleteTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_deleteTicket.Location = new System.Drawing.Point(1077, 627);
+            this.btn_deleteTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btn_deleteTicket.Name = "btn_deleteTicket";
             this.btn_deleteTicket.Size = new System.Drawing.Size(97, 32);
             this.btn_deleteTicket.TabIndex = 5;
@@ -155,8 +184,8 @@
             // 
             // btn_editTicket
             // 
-            this.btn_editTicket.Location = new System.Drawing.Point(95, 638);
-            this.btn_editTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_editTicket.Location = new System.Drawing.Point(963, 627);
+            this.btn_editTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editTicket.Name = "btn_editTicket";
             this.btn_editTicket.Size = new System.Drawing.Size(97, 32);
             this.btn_editTicket.TabIndex = 6;
@@ -168,12 +197,13 @@
             // 
             this.TicketsDashboard_btnResolve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.TicketsDashboard_btnResolve.Enabled = false;
-            this.TicketsDashboard_btnResolve.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TicketsDashboard_btnResolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TicketsDashboard_btnResolve.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.TicketsDashboard_btnResolve.ForeColor = System.Drawing.Color.White;
-            this.TicketsDashboard_btnResolve.Location = new System.Drawing.Point(1059, 631);
+            this.TicketsDashboard_btnResolve.Location = new System.Drawing.Point(850, 627);
             this.TicketsDashboard_btnResolve.Margin = new System.Windows.Forms.Padding(2);
             this.TicketsDashboard_btnResolve.Name = "TicketsDashboard_btnResolve";
-            this.TicketsDashboard_btnResolve.Size = new System.Drawing.Size(116, 39);
+            this.TicketsDashboard_btnResolve.Size = new System.Drawing.Size(97, 32);
             this.TicketsDashboard_btnResolve.TabIndex = 8;
             this.TicketsDashboard_btnResolve.Text = "Resolve";
             this.TicketsDashboard_btnResolve.UseVisualStyleBackColor = false;
@@ -209,10 +239,12 @@
         private System.Windows.Forms.Panel panel_Header;
         private System.Windows.Forms.Panel current_stripe;
         private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Label lbl_Users;
+        private System.Windows.Forms.Label lbl_Statistics;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button btn_deleteTicket;
         private System.Windows.Forms.Button btn_editTicket;
         private System.Windows.Forms.Button TicketsDashboard_btnResolve;
+        private System.Windows.Forms.Label lbl_Users;
+        private System.Windows.Forms.Label lbl_Tickets;
     }
 }
