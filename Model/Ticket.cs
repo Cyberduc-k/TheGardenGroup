@@ -18,7 +18,6 @@ namespace Model
         public User Handler { get; set; }
         public DateTime DateOfIssueing { get; set; }
         public DateTime DateOfSolving { get; set; }
-        public bool PassedOn { get; set; }
         public bool Solved { get; set; }
 
         public Ticket() { }
