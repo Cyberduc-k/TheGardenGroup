@@ -40,13 +40,16 @@
             this.panel_Header = new System.Windows.Forms.Panel();
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
-            this.lbl_TicketEDit = new System.Windows.Forms.Label();
+            this.lbl_FAqMenu = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnl_EditFAQ = new System.Windows.Forms.Panel();
+            this.lbl_Users = new System.Windows.Forms.Label();
+            this.lbl_Tickets = new System.Windows.Forms.Label();
+            this.lbl_Statistics = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnl_EditFAQ.SuspendLayout();
@@ -153,9 +156,12 @@
             // panel_Header
             // 
             this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Header.Controls.Add(this.lbl_Users);
+            this.panel_Header.Controls.Add(this.lbl_Tickets);
+            this.panel_Header.Controls.Add(this.lbl_Statistics);
             this.panel_Header.Controls.Add(this.current_stripe);
             this.panel_Header.Controls.Add(this.btn_Logout);
-            this.panel_Header.Controls.Add(this.lbl_TicketEDit);
+            this.panel_Header.Controls.Add(this.lbl_FAqMenu);
             this.panel_Header.Controls.Add(this.logo);
             this.panel_Header.Location = new System.Drawing.Point(2, 1);
             this.panel_Header.Margin = new System.Windows.Forms.Padding(4);
@@ -166,7 +172,7 @@
             // current_stripe
             // 
             this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(127, 76);
+            this.current_stripe.Location = new System.Drawing.Point(542, 77);
             this.current_stripe.Margin = new System.Windows.Forms.Padding(4);
             this.current_stripe.Name = "current_stripe";
             this.current_stripe.Size = new System.Drawing.Size(144, 6);
@@ -186,17 +192,17 @@
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
             // 
-            // lbl_TicketEDit
+            // lbl_FAqMenu
             // 
-            this.lbl_TicketEDit.AutoSize = true;
-            this.lbl_TicketEDit.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_TicketEDit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_TicketEDit.Location = new System.Drawing.Point(135, 27);
-            this.lbl_TicketEDit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_TicketEDit.Name = "lbl_TicketEDit";
-            this.lbl_TicketEDit.Size = new System.Drawing.Size(56, 31);
-            this.lbl_TicketEDit.TabIndex = 2;
-            this.lbl_TicketEDit.Text = "FAQ";
+            this.lbl_FAqMenu.AutoSize = true;
+            this.lbl_FAqMenu.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_FAqMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_FAqMenu.Location = new System.Drawing.Point(578, 21);
+            this.lbl_FAqMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FAqMenu.Name = "lbl_FAqMenu";
+            this.lbl_FAqMenu.Size = new System.Drawing.Size(56, 31);
+            this.lbl_FAqMenu.TabIndex = 2;
+            this.lbl_FAqMenu.Text = "FAQ";
             // 
             // logo
             // 
@@ -269,6 +275,45 @@
             this.pnl_EditFAQ.Size = new System.Drawing.Size(522, 494);
             this.pnl_EditFAQ.TabIndex = 36;
             // 
+            // lbl_Users
+            // 
+            this.lbl_Users.AutoSize = true;
+            this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Users.Location = new System.Drawing.Point(411, 21);
+            this.lbl_Users.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Users.Name = "lbl_Users";
+            this.lbl_Users.Size = new System.Drawing.Size(124, 31);
+            this.lbl_Users.TabIndex = 5;
+            this.lbl_Users.Text = "Gebruikers";
+            this.lbl_Users.Click += new System.EventHandler(this.lbl_Users_Click);
+            // 
+            // lbl_Tickets
+            // 
+            this.lbl_Tickets.AutoSize = true;
+            this.lbl_Tickets.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Tickets.Location = new System.Drawing.Point(297, 21);
+            this.lbl_Tickets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Tickets.Name = "lbl_Tickets";
+            this.lbl_Tickets.Size = new System.Drawing.Size(84, 31);
+            this.lbl_Tickets.TabIndex = 6;
+            this.lbl_Tickets.Text = "Tickets";
+            this.lbl_Tickets.Click += new System.EventHandler(this.lbl_Tickets_Click);
+            // 
+            // lbl_Statistics
+            // 
+            this.lbl_Statistics.AutoSize = true;
+            this.lbl_Statistics.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_Statistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Statistics.Location = new System.Drawing.Point(127, 21);
+            this.lbl_Statistics.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Statistics.Name = "lbl_Statistics";
+            this.lbl_Statistics.Size = new System.Drawing.Size(131, 31);
+            this.lbl_Statistics.TabIndex = 7;
+            this.lbl_Statistics.Text = "Statistieken";
+            this.lbl_Statistics.Click += new System.EventHandler(this.lbl_Statistics_Click);
+            // 
             // FAQForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -307,12 +352,15 @@
         private System.Windows.Forms.Panel panel_Header;
         private System.Windows.Forms.Panel current_stripe;
         private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Label lbl_TicketEDit;
+        private System.Windows.Forms.Label lbl_FAqMenu;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pnl_EditFAQ;
+        private System.Windows.Forms.Label lbl_Users;
+        private System.Windows.Forms.Label lbl_Tickets;
+        private System.Windows.Forms.Label lbl_Statistics;
     }
 }

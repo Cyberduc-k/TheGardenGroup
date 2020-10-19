@@ -142,5 +142,56 @@ namespace View
 
             return faqs;
         }
+
+        private void lbl_Users_Click(object sender, EventArgs e)
+        {
+            User_Dashboard users = Application.OpenForms.OfType<User_Dashboard>().FirstOrDefault();
+
+            if (users == null)
+            {
+                users = new User_Dashboard(provider);
+                users.FormClosed += (_1, _2) => Close();
+            }
+
+            users.StartPosition = FormStartPosition.Manual;
+            users.Location = Location;
+            users.Show();
+            users.Activate();
+            Hide();
+        }
+
+        private void lbl_Tickets_Click(object sender, EventArgs e)
+        {
+            Tickets_Dashboard tickets = Application.OpenForms.OfType<Tickets_Dashboard>().FirstOrDefault();
+
+            if (tickets == null)
+            {
+                tickets = new Tickets_Dashboard(provider);
+                tickets.FormClosed += (_1, _2) => Close();
+            }
+
+            tickets.StartPosition = FormStartPosition.Manual;
+            tickets.Location = Location;
+            tickets.Show();
+            tickets.Activate();
+            Hide();
+        }
+
+        private void lbl_Statistics_Click(object sender, EventArgs e)
+        {
+            Statistics_Dashboard stats = Application.OpenForms.OfType<Statistics_Dashboard>().FirstOrDefault();
+
+            if (stats == null)
+            {
+                stats = new Statistics_Dashboard(provider);
+                stats.FormClosed += (_1, _2) => Close();
+            }
+
+            stats.StartPosition = FormStartPosition.Manual;
+            stats.Location = Location;
+            stats.Show();
+            stats.Activate();
+            Hide();
+        }
     }
 }

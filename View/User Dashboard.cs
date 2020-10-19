@@ -187,5 +187,22 @@ namespace View
             tickets.Activate();
             Hide();
         }
+
+        private void lbl_FAqMenu_Click(object sender, EventArgs e)
+        {
+            FAQForm faq = Application.OpenForms.OfType<FAQForm>().FirstOrDefault();
+
+            if (faq == null)
+            {
+                faq = new FAQForm(provider);
+                faq.FormClosed += (_1, _2) => Close();
+            }
+
+            faq.StartPosition = FormStartPosition.Manual;
+            faq.Location = Location;
+            faq.Show();
+            faq.Activate();
+            Hide();
+        }
     }
 }

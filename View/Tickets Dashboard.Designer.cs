@@ -43,6 +43,7 @@
             this.btn_deleteTicket = new System.Windows.Forms.Button();
             this.btn_editTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnResolve = new System.Windows.Forms.Button();
+            this.lbl_FAqMenu = new System.Windows.Forms.Label();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -60,11 +61,12 @@
             this.lv_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lv_Tickets.FullRowSelect = true;
             this.lv_Tickets.HideSelection = false;
-            this.lv_Tickets.Location = new System.Drawing.Point(95, 152);
+            this.lv_Tickets.Location = new System.Drawing.Point(127, 187);
+            this.lv_Tickets.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lv_Tickets.MultiSelect = false;
             this.lv_Tickets.Name = "lv_Tickets";
             this.lv_Tickets.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lv_Tickets.Size = new System.Drawing.Size(1080, 454);
+            this.lv_Tickets.Size = new System.Drawing.Size(1439, 558);
             this.lv_Tickets.TabIndex = 3;
             this.lv_Tickets.UseCompatibleStateImageBehavior = false;
             this.lv_Tickets.View = System.Windows.Forms.View.Details;
@@ -93,6 +95,7 @@
             // panel_Header
             // 
             this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Header.Controls.Add(this.lbl_FAqMenu);
             this.panel_Header.Controls.Add(this.current_stripe);
             this.panel_Header.Controls.Add(this.btn_Logout);
             this.panel_Header.Controls.Add(this.lbl_Users);
@@ -100,16 +103,18 @@
             this.panel_Header.Controls.Add(this.lbl_Statistics);
             this.panel_Header.Controls.Add(this.logo);
             this.panel_Header.Location = new System.Drawing.Point(-1, -1);
+            this.panel_Header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_Header.Name = "panel_Header";
-            this.panel_Header.Size = new System.Drawing.Size(1266, 69);
+            this.panel_Header.Size = new System.Drawing.Size(1687, 84);
             this.panel_Header.TabIndex = 4;
             // 
             // current_stripe
             // 
             this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(223, 62);
+            this.current_stripe.Location = new System.Drawing.Point(297, 76);
+            this.current_stripe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.current_stripe.Name = "current_stripe";
-            this.current_stripe.Size = new System.Drawing.Size(79, 5);
+            this.current_stripe.Size = new System.Drawing.Size(105, 6);
             this.current_stripe.TabIndex = 4;
             // 
             // btn_Logout
@@ -119,9 +124,10 @@
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1172, 20);
+            this.btn_Logout.Location = new System.Drawing.Point(1563, 25);
+            this.btn_Logout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
+            this.btn_Logout.Size = new System.Drawing.Size(107, 33);
             this.btn_Logout.TabIndex = 3;
             this.btn_Logout.Text = "Uitloggen";
             this.btn_Logout.UseVisualStyleBackColor = false;
@@ -132,9 +138,10 @@
             this.lbl_Users.AutoSize = true;
             this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Users.Location = new System.Drawing.Point(308, 17);
+            this.lbl_Users.Location = new System.Drawing.Point(411, 21);
+            this.lbl_Users.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Users.Name = "lbl_Users";
-            this.lbl_Users.Size = new System.Drawing.Size(118, 30);
+            this.lbl_Users.Size = new System.Drawing.Size(124, 31);
             this.lbl_Users.TabIndex = 2;
             this.lbl_Users.Text = "Gebruikers";
             this.lbl_Users.Click += new System.EventHandler(this.lbl_Users_Click);
@@ -144,9 +151,10 @@
             this.lbl_Tickets.AutoSize = true;
             this.lbl_Tickets.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Tickets.Location = new System.Drawing.Point(223, 17);
+            this.lbl_Tickets.Location = new System.Drawing.Point(297, 21);
+            this.lbl_Tickets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Tickets.Name = "lbl_Tickets";
-            this.lbl_Tickets.Size = new System.Drawing.Size(79, 30);
+            this.lbl_Tickets.Size = new System.Drawing.Size(84, 31);
             this.lbl_Tickets.TabIndex = 2;
             this.lbl_Tickets.Text = "Tickets";
             // 
@@ -155,9 +163,10 @@
             this.lbl_Statistics.AutoSize = true;
             this.lbl_Statistics.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_Statistics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Statistics.Location = new System.Drawing.Point(95, 17);
+            this.lbl_Statistics.Location = new System.Drawing.Point(127, 21);
+            this.lbl_Statistics.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Statistics.Name = "lbl_Statistics";
-            this.lbl_Statistics.Size = new System.Drawing.Size(122, 30);
+            this.lbl_Statistics.Size = new System.Drawing.Size(131, 31);
             this.lbl_Statistics.TabIndex = 2;
             this.lbl_Statistics.Text = "Statistieken";
             this.lbl_Statistics.Click += new System.EventHandler(this.lbl_Statistics_Click);
@@ -165,19 +174,20 @@
             // logo
             // 
             this.logo.Image = global::View.Properties.Resources.GGLogoTM;
-            this.logo.Location = new System.Drawing.Point(7, 7);
+            this.logo.Location = new System.Drawing.Point(9, 9);
+            this.logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(53, 53);
+            this.logo.Size = new System.Drawing.Size(71, 65);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
             // 
             // btn_deleteTicket
             // 
-            this.btn_deleteTicket.Location = new System.Drawing.Point(1077, 627);
-            this.btn_deleteTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_deleteTicket.Location = new System.Drawing.Point(1436, 772);
+            this.btn_deleteTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_deleteTicket.Name = "btn_deleteTicket";
-            this.btn_deleteTicket.Size = new System.Drawing.Size(97, 32);
+            this.btn_deleteTicket.Size = new System.Drawing.Size(129, 39);
             this.btn_deleteTicket.TabIndex = 5;
             this.btn_deleteTicket.Text = "Delete";
             this.btn_deleteTicket.UseVisualStyleBackColor = true;
@@ -185,10 +195,10 @@
             // 
             // btn_editTicket
             // 
-            this.btn_editTicket.Location = new System.Drawing.Point(963, 627);
-            this.btn_editTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_editTicket.Location = new System.Drawing.Point(1284, 772);
+            this.btn_editTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_editTicket.Name = "btn_editTicket";
-            this.btn_editTicket.Size = new System.Drawing.Size(97, 32);
+            this.btn_editTicket.Size = new System.Drawing.Size(129, 39);
             this.btn_editTicket.TabIndex = 6;
             this.btn_editTicket.Text = "Edit";
             this.btn_editTicket.UseVisualStyleBackColor = true;
@@ -202,26 +212,40 @@
             this.TicketsDashboard_btnResolve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TicketsDashboard_btnResolve.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.TicketsDashboard_btnResolve.ForeColor = System.Drawing.Color.White;
-            this.TicketsDashboard_btnResolve.Location = new System.Drawing.Point(850, 627);
-            this.TicketsDashboard_btnResolve.Margin = new System.Windows.Forms.Padding(2);
+            this.TicketsDashboard_btnResolve.Location = new System.Drawing.Point(1133, 772);
+            this.TicketsDashboard_btnResolve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TicketsDashboard_btnResolve.Name = "TicketsDashboard_btnResolve";
-            this.TicketsDashboard_btnResolve.Size = new System.Drawing.Size(97, 32);
+            this.TicketsDashboard_btnResolve.Size = new System.Drawing.Size(129, 39);
             this.TicketsDashboard_btnResolve.TabIndex = 8;
             this.TicketsDashboard_btnResolve.Text = "Resolve";
             this.TicketsDashboard_btnResolve.UseVisualStyleBackColor = false;
             this.TicketsDashboard_btnResolve.Click += new System.EventHandler(this.TicketsDashboard_btnResolve_Click);
             // 
+            // lbl_FAqMenu
+            // 
+            this.lbl_FAqMenu.AutoSize = true;
+            this.lbl_FAqMenu.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.lbl_FAqMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_FAqMenu.Location = new System.Drawing.Point(578, 21);
+            this.lbl_FAqMenu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FAqMenu.Name = "lbl_FAqMenu";
+            this.lbl_FAqMenu.Size = new System.Drawing.Size(56, 31);
+            this.lbl_FAqMenu.TabIndex = 10;
+            this.lbl_FAqMenu.Text = "FAQ";
+            this.lbl_FAqMenu.Click += new System.EventHandler(this.lbl_FAqMenu_Click);
+            // 
             // Tickets_Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1685, 838);
             this.Controls.Add(this.TicketsDashboard_btnResolve);
             this.Controls.Add(this.btn_editTicket);
             this.Controls.Add(this.btn_deleteTicket);
             this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.lv_Tickets);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tickets_Dashboard";
             this.Text = "Tickets_Dashboard";
             this.panel_Header.ResumeLayout(false);
@@ -248,5 +272,6 @@
         private System.Windows.Forms.Button TicketsDashboard_btnResolve;
         private System.Windows.Forms.Label lbl_Users;
         private System.Windows.Forms.Label lbl_Tickets;
+        private System.Windows.Forms.Label lbl_FAqMenu;
     }
 }

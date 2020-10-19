@@ -38,7 +38,6 @@ namespace View
 
             Application.Run(new Login(provider));
             Application.Run(new Submit_Ticket(provider));
-            Application.Run(new FAQForm(provider));
             Application.Run(new Statistics_Dashboard(provider));
         }
     }
