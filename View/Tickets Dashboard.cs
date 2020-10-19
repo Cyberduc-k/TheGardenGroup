@@ -50,6 +50,7 @@ namespace View
                 lbl_FAqMenu.Left = 180;
                 TicketsDashboard_btnResolve.Hide();
                 btn_SubmitTicket.Show();
+                TicketsDashboard_btnViewTicket.Show();
                 FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id));
             }
             else
@@ -134,11 +135,15 @@ namespace View
         private void lv_Tickets_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lv_Tickets.SelectedItems.Count <= 0)
+            {
                 TicketsDashboard_btnResolve.Enabled = false;
+                TicketsDashboard_btnViewTicket.Enabled = false;
+            }
             else
             {
                 selectedTicket = (Ticket)lv_Tickets.SelectedItems[0].Tag;
                 TicketsDashboard_btnResolve.Enabled = true;
+                TicketsDashboard_btnViewTicket.Enabled = true;
             }
         }
 
@@ -231,6 +236,17 @@ namespace View
             Show();
 
             FillTickets();
+        }
+
+        private void TicketsDashboard_btnViewTicket_Click(object sender, EventArgs e)
+        {
+            View_Ticket viewTicket = new View_Ticket(selectedTicket, provider);
+
+            viewTicket.StartPosition = FormStartPosition.Manual;
+            viewTicket.Location = Location;
+            Hide();
+            viewTicket.ShowDialog();
+            Show();
         }
     }
 }

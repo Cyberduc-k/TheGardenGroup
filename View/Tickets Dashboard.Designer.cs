@@ -45,6 +45,7 @@
             this.btn_editTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnResolve = new System.Windows.Forms.Button();
             this.btn_SubmitTicket = new System.Windows.Forms.Button();
+            this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -246,12 +247,30 @@
             this.btn_SubmitTicket.Visible = false;
             this.btn_SubmitTicket.Click += new System.EventHandler(this.btn_SubmitTicket_Click);
             // 
+            // TicketsDashboard_btnViewTicket
+            // 
+            this.TicketsDashboard_btnViewTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.TicketsDashboard_btnViewTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.TicketsDashboard_btnViewTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TicketsDashboard_btnViewTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.TicketsDashboard_btnViewTicket.ForeColor = System.Drawing.Color.White;
+            this.TicketsDashboard_btnViewTicket.Location = new System.Drawing.Point(738, 627);
+            this.TicketsDashboard_btnViewTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.TicketsDashboard_btnViewTicket.Name = "TicketsDashboard_btnViewTicket";
+            this.TicketsDashboard_btnViewTicket.Size = new System.Drawing.Size(97, 32);
+            this.TicketsDashboard_btnViewTicket.TabIndex = 10;
+            this.TicketsDashboard_btnViewTicket.Text = "View Ticket";
+            this.TicketsDashboard_btnViewTicket.UseVisualStyleBackColor = false;
+            this.TicketsDashboard_btnViewTicket.Visible = false;
+            this.TicketsDashboard_btnViewTicket.Click += new System.EventHandler(this.TicketsDashboard_btnViewTicket_Click);
+            // 
             // Tickets_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.TicketsDashboard_btnViewTicket);
             this.Controls.Add(this.btn_SubmitTicket);
             this.Controls.Add(this.TicketsDashboard_btnResolve);
             this.Controls.Add(this.btn_editTicket);
@@ -286,5 +305,6 @@
         private System.Windows.Forms.Label lbl_Tickets;
         private System.Windows.Forms.Label lbl_FAqMenu;
         private System.Windows.Forms.Button btn_SubmitTicket;
+        private System.Windows.Forms.Button TicketsDashboard_btnViewTicket;
     }
 }
