@@ -95,6 +95,7 @@ namespace View
                 li.SubItems.Add(employee.LastName);
                 li.SubItems.Add(employee.Email);
                 li.SubItems.Add(employee.BirthDate.ToShortDateString());
+                li.SubItems.Add(employee.ReviewScore.ToString());
                 li.SubItems.Add(employee.TicketsProcessed.ToString());
                 li.SubItems.Add(employee.TicketsSucceeded.ToString());
                 li.SubItems.Add(employee.TicketsFailed.ToString());
