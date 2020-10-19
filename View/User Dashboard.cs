@@ -108,7 +108,7 @@ namespace View
         {
             if (lv_Users.SelectedItems == null)
             {
-                MessageBox.Show("Please select a user to edit");
+                ErrorHandler.Instance.HandleError("User can't be null. Please select a user to edit", "Can't be null", new ArgumentNullException());
                 return;
             }
 
@@ -128,6 +128,7 @@ namespace View
             IUserService service = provider.GetService<IUserService>();
 
             service.Delete(selectedUser);
+
             FillUsers();
         }
 

@@ -219,6 +219,8 @@ namespace View
             Hide();
             submit.ShowDialog();
             Show();
+
+            FillTickets();
         }
     }
 }

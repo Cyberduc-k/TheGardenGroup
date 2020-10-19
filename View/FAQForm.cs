@@ -38,6 +38,12 @@ namespace View
             {
                 pnl_EditFAQ.Hide();
                 treeView_FAQ.Left= 490;
+
+                lbl_Statistics.Hide();
+                lbl_Users.Hide();
+                lbl_Tickets.Left = 95;
+                current_stripe.Left = 180;
+                lbl_FAqMenu.Left = 180;
             }
         }
 
