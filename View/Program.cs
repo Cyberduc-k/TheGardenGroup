@@ -37,8 +37,8 @@ namespace View
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new Login(provider));
-            Application.Run(new Submit_Ticket(provider));
-            Application.Run(new Statistics_Dashboard(provider));
+            // Application.Run(new Submit_Ticket(provider));
+            // Application.Run(new Statistics_Dashboard(provider));
         }
     }
 }

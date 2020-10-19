@@ -47,6 +47,9 @@ namespace View
                 lbl_Users.Hide();
                 lbl_Tickets.Left = 95;
                 current_stripe.Left = 95;
+                lbl_FAqMenu.Left = 180;
+                TicketsDashboard_btnResolve.Hide();
+                btn_SubmitTicket.Left = 850;
                 FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id));
             }
             else
@@ -205,6 +208,17 @@ namespace View
             faq.Show();
             faq.Activate();
             Hide();
+        }
+
+        private void btn_SubmitTicket_Click(object sender, EventArgs e)
+        {
+            Submit_Ticket submit = new Submit_Ticket(provider);
+
+            submit.StartPosition = FormStartPosition.Manual;
+            submit.Location = Location;
+            Hide();
+            submit.ShowDialog();
+            Show();
         }
     }
 }

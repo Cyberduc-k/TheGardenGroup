@@ -43,7 +43,7 @@ namespace View
                     dashboard.StartPosition = FormStartPosition.Manual;
                     dashboard.Location = Location;
                     dashboard.Show();
-                    dashboard.FormClosed += (_1, _2) => Close();
+                    dashboard.FormClosed += (_1, _2) => Show();
                     Hide();
                 }
                 else
@@ -53,7 +53,7 @@ namespace View
                     dashboard.StartPosition = FormStartPosition.Manual;
                     dashboard.Location = Location;
                     dashboard.Show();
-                    dashboard.FormClosed += (_1, _2) => Close();
+                    dashboard.FormClosed += (_1, _2) => Show();
                     Hide();
                 }
             }
