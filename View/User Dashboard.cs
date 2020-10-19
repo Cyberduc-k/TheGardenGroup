@@ -128,6 +128,7 @@ namespace View
             IUserService service = provider.GetService<IUserService>();
 
             service.Delete(selectedUser);
+            FillUsers();
         }
 
         private void lv_Users_SelectedIndexChanged(object sender, EventArgs e)

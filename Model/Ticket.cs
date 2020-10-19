@@ -19,6 +19,7 @@ namespace Model
         public DateTime DateOfIssueing { get; set; }
         public DateTime DateOfSolving { get; set; }
         public bool Solved { get; set; }
+        public string Review { get; set; }
 
         public Ticket() { }
 

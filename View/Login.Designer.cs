@@ -65,7 +65,7 @@
             this.lbl_Inloggen.Name = "lbl_Inloggen";
             this.lbl_Inloggen.Size = new System.Drawing.Size(106, 31);
             this.lbl_Inloggen.TabIndex = 1;
-            this.lbl_Inloggen.Text = "Inloggen";
+            this.lbl_Inloggen.Text = "Login";
             this.lbl_Inloggen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_Login
@@ -91,9 +91,9 @@
             this.lbl_WrongCredentials.Location = new System.Drawing.Point(25, 158);
             this.lbl_WrongCredentials.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_WrongCredentials.Name = "lbl_WrongCredentials";
-            this.lbl_WrongCredentials.Size = new System.Drawing.Size(163, 12);
+            this.lbl_WrongCredentials.Size = new System.Drawing.Size(126, 12);
             this.lbl_WrongCredentials.TabIndex = 5;
-            this.lbl_WrongCredentials.Text = "Verkeerd email adres of wachtwoord";
+            this.lbl_WrongCredentials.Text = "Incorrect email or password";
             this.lbl_WrongCredentials.Visible = false;
             // 
             // btn_Login
@@ -108,7 +108,7 @@
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(196, 27);
             this.btn_Login.TabIndex = 1;
-            this.btn_Login.Text = "Inloggen";
+            this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Clicked);
             // 
@@ -119,9 +119,9 @@
             this.lbl_Password.Location = new System.Drawing.Point(25, 99);
             this.lbl_Password.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(81, 17);
+            this.lbl_Password.Size = new System.Drawing.Size(64, 17);
             this.lbl_Password.TabIndex = 0;
-            this.lbl_Password.Text = "Wachtwoord";
+            this.lbl_Password.Text = "Password";
             // 
             // lbl_Email
             // 
@@ -130,9 +130,9 @@
             this.lbl_Email.Location = new System.Drawing.Point(25, 22);
             this.lbl_Email.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(76, 17);
+            this.lbl_Email.Size = new System.Drawing.Size(90, 17);
             this.lbl_Email.TabIndex = 0;
-            this.lbl_Email.Text = "Email adres";
+            this.lbl_Email.Text = "Email address";
             // 
             // input_Email
             // 
@@ -176,11 +176,11 @@
             // 
             this.lbl_New.AutoSize = true;
             this.lbl_New.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_New.Location = new System.Drawing.Point(34, 10);
+            this.lbl_New.Location = new System.Drawing.Point(43, 10);
             this.lbl_New.Name = "lbl_New";
-            this.lbl_New.Size = new System.Drawing.Size(50, 17);
+            this.lbl_New.Size = new System.Drawing.Size(40, 17);
             this.lbl_New.TabIndex = 0;
-            this.lbl_New.Text = "Nieuw?";
+            this.lbl_New.Text = "New?";
             // 
             // btn_New
             // 
@@ -191,11 +191,11 @@
             this.btn_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_New.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_New.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.btn_New.Location = new System.Drawing.Point(79, 6);
+            this.btn_New.Location = new System.Drawing.Point(74, 6);
             this.btn_New.Name = "btn_New";
             this.btn_New.Size = new System.Drawing.Size(135, 25);
             this.btn_New.TabIndex = 6;
-            this.btn_New.Text = "Maak een account";
+            this.btn_New.Text = "Create an account";
             this.btn_New.UseVisualStyleBackColor = true;
             this.btn_New.Click += new System.EventHandler(this.btn_New_Clicked);
             // 

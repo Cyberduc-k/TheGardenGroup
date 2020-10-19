@@ -56,11 +56,12 @@
             this.lbl_EditAccount.AutoSize = true;
             this.lbl_EditAccount.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lbl_EditAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_EditAccount.Location = new System.Drawing.Point(519, 87);
+            this.lbl_EditAccount.Location = new System.Drawing.Point(547, 87);
             this.lbl_EditAccount.Name = "lbl_EditAccount";
-            this.lbl_EditAccount.Size = new System.Drawing.Size(220, 32);
+            this.lbl_EditAccount.Size = new System.Drawing.Size(149, 32);
             this.lbl_EditAccount.TabIndex = 0;
-            this.lbl_EditAccount.Text = "Account aanpassen";
+            this.lbl_EditAccount.Text = "Edit Account";
+            this.lbl_EditAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // input_FirstName
             // 
@@ -148,7 +149,7 @@
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(196, 30);
             this.btn_Save.TabIndex = 3;
-            this.btn_Save.Text = "Opslaan";
+            this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
@@ -162,7 +163,7 @@
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(196, 30);
             this.btn_Cancel.TabIndex = 3;
-            this.btn_Cancel.Text = "Annuleren";
+            this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
@@ -173,9 +174,9 @@
             this.lbl_BirthDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_BirthDate.Location = new System.Drawing.Point(244, 21);
             this.lbl_BirthDate.Name = "lbl_BirthDate";
-            this.lbl_BirthDate.Size = new System.Drawing.Size(105, 17);
+            this.lbl_BirthDate.Size = new System.Drawing.Size(64, 17);
             this.lbl_BirthDate.TabIndex = 2;
-            this.lbl_BirthDate.Text = "Geboorte datum";
+            this.lbl_BirthDate.Text = "Birth date";
             // 
             // lbl_DisplayName
             // 
@@ -186,7 +187,7 @@
             this.lbl_DisplayName.Name = "lbl_DisplayName";
             this.lbl_DisplayName.Size = new System.Drawing.Size(86, 17);
             this.lbl_DisplayName.TabIndex = 2;
-            this.lbl_DisplayName.Text = "Display naam";
+            this.lbl_DisplayName.Text = "Display name";
             // 
             // lbl_Email
             // 
@@ -195,9 +196,9 @@
             this.lbl_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_Email.Location = new System.Drawing.Point(24, 176);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(76, 17);
+            this.lbl_Email.Size = new System.Drawing.Size(90, 17);
             this.lbl_Email.TabIndex = 2;
-            this.lbl_Email.Text = "Email adres";
+            this.lbl_Email.Text = "Email address";
             // 
             // lbl_LastName
             // 
@@ -206,9 +207,9 @@
             this.lbl_LastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_LastName.Location = new System.Drawing.Point(24, 100);
             this.lbl_LastName.Name = "lbl_LastName";
-            this.lbl_LastName.Size = new System.Drawing.Size(77, 17);
+            this.lbl_LastName.Size = new System.Drawing.Size(67, 17);
             this.lbl_LastName.TabIndex = 2;
-            this.lbl_LastName.Text = "Achternaam";
+            this.lbl_LastName.Text = "Last name";
             // 
             // lbl_Occupation
             // 
@@ -217,9 +218,9 @@
             this.lbl_Occupation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_Occupation.Location = new System.Drawing.Point(244, 176);
             this.lbl_Occupation.Name = "lbl_Occupation";
-            this.lbl_Occupation.Size = new System.Drawing.Size(104, 17);
+            this.lbl_Occupation.Size = new System.Drawing.Size(74, 17);
             this.lbl_Occupation.TabIndex = 2;
-            this.lbl_Occupation.Text = "Werkzaamheden";
+            this.lbl_Occupation.Text = "Occupation";
             // 
             // lbl_Company
             // 
@@ -228,9 +229,9 @@
             this.lbl_Company.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lbl_Company.Location = new System.Drawing.Point(244, 100);
             this.lbl_Company.Name = "lbl_Company";
-            this.lbl_Company.Size = new System.Drawing.Size(86, 17);
+            this.lbl_Company.Size = new System.Drawing.Size(63, 17);
             this.lbl_Company.TabIndex = 2;
-            this.lbl_Company.Text = "Werkzaam bij";
+            this.lbl_Company.Text = "Company";
             // 
             // lbl_FirstName
             // 
@@ -241,7 +242,7 @@
             this.lbl_FirstName.Name = "lbl_FirstName";
             this.lbl_FirstName.Size = new System.Drawing.Size(68, 17);
             this.lbl_FirstName.TabIndex = 2;
-            this.lbl_FirstName.Text = "Voornaam";
+            this.lbl_FirstName.Text = "First name";
             // 
             // input_DisplayName
             // 

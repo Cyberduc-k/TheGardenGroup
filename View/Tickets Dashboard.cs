@@ -49,7 +49,7 @@ namespace View
                 current_stripe.Left = 95;
                 lbl_FAqMenu.Left = 180;
                 TicketsDashboard_btnResolve.Hide();
-                btn_SubmitTicket.Left = 850;
+                btn_SubmitTicket.Show();
                 FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id));
             }
             else
