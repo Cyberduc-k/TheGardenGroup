@@ -113,7 +113,12 @@ namespace View
             }
 
             Edit_Ticket editTicket = new Edit_Ticket(selectedTicket, provider);
+
+            editTicket.StartPosition = FormStartPosition.Manual;
+            editTicket.Location = Location;
+            Hide();
             editTicket.ShowDialog();
+            Show();
 
             FillTickets();
         }
@@ -140,7 +145,12 @@ namespace View
         private void TicketsDashboard_btnResolve_Click(object sender, EventArgs e)
         {
             Resolve_Ticket resolveForm = new Resolve_Ticket(selectedTicket, provider);
-            resolveForm.Show();
+
+            resolveForm.StartPosition = FormStartPosition.Manual;
+            resolveForm.Location = Location;
+            Hide();
+            resolveForm.ShowDialog();
+            Show();
         }
 
         private void lbl_Statistics_Click(object sender, EventArgs e)

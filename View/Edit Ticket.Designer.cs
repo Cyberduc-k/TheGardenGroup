@@ -277,7 +277,9 @@
             // EditTicket_btnEdit
             // 
             this.EditTicket_btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.EditTicket_btnEdit.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.EditTicket_btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditTicket_btnEdit.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_btnEdit.ForeColor = System.Drawing.Color.White;
             this.EditTicket_btnEdit.Location = new System.Drawing.Point(1125, 631);
             this.EditTicket_btnEdit.Name = "EditTicket_btnEdit";
@@ -289,9 +291,11 @@
             // 
             // EditTicket_btnCancel
             // 
-            this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.EditTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.White;
+            this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.EditTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.EditTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.Black;
             this.EditTicket_btnCancel.Location = new System.Drawing.Point(22, 631);
             this.EditTicket_btnCancel.Name = "EditTicket_btnCancel";
             this.EditTicket_btnCancel.Size = new System.Drawing.Size(122, 39);
@@ -371,12 +375,13 @@
             this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1180, 20);
+            this.btn_Logout.Location = new System.Drawing.Point(1172, 20);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(67, 27);
+            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
             this.btn_Logout.TabIndex = 3;
-            this.btn_Logout.Text = "Uitloggen";
+            this.btn_Logout.Text = "Logout";
             this.btn_Logout.UseVisualStyleBackColor = false;
             // 
             // lbl_TicketEDit
@@ -427,6 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.lbl_editInfo);
             this.Controls.Add(this.lbl_submittedBY);
@@ -455,7 +461,7 @@
             this.Controls.Add(this.EditTicket_lblCategoryText);
             this.Controls.Add(this.EditTicket_lblSubjectText);
             this.Controls.Add(this.lbl_editTicket);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Edit_Ticket";
             this.Text = "Edit_Ticket";
             this.panel_Header.ResumeLayout(false);
