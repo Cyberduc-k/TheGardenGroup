@@ -193,24 +193,34 @@
             // 
             // btn_deleteTicket
             // 
+            this.btn_deleteTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
+            this.btn_deleteTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.btn_deleteTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_deleteTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_deleteTicket.ForeColor = System.Drawing.Color.White;
             this.btn_deleteTicket.Location = new System.Drawing.Point(1077, 627);
             this.btn_deleteTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btn_deleteTicket.Name = "btn_deleteTicket";
             this.btn_deleteTicket.Size = new System.Drawing.Size(97, 32);
             this.btn_deleteTicket.TabIndex = 5;
             this.btn_deleteTicket.Text = "Delete";
-            this.btn_deleteTicket.UseVisualStyleBackColor = true;
+            this.btn_deleteTicket.UseVisualStyleBackColor = false;
             this.btn_deleteTicket.Click += new System.EventHandler(this.btn_deleteTicket_Click);
             // 
             // btn_editTicket
             // 
+            this.btn_editTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_editTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_editTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_editTicket.ForeColor = System.Drawing.Color.White;
             this.btn_editTicket.Location = new System.Drawing.Point(963, 627);
             this.btn_editTicket.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editTicket.Name = "btn_editTicket";
             this.btn_editTicket.Size = new System.Drawing.Size(97, 32);
             this.btn_editTicket.TabIndex = 6;
             this.btn_editTicket.Text = "Edit";
-            this.btn_editTicket.UseVisualStyleBackColor = true;
+            this.btn_editTicket.UseVisualStyleBackColor = false;
             this.btn_editTicket.Click += new System.EventHandler(this.btn_editTicket_Click);
             // 
             // TicketsDashboard_btnResolve
@@ -278,7 +288,7 @@
             this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.lv_Tickets);
             this.Name = "Tickets_Dashboard";
-            this.Text = "Tickets_Dashboard";
+            this.Text = "Tickets Dashboard";
             this.panel_Header.ResumeLayout(false);
             this.panel_Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();

@@ -45,16 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel_Header = new System.Windows.Forms.Panel();
-            this.current_stripe = new System.Windows.Forms.Panel();
-            this.btn_Logout = new System.Windows.Forms.Button();
-            this.lbl_Users = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.SubmitTicket_btnCancel = new System.Windows.Forms.Button();
             this.SubmitTicket_btnSubmit = new System.Windows.Forms.Button();
             this.pnl_Login.SuspendLayout();
-            this.panel_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Login
@@ -76,10 +69,10 @@
             this.pnl_Login.Controls.Add(this.label3);
             this.pnl_Login.Controls.Add(this.label2);
             this.pnl_Login.Controls.Add(this.label1);
-            this.pnl_Login.Location = new System.Drawing.Point(13, 88);
+            this.pnl_Login.Location = new System.Drawing.Point(9, 9);
             this.pnl_Login.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_Login.Name = "pnl_Login";
-            this.pnl_Login.Size = new System.Drawing.Size(1235, 528);
+            this.pnl_Login.Size = new System.Drawing.Size(1244, 607);
             this.pnl_Login.TabIndex = 24;
             // 
             // SubmitTicket_lblDescription
@@ -260,67 +253,15 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Submit new ticket";
             // 
-            // panel_Header
-            // 
-            this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Header.Controls.Add(this.current_stripe);
-            this.panel_Header.Controls.Add(this.btn_Logout);
-            this.panel_Header.Controls.Add(this.lbl_Users);
-            this.panel_Header.Controls.Add(this.logo);
-            this.panel_Header.Location = new System.Drawing.Point(-1, -1);
-            this.panel_Header.Name = "panel_Header";
-            this.panel_Header.Size = new System.Drawing.Size(1266, 69);
-            this.panel_Header.TabIndex = 25;
-            // 
-            // current_stripe
-            // 
-            this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(95, 62);
-            this.current_stripe.Name = "current_stripe";
-            this.current_stripe.Size = new System.Drawing.Size(108, 5);
-            this.current_stripe.TabIndex = 4;
-            // 
-            // btn_Logout
-            // 
-            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
-            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1180, 20);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(67, 27);
-            this.btn_Logout.TabIndex = 3;
-            this.btn_Logout.Text = "Uitloggen";
-            this.btn_Logout.UseVisualStyleBackColor = false;
-            // 
-            // lbl_Users
-            // 
-            this.lbl_Users.AutoSize = true;
-            this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Users.Location = new System.Drawing.Point(81, 17);
-            this.lbl_Users.Name = "lbl_Users";
-            this.lbl_Users.Size = new System.Drawing.Size(139, 30);
-            this.lbl_Users.TabIndex = 2;
-            this.lbl_Users.Text = "Submit ticket";
-            // 
-            // logo
-            // 
-            this.logo.Image = global::View.Properties.Resources.GGLogoTM;
-            this.logo.Location = new System.Drawing.Point(7, 7);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(53, 53);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 1;
-            this.logo.TabStop = false;
-            // 
             // SubmitTicket_btnCancel
             // 
-            this.SubmitTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
-            this.SubmitTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.SubmitTicket_btnCancel.ForeColor = System.Drawing.Color.White;
+            this.SubmitTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.SubmitTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.SubmitTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SubmitTicket_btnCancel.ForeColor = System.Drawing.Color.Black;
             this.SubmitTicket_btnCancel.Location = new System.Drawing.Point(13, 631);
-            this.SubmitTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitTicket_btnCancel.Name = "SubmitTicket_btnCancel";
             this.SubmitTicket_btnCancel.Size = new System.Drawing.Size(122, 39);
             this.SubmitTicket_btnCancel.TabIndex = 26;
@@ -332,10 +273,12 @@
             // 
             this.SubmitTicket_btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
             this.SubmitTicket_btnSubmit.Enabled = false;
-            this.SubmitTicket_btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitTicket_btnSubmit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.SubmitTicket_btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitTicket_btnSubmit.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.SubmitTicket_btnSubmit.ForeColor = System.Drawing.Color.White;
             this.SubmitTicket_btnSubmit.Location = new System.Drawing.Point(1137, 631);
-            this.SubmitTicket_btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitTicket_btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitTicket_btnSubmit.Name = "SubmitTicket_btnSubmit";
             this.SubmitTicket_btnSubmit.Size = new System.Drawing.Size(116, 39);
             this.SubmitTicket_btnSubmit.TabIndex = 27;
@@ -351,15 +294,11 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.SubmitTicket_btnSubmit);
             this.Controls.Add(this.SubmitTicket_btnCancel);
-            this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.pnl_Login);
             this.Name = "Submit_Ticket";
-            this.Text = "Submit_Ticket";
+            this.Text = "Submit Ticket";
             this.pnl_Login.ResumeLayout(false);
             this.pnl_Login.PerformLayout();
-            this.panel_Header.ResumeLayout(false);
-            this.panel_Header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,11 +319,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel_Header;
-        private System.Windows.Forms.Panel current_stripe;
-        private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Label lbl_Users;
-        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Button SubmitTicket_btnCancel;
         private System.Windows.Forms.Button SubmitTicket_btnSubmit;
         private System.Windows.Forms.Label SubmitTicket_lblDescription;

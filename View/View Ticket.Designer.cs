@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.ViewTicket_btnClose = new System.Windows.Forms.Button();
-            this.panel_Header = new System.Windows.Forms.Panel();
-            this.current_stripe = new System.Windows.Forms.Panel();
-            this.btn_Logout = new System.Windows.Forms.Button();
-            this.lbl_Users = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.pnl_Login = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,15 +49,15 @@
             this.ViewTicket_lblMail = new System.Windows.Forms.Label();
             this.ViewTicket_lblName = new System.Windows.Forms.Label();
             this.ViewTicket_lblTicketID = new System.Windows.Forms.Label();
-            this.panel_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnl_Login.SuspendLayout();
             this.SuspendLayout();
             // 
             // ViewTicket_btnClose
             // 
-            this.ViewTicket_btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(220)))), ((int)(((byte)(129)))));
-            this.ViewTicket_btnClose.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.ViewTicket_btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.ViewTicket_btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.ViewTicket_btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ViewTicket_btnClose.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ViewTicket_btnClose.ForeColor = System.Drawing.Color.White;
             this.ViewTicket_btnClose.Location = new System.Drawing.Point(1109, 631);
             this.ViewTicket_btnClose.Margin = new System.Windows.Forms.Padding(2);
@@ -72,60 +67,6 @@
             this.ViewTicket_btnClose.Text = "Close";
             this.ViewTicket_btnClose.UseVisualStyleBackColor = false;
             this.ViewTicket_btnClose.Click += new System.EventHandler(this.ViewTicket_btnCancel_Click);
-            // 
-            // panel_Header
-            // 
-            this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Header.Controls.Add(this.current_stripe);
-            this.panel_Header.Controls.Add(this.btn_Logout);
-            this.panel_Header.Controls.Add(this.lbl_Users);
-            this.panel_Header.Controls.Add(this.logo);
-            this.panel_Header.Location = new System.Drawing.Point(0, -1);
-            this.panel_Header.Name = "panel_Header";
-            this.panel_Header.Size = new System.Drawing.Size(1266, 69);
-            this.panel_Header.TabIndex = 22;
-            // 
-            // current_stripe
-            // 
-            this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(95, 62);
-            this.current_stripe.Name = "current_stripe";
-            this.current_stripe.Size = new System.Drawing.Size(108, 5);
-            this.current_stripe.TabIndex = 4;
-            // 
-            // btn_Logout
-            // 
-            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
-            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1180, 20);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(67, 27);
-            this.btn_Logout.TabIndex = 3;
-            this.btn_Logout.Text = "Uitloggen";
-            this.btn_Logout.UseVisualStyleBackColor = false;
-            // 
-            // lbl_Users
-            // 
-            this.lbl_Users.AutoSize = true;
-            this.lbl_Users.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_Users.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Users.Location = new System.Drawing.Point(81, 17);
-            this.lbl_Users.Name = "lbl_Users";
-            this.lbl_Users.Size = new System.Drawing.Size(145, 30);
-            this.lbl_Users.TabIndex = 2;
-            this.lbl_Users.Text = "Resolve ticket";
-            // 
-            // logo
-            // 
-            this.logo.Image = global::View.Properties.Resources.GGLogoTM;
-            this.logo.Location = new System.Drawing.Point(7, 7);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(53, 53);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 1;
-            this.logo.TabStop = false;
             // 
             // pnl_Login
             // 
@@ -149,10 +90,10 @@
             this.pnl_Login.Controls.Add(this.ViewTicket_lblMail);
             this.pnl_Login.Controls.Add(this.ViewTicket_lblName);
             this.pnl_Login.Controls.Add(this.ViewTicket_lblTicketID);
-            this.pnl_Login.Location = new System.Drawing.Point(14, 84);
+            this.pnl_Login.Location = new System.Drawing.Point(9, 9);
             this.pnl_Login.Margin = new System.Windows.Forms.Padding(0);
             this.pnl_Login.Name = "pnl_Login";
-            this.pnl_Login.Size = new System.Drawing.Size(1239, 533);
+            this.pnl_Login.Size = new System.Drawing.Size(1244, 608);
             this.pnl_Login.TabIndex = 23;
             // 
             // label3
@@ -206,7 +147,7 @@
             this.ViewTicket_txtAreaSolution.Margin = new System.Windows.Forms.Padding(2);
             this.ViewTicket_txtAreaSolution.Multiline = true;
             this.ViewTicket_txtAreaSolution.Name = "ViewTicket_txtAreaSolution";
-            this.ViewTicket_txtAreaSolution.Size = new System.Drawing.Size(598, 405);
+            this.ViewTicket_txtAreaSolution.Size = new System.Drawing.Size(598, 482);
             this.ViewTicket_txtAreaSolution.TabIndex = 35;
             // 
             // ViewTicket_lblDate
@@ -367,16 +308,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.pnl_Login);
-            this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.ViewTicket_btnClose);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "View_Ticket";
             this.Text = "Resolve_Ticket";
-            this.panel_Header.ResumeLayout(false);
-            this.panel_Header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.pnl_Login.ResumeLayout(false);
             this.pnl_Login.PerformLayout();
             this.ResumeLayout(false);
@@ -385,11 +323,6 @@
 
         #endregion
         private System.Windows.Forms.Button ViewTicket_btnClose;
-        private System.Windows.Forms.Panel panel_Header;
-        private System.Windows.Forms.Panel current_stripe;
-        private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Label lbl_Users;
-        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Panel pnl_Login;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox ViewTicket_txtAreaSolution;

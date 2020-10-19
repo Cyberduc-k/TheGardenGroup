@@ -52,15 +52,10 @@
             this.EditTicket_lblName = new System.Windows.Forms.Label();
             this.EditTicket_lblTicketID = new System.Windows.Forms.Label();
             this.EditTicket_lblEdit = new System.Windows.Forms.Label();
-            this.panel_Header = new System.Windows.Forms.Panel();
-            this.current_stripe = new System.Windows.Forms.Panel();
-            this.btn_Logout = new System.Windows.Forms.Button();
-            this.lbl_TicketEDit = new System.Windows.Forms.Label();
-            this.logo = new System.Windows.Forms.PictureBox();
             this.lbl_submittedBY = new System.Windows.Forms.Label();
             this.lbl_editInfo = new System.Windows.Forms.Label();
-            this.panel_Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.pnl_EditTicket = new System.Windows.Forms.Panel();
+            this.pnl_EditTicket.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_editTicket
@@ -218,7 +213,7 @@
             this.EditTicket_rBtnHighPriority.AutoSize = true;
             this.EditTicket_rBtnHighPriority.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_rBtnHighPriority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.EditTicket_rBtnHighPriority.Location = new System.Drawing.Point(792, 260);
+            this.EditTicket_rBtnHighPriority.Location = new System.Drawing.Point(815, 260);
             this.EditTicket_rBtnHighPriority.Name = "EditTicket_rBtnHighPriority";
             this.EditTicket_rBtnHighPriority.Size = new System.Drawing.Size(56, 23);
             this.EditTicket_rBtnHighPriority.TabIndex = 22;
@@ -232,7 +227,7 @@
             this.EditTicket_rBtnMediumPriority.AutoSize = true;
             this.EditTicket_rBtnMediumPriority.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_rBtnMediumPriority.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.EditTicket_rBtnMediumPriority.Location = new System.Drawing.Point(722, 260);
+            this.EditTicket_rBtnMediumPriority.Location = new System.Drawing.Point(731, 261);
             this.EditTicket_rBtnMediumPriority.Name = "EditTicket_rBtnMediumPriority";
             this.EditTicket_rBtnMediumPriority.Size = new System.Drawing.Size(78, 23);
             this.EditTicket_rBtnMediumPriority.TabIndex = 21;
@@ -281,7 +276,7 @@
             this.EditTicket_btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditTicket_btnEdit.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_btnEdit.ForeColor = System.Drawing.Color.White;
-            this.EditTicket_btnEdit.Location = new System.Drawing.Point(1125, 631);
+            this.EditTicket_btnEdit.Location = new System.Drawing.Point(1125, 630);
             this.EditTicket_btnEdit.Name = "EditTicket_btnEdit";
             this.EditTicket_btnEdit.Size = new System.Drawing.Size(122, 39);
             this.EditTicket_btnEdit.TabIndex = 17;
@@ -296,7 +291,7 @@
             this.EditTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.EditTicket_btnCancel.Location = new System.Drawing.Point(22, 631);
+            this.EditTicket_btnCancel.Location = new System.Drawing.Point(12, 630);
             this.EditTicket_btnCancel.Name = "EditTicket_btnCancel";
             this.EditTicket_btnCancel.Size = new System.Drawing.Size(122, 39);
             this.EditTicket_btnCancel.TabIndex = 16;
@@ -350,67 +345,12 @@
             this.EditTicket_lblEdit.TabIndex = 28;
             this.EditTicket_lblEdit.Text = "Edit:";
             // 
-            // panel_Header
-            // 
-            this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Header.Controls.Add(this.current_stripe);
-            this.panel_Header.Controls.Add(this.btn_Logout);
-            this.panel_Header.Controls.Add(this.lbl_TicketEDit);
-            this.panel_Header.Controls.Add(this.logo);
-            this.panel_Header.Location = new System.Drawing.Point(-1, -1);
-            this.panel_Header.Name = "panel_Header";
-            this.panel_Header.Size = new System.Drawing.Size(1266, 69);
-            this.panel_Header.TabIndex = 29;
-            // 
-            // current_stripe
-            // 
-            this.current_stripe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(194)))), ((int)(((byte)(92)))));
-            this.current_stripe.Location = new System.Drawing.Point(95, 62);
-            this.current_stripe.Name = "current_stripe";
-            this.current_stripe.Size = new System.Drawing.Size(108, 5);
-            this.current_stripe.TabIndex = 4;
-            // 
-            // btn_Logout
-            // 
-            this.btn_Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.btn_Logout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
-            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btn_Logout.ForeColor = System.Drawing.Color.White;
-            this.btn_Logout.Location = new System.Drawing.Point(1172, 20);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(80, 27);
-            this.btn_Logout.TabIndex = 3;
-            this.btn_Logout.Text = "Logout";
-            this.btn_Logout.UseVisualStyleBackColor = false;
-            // 
-            // lbl_TicketEDit
-            // 
-            this.lbl_TicketEDit.AutoSize = true;
-            this.lbl_TicketEDit.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.lbl_TicketEDit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_TicketEDit.Location = new System.Drawing.Point(101, 22);
-            this.lbl_TicketEDit.Name = "lbl_TicketEDit";
-            this.lbl_TicketEDit.Size = new System.Drawing.Size(107, 30);
-            this.lbl_TicketEDit.TabIndex = 2;
-            this.lbl_TicketEDit.Text = "Edit ticket";
-            // 
-            // logo
-            // 
-            this.logo.Image = global::View.Properties.Resources.GGLogoTM;
-            this.logo.Location = new System.Drawing.Point(7, 7);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(53, 53);
-            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logo.TabIndex = 1;
-            this.logo.TabStop = false;
-            // 
             // lbl_submittedBY
             // 
             this.lbl_submittedBY.AutoSize = true;
             this.lbl_submittedBY.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_submittedBY.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_submittedBY.Location = new System.Drawing.Point(475, 132);
+            this.lbl_submittedBY.Location = new System.Drawing.Point(475, 129);
             this.lbl_submittedBY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_submittedBY.Name = "lbl_submittedBY";
             this.lbl_submittedBY.Size = new System.Drawing.Size(94, 19);
@@ -428,47 +368,53 @@
             this.lbl_editInfo.TabIndex = 31;
             this.lbl_editInfo.Text = "(only fill in/change the fields you wanna change)";
             // 
+            // pnl_EditTicket
+            // 
+            this.pnl_EditTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblDeadlineText);
+            this.pnl_EditTicket.Controls.Add(this.lbl_editTicket);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblSubjectText);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblCategoryText);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblPriorityText);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblTicketSubject);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblDescriptionText);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblTicketCategory);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblTicketPriority);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblTicketDeadline);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblTicketDescription);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_txtSubject);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_cmbCategory);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_rBtnLowPriority);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_rBtnMediumPriority);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_rBtnHighPriority);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_txtDeadline);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_txtAreaDescription);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblTicketID);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblName);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblMail);
+            this.pnl_EditTicket.Controls.Add(this.EditTicket_lblEdit);
+            this.pnl_EditTicket.Controls.Add(this.lbl_submittedBY);
+            this.pnl_EditTicket.Controls.Add(this.lbl_editInfo);
+            this.pnl_EditTicket.Location = new System.Drawing.Point(12, 12);
+            this.pnl_EditTicket.Name = "pnl_EditTicket";
+            this.pnl_EditTicket.Size = new System.Drawing.Size(1235, 605);
+            this.pnl_EditTicket.TabIndex = 32;
+            // 
             // Edit_Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.lbl_editInfo);
-            this.Controls.Add(this.lbl_submittedBY);
-            this.Controls.Add(this.panel_Header);
-            this.Controls.Add(this.EditTicket_lblEdit);
-            this.Controls.Add(this.EditTicket_lblMail);
-            this.Controls.Add(this.EditTicket_lblName);
-            this.Controls.Add(this.EditTicket_lblTicketID);
-            this.Controls.Add(this.EditTicket_txtAreaDescription);
-            this.Controls.Add(this.EditTicket_txtDeadline);
-            this.Controls.Add(this.EditTicket_rBtnHighPriority);
-            this.Controls.Add(this.EditTicket_rBtnMediumPriority);
-            this.Controls.Add(this.EditTicket_rBtnLowPriority);
-            this.Controls.Add(this.EditTicket_cmbCategory);
-            this.Controls.Add(this.EditTicket_txtSubject);
             this.Controls.Add(this.EditTicket_btnEdit);
             this.Controls.Add(this.EditTicket_btnCancel);
-            this.Controls.Add(this.EditTicket_lblTicketDescription);
-            this.Controls.Add(this.EditTicket_lblTicketDeadline);
-            this.Controls.Add(this.EditTicket_lblTicketPriority);
-            this.Controls.Add(this.EditTicket_lblTicketCategory);
-            this.Controls.Add(this.EditTicket_lblTicketSubject);
-            this.Controls.Add(this.EditTicket_lblDescriptionText);
-            this.Controls.Add(this.EditTicket_lblDeadlineText);
-            this.Controls.Add(this.EditTicket_lblPriorityText);
-            this.Controls.Add(this.EditTicket_lblCategoryText);
-            this.Controls.Add(this.EditTicket_lblSubjectText);
-            this.Controls.Add(this.lbl_editTicket);
+            this.Controls.Add(this.pnl_EditTicket);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Edit_Ticket";
-            this.Text = "Edit_Ticket";
-            this.panel_Header.ResumeLayout(false);
-            this.panel_Header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.Text = "Edit Ticket";
+            this.pnl_EditTicket.ResumeLayout(false);
+            this.pnl_EditTicket.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -498,12 +444,8 @@
         private System.Windows.Forms.Label EditTicket_lblName;
         private System.Windows.Forms.Label EditTicket_lblTicketID;
         private System.Windows.Forms.Label EditTicket_lblEdit;
-        private System.Windows.Forms.Panel panel_Header;
-        private System.Windows.Forms.Panel current_stripe;
-        private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Label lbl_TicketEDit;
-        private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label lbl_submittedBY;
         private System.Windows.Forms.Label lbl_editInfo;
+        private System.Windows.Forms.Panel pnl_EditTicket;
     }
 }
