@@ -51,6 +51,8 @@ namespace View
             {
                 ErrorHandler.Instance.HandleError("Something went wrong while adding your ticket, try again please.", "Try again", ex);
             }
+
+            Close();
         }
 
         private void SubmitTicket_btnCancel_Click(object sender, EventArgs e)
