@@ -108,17 +108,12 @@ namespace View
 
                 ticket.ReviewScore = (byte)input_ReviewScore.Value;
 
+                ticketService.Update(ticket);
+
                 if (ticket.HandlerId != null && oldReviewScore != ticket.ReviewScore)
                 {
-                    IUserService userService = provider.GetService<IUserService>();
-                    Employee handler = (Employee)userService.GetSingle(ticket.HandlerId);
-
-                    handler.ReviewScore -= oldReviewScore;
-                    handler.ReviewScore += ticket.ReviewScore;
-                    userService.Update(handler);
+                    UpdateReviewSCore(ticketService);
                 }
-
-                ticketService.Update(ticket);
             }
             catch (Exception ex)
             {
@@ -133,6 +128,19 @@ namespace View
 
                 Close();
             }
+        }
+
+        private void UpdateReviewSCore(ITicketService ticketService)
+        {
+            IUserService userService = provider.GetService<IUserService>();
+            Employee handler = (Employee)userService.GetSingle(ticket.HandlerId);
+            IEnumerable<Ticket> tickets = ticketService.GetAllBy(tckt => tckt.HandlerId == ticket.HandlerId);
+            int totalScore = tickets.Sum(tckt => tckt.ReviewScore);
+
+            totalScore /= tickets.Count();
+
+            handler.ReviewScore = (byte)totalScore;
+            userService.Update(handler);
         }
 
         private void EditTicket_btnCancel_Click(object sender, EventArgs e)

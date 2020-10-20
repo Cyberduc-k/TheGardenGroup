@@ -5,7 +5,7 @@ namespace Model
     public class Employee : User
     {
         public Category Expertise { get; set; }
-        public int ReviewScore { get; set; }
+        public byte ReviewScore { get; set; }
         public int TicketsProcessed { get; set; }
         public int TicketsSucceeded { get; set; }
         public int TicketsFailed { get; set; }
