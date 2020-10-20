@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Forms;
 
 namespace View
@@ -68,16 +69,16 @@ namespace View
         {
             try
             {
-                ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
+                ITicketService ticketService = provider.GetService<ITicketService>();
 
                 if (EditTicket_txtSubject.Text != "")
                 {
-                    this.ticket.Subject = EditTicket_txtSubject.Text;
+                    ticket.Subject = EditTicket_txtSubject.Text;
                 }
 
                 if (EditTicket_cmbCategory.SelectedItem != null)
                 {
-                    this.ticket.Category = (Category)EditTicket_cmbCategory.SelectedItem;
+                    ticket.Category = (Category)EditTicket_cmbCategory.SelectedItem;
                 }
 
                 if (EditTicket_rBtnHighPriority.Checked || EditTicket_rBtnMediumPriority.Checked ||
@@ -85,27 +86,39 @@ namespace View
                 {
                     Enum.TryParse(ActiveForm.Controls.OfType<RadioButton>()
                                              .FirstOrDefault(r => r.Checked).Tag.ToString(), out Priority priority);
-                    this.ticket.Priority = priority;
+                    ticket.Priority = priority;
                 }
 
                 if (EditTicket_txtDeadline.Text != "")
                 {
-                    this.ticket.DaysToSolve = int.Parse(EditTicket_txtDeadline.Text);
+                    ticket.DaysToSolve = int.Parse(EditTicket_txtDeadline.Text);
                 }
 
                 if (EditTicket_txtAreaDescription.Text != "")
                 {
-                    this.ticket.Description = EditTicket_txtAreaDescription.Text;
+                    ticket.Description = EditTicket_txtAreaDescription.Text;
                 }
 
                 if (input_Review.Text.Length > 0)
                 {
-                    this.ticket.Review = input_Review.Text;
+                    ticket.Review = input_Review.Text;
                 }
 
-                this.ticket.ReviewScore = (byte)input_ReviewScore.Value;
+                byte oldReviewScore = ticket.ReviewScore;
 
-                ticketService.Update(this.ticket);
+                ticket.ReviewScore = (byte)input_ReviewScore.Value;
+
+                if (ticket.HandlerId != null && oldReviewScore != ticket.ReviewScore)
+                {
+                    IUserService userService = provider.GetService<IUserService>();
+                    Employee handler = (Employee)userService.GetSingle(ticket.HandlerId);
+
+                    handler.ReviewScore -= oldReviewScore;
+                    handler.ReviewScore += ticket.ReviewScore;
+                    userService.Update(handler);
+                }
+
+                ticketService.Update(ticket);
             }
             catch (Exception ex)
             {
@@ -118,13 +131,13 @@ namespace View
                 EditTicket_txtDeadline.Clear();
                 EditTicket_txtSubject.Clear();
 
-                this.Close();
+                Close();
             }
         }
 
         private void EditTicket_btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

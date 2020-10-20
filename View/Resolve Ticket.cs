@@ -48,6 +48,7 @@ namespace View
                 ticket.Solution = ResolveTicket_txtAreaSolution.Text;
                 ticket.Solved = true;
                 ticket.Handler = LoggedInUser.Instance.User;
+                ticket.HandlerId = LoggedInUser.Instance.User.Id;
 
                 ticketService.Update(ticket);
 
