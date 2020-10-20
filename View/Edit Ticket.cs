@@ -133,7 +133,7 @@ namespace View
         {
             IUserService userService = provider.GetService<IUserService>();
             Employee handler = (Employee)userService.GetSingle(ticket.HandlerId);
-            IEnumerable<Ticket> tickets = ticketService.GetAllBy(tckt => tckt.HandlerId == ticket.HandlerId);
+            IEnumerable<Ticket> tickets = ticketService.GetAllBy(tckt => tckt.HandlerId == ticket.HandlerId && tckt.ReviewScore != 0);
             int totalScore = tickets.Sum(tckt => tckt.ReviewScore);
 
             totalScore /= tickets.Count();
