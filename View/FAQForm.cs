@@ -51,11 +51,10 @@ namespace View
         {
             FAQ_comboCategory.Items.Clear();
 
-            FAQ_comboCategory.Items.Add(Category.Printers);
-            FAQ_comboCategory.Items.Add(Category.Computers);
-            FAQ_comboCategory.Items.Add(Category.Mail);
-            FAQ_comboCategory.Items.Add(Category.General);
-            FAQ_comboCategory.Items.Add(Category.Other);
+            foreach (Category category in Enum.GetValues(typeof(Category)))
+            {
+                FAQ_comboCategory.Items.Add(category);
+            }
 
             FAQ_comboCategory.SelectedIndex = 3;
         }

@@ -23,7 +23,13 @@ namespace View
             ActivityMeasurement();
 
             //Make sure a category is selected by default
-            SubmitTicket_comboCategory.SelectedIndex = 0;
+            foreach (Category category in Enum.GetValues(typeof(Category)))
+            {
+                SubmitTicket_comboCategory.Items.Add(category);
+            }
+
+            //Select the last Category available, should be "Other"
+            SubmitTicket_comboCategory.SelectedIndex = Enum.GetValues(typeof(Category)).Length - 1;
         }
 
         public void ActivityMeasurement()
