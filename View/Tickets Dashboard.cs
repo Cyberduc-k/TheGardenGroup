@@ -75,7 +75,7 @@ namespace View
                 //Only the id is stored in the db, so the user has to be added again.
                 ticket.Client = userService.GetSingle(ticket.ClientId);
 
-                ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
+                ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToString("dd-MM-yyyy"));
 
                 li.SubItems.Add(ticket.Category.ToString());
                 li.SubItems.Add(ticket.Subject);
@@ -111,7 +111,7 @@ namespace View
                 //Only the id is stored in the db, so the user has to be added again.
                 ticket.Client = userService.GetSingle(ticket.ClientId);
 
-                ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
+                ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToString("dd-MM-yyyy"));
 
                 li.SubItems.Add(ticket.Category.ToString());
                 li.SubItems.Add(ticket.Subject);
