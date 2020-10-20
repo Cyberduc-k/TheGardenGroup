@@ -27,7 +27,26 @@ namespace View
         {
             ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
+            Tickets_Dashboard_GenInfo(ticketService);
+        }
+
+        private void Tickets_Dashboard_GenInfo(ITicketService ticketService)
+        {
+            //Use the count function to get the amount of active tickets
             lbl_AmountOfActiveTickets.Text = ticketService.Count().ToString();
+
+            //Calculate the amount of tickets that need immediate attention
+            IEnumerable<Ticket> tickets = ticketService.GetAll();
+            int AmountOfImmediateAttentionTickets = 0;
+
+            foreach (Ticket ticket in tickets)
+            {
+                if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve)
+                {
+                    AmountOfImmediateAttentionTickets++;
+                }
+            }
+            lbl_AmountOfImmediateAttentionTickets.Text = AmountOfImmediateAttentionTickets.ToString();
         }
 
         private void Btn_TicketList_Click(object sender, EventArgs e)

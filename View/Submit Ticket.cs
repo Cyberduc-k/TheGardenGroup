@@ -20,9 +20,15 @@ namespace View
             this.provider = provider;
 
             InitializeComponent();
+            ActivityMeasurement();
 
             //Make sure a category is selected by default
             SubmitTicket_comboCategory.SelectedIndex = 0;
+        }
+
+        public void ActivityMeasurement()
+        {
+
         }
 
         #region OnClicks
