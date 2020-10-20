@@ -33,6 +33,7 @@
             this.ch_Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_Subject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ch_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_Header = new System.Windows.Forms.Panel();
             this.lbl_FAqMenu = new System.Windows.Forms.Label();
             this.current_stripe = new System.Windows.Forms.Panel();
@@ -46,7 +47,7 @@
             this.TicketsDashboard_btnResolve = new System.Windows.Forms.Button();
             this.btn_SubmitTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
-            this.ch_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_Account = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -95,11 +96,16 @@
             this.ch_Priority.Text = "Priority";
             this.ch_Priority.Width = 120;
             // 
+            // ch_Status
+            // 
+            this.ch_Status.Text = "Status";
+            // 
             // panel_Header
             // 
             this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_Header.Controls.Add(this.lbl_FAqMenu);
             this.panel_Header.Controls.Add(this.current_stripe);
+            this.panel_Header.Controls.Add(this.btn_Account);
             this.panel_Header.Controls.Add(this.btn_Logout);
             this.panel_Header.Controls.Add(this.lbl_Users);
             this.panel_Header.Controls.Add(this.lbl_Tickets);
@@ -276,9 +282,20 @@
             this.TicketsDashboard_btnViewTicket.Visible = false;
             this.TicketsDashboard_btnViewTicket.Click += new System.EventHandler(this.TicketsDashboard_btnViewTicket_Click);
             // 
-            // ch_Status
+            // btn_Account
             // 
-            this.ch_Status.Text = "Status";
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.Location = new System.Drawing.Point(1078, 20);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.Size = new System.Drawing.Size(80, 27);
+            this.btn_Account.TabIndex = 3;
+            this.btn_Account.Text = "Account";
+            this.btn_Account.UseVisualStyleBackColor = false;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // Tickets_Dashboard
             // 
@@ -323,5 +340,6 @@
         private System.Windows.Forms.Button btn_SubmitTicket;
         private System.Windows.Forms.Button TicketsDashboard_btnViewTicket;
         private System.Windows.Forms.ColumnHeader ch_Status;
+        private System.Windows.Forms.Button btn_Account;
     }
 }

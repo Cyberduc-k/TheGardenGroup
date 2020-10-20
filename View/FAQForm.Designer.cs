@@ -50,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pnl_EditFAQ = new System.Windows.Forms.Panel();
+            this.btn_Account = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.pnl_EditFAQ.SuspendLayout();
@@ -60,7 +61,7 @@
             this.treeView_FAQ.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.treeView_FAQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.treeView_FAQ.Location = new System.Drawing.Point(225, 214);
-            this.treeView_FAQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.treeView_FAQ.Margin = new System.Windows.Forms.Padding(2);
             this.treeView_FAQ.Name = "treeView_FAQ";
             this.treeView_FAQ.Size = new System.Drawing.Size(448, 355);
             this.treeView_FAQ.TabIndex = 0;
@@ -106,7 +107,7 @@
             this.cmb_Questions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.cmb_Questions.FormattingEnabled = true;
             this.cmb_Questions.Location = new System.Drawing.Point(82, 35);
-            this.cmb_Questions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmb_Questions.Margin = new System.Windows.Forms.Padding(2);
             this.cmb_Questions.Name = "cmb_Questions";
             this.cmb_Questions.Size = new System.Drawing.Size(242, 27);
             this.cmb_Questions.TabIndex = 13;
@@ -117,7 +118,7 @@
             this.btn_DeleteQuestion.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.btn_DeleteQuestion.ForeColor = System.Drawing.Color.White;
             this.btn_DeleteQuestion.Location = new System.Drawing.Point(128, 82);
-            this.btn_DeleteQuestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_DeleteQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_DeleteQuestion.Name = "btn_DeleteQuestion";
             this.btn_DeleteQuestion.Size = new System.Drawing.Size(149, 41);
             this.btn_DeleteQuestion.TabIndex = 14;
@@ -130,7 +131,7 @@
             this.txt_QuestionAdd.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_QuestionAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.txt_QuestionAdd.Location = new System.Drawing.Point(82, 188);
-            this.txt_QuestionAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_QuestionAdd.Margin = new System.Windows.Forms.Padding(2);
             this.txt_QuestionAdd.Name = "txt_QuestionAdd";
             this.txt_QuestionAdd.Size = new System.Drawing.Size(242, 26);
             this.txt_QuestionAdd.TabIndex = 15;
@@ -140,7 +141,7 @@
             this.txt_AnswerAdd.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txt_AnswerAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.txt_AnswerAdd.Location = new System.Drawing.Point(82, 223);
-            this.txt_AnswerAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AnswerAdd.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AnswerAdd.Multiline = true;
             this.txt_AnswerAdd.Name = "txt_AnswerAdd";
             this.txt_AnswerAdd.Size = new System.Drawing.Size(242, 108);
@@ -152,7 +153,7 @@
             this.btn_AddQuestion.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.btn_AddQuestion.ForeColor = System.Drawing.Color.White;
             this.btn_AddQuestion.Location = new System.Drawing.Point(128, 335);
-            this.btn_AddQuestion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddQuestion.Name = "btn_AddQuestion";
             this.btn_AddQuestion.Size = new System.Drawing.Size(149, 41);
             this.btn_AddQuestion.TabIndex = 17;
@@ -318,10 +319,25 @@
             this.pnl_EditFAQ.Controls.Add(this.btn_DeleteQuestion);
             this.pnl_EditFAQ.Controls.Add(this.cmb_Questions);
             this.pnl_EditFAQ.Location = new System.Drawing.Point(706, 193);
-            this.pnl_EditFAQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_EditFAQ.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_EditFAQ.Name = "pnl_EditFAQ";
             this.pnl_EditFAQ.Size = new System.Drawing.Size(392, 401);
             this.pnl_EditFAQ.TabIndex = 36;
+            // 
+            // btn_Account
+            // 
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.Location = new System.Drawing.Point(1078, 20);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.Size = new System.Drawing.Size(80, 27);
+            this.btn_Account.TabIndex = 37;
+            this.btn_Account.Text = "Account";
+            this.btn_Account.UseVisualStyleBackColor = false;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // FAQForm
             // 
@@ -329,13 +345,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btn_Account);
             this.Controls.Add(this.pnl_EditFAQ);
             this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.lbl_CategoryFAQ);
             this.Controls.Add(this.FAQ_comboCategory);
             this.Controls.Add(this.lbl_FAQ);
             this.Controls.Add(this.treeView_FAQ);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FAQForm";
             this.Text = "FAQ";
             this.panel_Header.ResumeLayout(false);
@@ -372,5 +389,6 @@
         private System.Windows.Forms.Label lbl_Users;
         private System.Windows.Forms.Label lbl_Tickets;
         private System.Windows.Forms.Label lbl_Statistics;
+        private System.Windows.Forms.Button btn_Account;
     }
 }

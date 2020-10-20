@@ -1,6 +1,7 @@
 ﻿using Service;
 using Model;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -43,7 +44,7 @@ namespace View
                     dashboard.StartPosition = FormStartPosition.Manual;
                     dashboard.Location = Location;
                     dashboard.Show();
-                    dashboard.FormClosed += (_1, _2) => Show();
+                    dashboard.FormClosed += (_1, _2) => RestoreLogin();
                     Hide();
                 }
                 else
@@ -53,10 +54,24 @@ namespace View
                     dashboard.StartPosition = FormStartPosition.Manual;
                     dashboard.Location = Location;
                     dashboard.Show();
-                    dashboard.FormClosed += (_1, _2) => Show();
+                    dashboard.FormClosed += (_1, _2) => RestoreLogin();
                     Hide();
                 }
             }
+        }
+
+        public void RestoreLogin()
+        {
+            List<Form> formsToClose = new List<Form>();
+
+            foreach (Form form in Application.OpenForms)
+                if (!(form is Login))
+                    formsToClose.Add(form);
+
+            foreach (Form form in formsToClose)
+                form.Close();
+
+            Show();
         }
 
         private void btn_New_Clicked(object caller, EventArgs e)

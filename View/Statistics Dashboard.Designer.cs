@@ -44,6 +44,7 @@
             this.lbl_Tickets = new System.Windows.Forms.Label();
             this.lbl_Statistics = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
+            this.btn_Account = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -231,12 +232,28 @@
             this.logo.TabIndex = 1;
             this.logo.TabStop = false;
             // 
+            // btn_Account
+            // 
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.Location = new System.Drawing.Point(1078, 20);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.Size = new System.Drawing.Size(80, 27);
+            this.btn_Account.TabIndex = 9;
+            this.btn_Account.Text = "Account";
+            this.btn_Account.UseVisualStyleBackColor = false;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
+            // 
             // Statistics_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btn_Account);
             this.Controls.Add(this.panel_Header);
             this.Controls.Add(this.Btn_UserList);
             this.Controls.Add(this.label4);
@@ -275,5 +292,6 @@
         private System.Windows.Forms.Label lbl_Tickets;
         private System.Windows.Forms.Label lbl_Users;
         private System.Windows.Forms.Label lbl_FAqMenu;
+        private System.Windows.Forms.Button btn_Account;
     }
 }

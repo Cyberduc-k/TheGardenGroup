@@ -61,9 +61,8 @@ namespace View
 
             login.StartPosition = FormStartPosition.Manual;
             login.Location = Location;
-            login.Show();
+            login.RestoreLogin();
             login.Activate();
-            Close();
         }
 
         private void lbl_Tickets_Click(object sender, EventArgs e)
@@ -73,9 +72,8 @@ namespace View
             if (tickets == null)
             {
                 tickets = new Tickets_Dashboard(provider);
-                tickets.FormClosed += (_1, _2) => Close();
             }
-
+            
             tickets.StartPosition = FormStartPosition.Manual;
             tickets.Location = Location;
             tickets.Show();
@@ -90,9 +88,8 @@ namespace View
             if (users == null)
             {
                 users = new User_Dashboard(provider);
-                users.FormClosed += (_1, _2) => Close();
             }
-
+            
             users.StartPosition = FormStartPosition.Manual;
             users.Location = Location;
             users.Show();
@@ -107,15 +104,24 @@ namespace View
             if (faq == null)
             {
                 faq = new FAQForm(provider);
-                faq.FormClosed += (_1, _2) => Close();
             }
-
+            
             faq.StartPosition = FormStartPosition.Manual;
             faq.Location = Location;
             faq.Show();
             faq.Activate();
             Hide();
         }
-    
+
+        private void btn_Account_Click(object sender, EventArgs e)
+        {
+            Edit_User editUser = new Edit_User(provider, LoggedInUser.Instance.User);
+
+            Hide();
+            editUser.StartPosition = FormStartPosition.Manual;
+            editUser.Location = Location;
+            editUser.ShowDialog();
+            Show();
+        }
     }
 }
