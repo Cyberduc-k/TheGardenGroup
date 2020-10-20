@@ -119,7 +119,7 @@
             this.btn_Employee.Location = new System.Drawing.Point(24, 106);
             this.btn_Employee.Name = "btn_Employee";
             this.btn_Employee.Size = new System.Drawing.Size(196, 26);
-            this.btn_Employee.TabIndex = 1;
+            this.btn_Employee.TabIndex = 2;
             this.btn_Employee.Text = "Employee";
             this.btn_Employee.UseVisualStyleBackColor = false;
             this.btn_Employee.Click += new System.EventHandler(this.btn_Employee_Click);
@@ -175,7 +175,7 @@
             this.input_LastName.Location = new System.Drawing.Point(24, 124);
             this.input_LastName.Name = "input_LastName";
             this.input_LastName.Size = new System.Drawing.Size(196, 29);
-            this.input_LastName.TabIndex = 3;
+            this.input_LastName.TabIndex = 4;
             // 
             // input_FirstName
             // 
@@ -197,7 +197,7 @@
             this.btn_Next1.Location = new System.Drawing.Point(129, 252);
             this.btn_Next1.Name = "btn_Next1";
             this.btn_Next1.Size = new System.Drawing.Size(93, 26);
-            this.btn_Next1.TabIndex = 2;
+            this.btn_Next1.TabIndex = 6;
             this.btn_Next1.Text = "Next";
             this.btn_Next1.UseVisualStyleBackColor = false;
             this.btn_Next1.Click += new System.EventHandler(this.btn_Next1_Click);
@@ -211,7 +211,7 @@
             this.btn_Back1.Location = new System.Drawing.Point(25, 252);
             this.btn_Back1.Name = "btn_Back1";
             this.btn_Back1.Size = new System.Drawing.Size(93, 26);
-            this.btn_Back1.TabIndex = 2;
+            this.btn_Back1.TabIndex = 7;
             this.btn_Back1.Text = "Back";
             this.btn_Back1.UseVisualStyleBackColor = false;
             this.btn_Back1.Click += new System.EventHandler(this.btn_Back1_Click);
@@ -223,7 +223,7 @@
             this.input_BirthDate.Location = new System.Drawing.Point(25, 198);
             this.input_BirthDate.Name = "input_BirthDate";
             this.input_BirthDate.Size = new System.Drawing.Size(196, 29);
-            this.input_BirthDate.TabIndex = 1;
+            this.input_BirthDate.TabIndex = 5;
             // 
             // lbl_BirthDate
             // 
@@ -282,7 +282,7 @@
             this.input_Occupation.Location = new System.Drawing.Point(25, 121);
             this.input_Occupation.Name = "input_Occupation";
             this.input_Occupation.Size = new System.Drawing.Size(196, 29);
-            this.input_Occupation.TabIndex = 4;
+            this.input_Occupation.TabIndex = 9;
             // 
             // input_Company
             // 
@@ -293,7 +293,7 @@
             this.input_Company.Location = new System.Drawing.Point(25, 45);
             this.input_Company.Name = "input_Company";
             this.input_Company.Size = new System.Drawing.Size(196, 29);
-            this.input_Company.TabIndex = 4;
+            this.input_Company.TabIndex = 8;
             // 
             // lbl_Occupation
             // 
@@ -326,7 +326,7 @@
             this.btn_Back2.Location = new System.Drawing.Point(24, 175);
             this.btn_Back2.Name = "btn_Back2";
             this.btn_Back2.Size = new System.Drawing.Size(93, 26);
-            this.btn_Back2.TabIndex = 2;
+            this.btn_Back2.TabIndex = 11;
             this.btn_Back2.Text = "Back";
             this.btn_Back2.UseVisualStyleBackColor = false;
             this.btn_Back2.Click += new System.EventHandler(this.btn_Back2_Click);
@@ -340,7 +340,7 @@
             this.btn_Next2.Location = new System.Drawing.Point(129, 175);
             this.btn_Next2.Name = "btn_Next2";
             this.btn_Next2.Size = new System.Drawing.Size(93, 26);
-            this.btn_Next2.TabIndex = 2;
+            this.btn_Next2.TabIndex = 10;
             this.btn_Next2.Text = "Next";
             this.btn_Next2.UseVisualStyleBackColor = false;
             this.btn_Next2.Click += new System.EventHandler(this.btn_Next2_Click);
@@ -372,7 +372,7 @@
             this.btn_MakeAccount1.Location = new System.Drawing.Point(115, 252);
             this.btn_MakeAccount1.Name = "btn_MakeAccount1";
             this.btn_MakeAccount1.Size = new System.Drawing.Size(105, 26);
-            this.btn_MakeAccount1.TabIndex = 2;
+            this.btn_MakeAccount1.TabIndex = 15;
             this.btn_MakeAccount1.Text = "Account Maken";
             this.btn_MakeAccount1.UseVisualStyleBackColor = false;
             this.btn_MakeAccount1.Click += new System.EventHandler(this.btn_MakeAccount1_Click);
@@ -386,7 +386,7 @@
             this.btn_Back3.Location = new System.Drawing.Point(25, 252);
             this.btn_Back3.Name = "btn_Back3";
             this.btn_Back3.Size = new System.Drawing.Size(80, 26);
-            this.btn_Back3.TabIndex = 2;
+            this.btn_Back3.TabIndex = 16;
             this.btn_Back3.Text = "Terug";
             this.btn_Back3.UseVisualStyleBackColor = false;
             this.btn_Back3.Click += new System.EventHandler(this.btn_Back3_Click);
@@ -400,7 +400,7 @@
             this.input_PasswordRepeat1.Location = new System.Drawing.Point(25, 198);
             this.input_PasswordRepeat1.Name = "input_PasswordRepeat1";
             this.input_PasswordRepeat1.Size = new System.Drawing.Size(196, 29);
-            this.input_PasswordRepeat1.TabIndex = 1;
+            this.input_PasswordRepeat1.TabIndex = 14;
             this.input_PasswordRepeat1.UseSystemPasswordChar = true;
             this.input_PasswordRepeat1.TextChanged += new System.EventHandler(this.input_Password1_TextChanged);
             // 
@@ -413,7 +413,7 @@
             this.input_Password1.Location = new System.Drawing.Point(25, 121);
             this.input_Password1.Name = "input_Password1";
             this.input_Password1.Size = new System.Drawing.Size(196, 29);
-            this.input_Password1.TabIndex = 1;
+            this.input_Password1.TabIndex = 13;
             this.input_Password1.UseSystemPasswordChar = true;
             this.input_Password1.TextChanged += new System.EventHandler(this.input_Password1_TextChanged);
             // 
@@ -426,7 +426,7 @@
             this.input_Email1.Location = new System.Drawing.Point(25, 45);
             this.input_Email1.Name = "input_Email1";
             this.input_Email1.Size = new System.Drawing.Size(196, 29);
-            this.input_Email1.TabIndex = 1;
+            this.input_Email1.TabIndex = 12;
             // 
             // lbl_PasswordRepeat1
             // 
@@ -486,16 +486,10 @@
             this.input_Category.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.input_Category.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.input_Category.FormattingEnabled = true;
-            this.input_Category.Items.AddRange(new object[] {
-            "Printers",
-            "Computers",
-            "Mail",
-            "General",
-            "Other"});
             this.input_Category.Location = new System.Drawing.Point(24, 45);
             this.input_Category.Name = "input_Category";
             this.input_Category.Size = new System.Drawing.Size(196, 29);
-            this.input_Category.TabIndex = 7;
+            this.input_Category.TabIndex = 8;
             // 
             // input_PasswordRepeat2
             // 
@@ -506,7 +500,7 @@
             this.input_PasswordRepeat2.Location = new System.Drawing.Point(24, 275);
             this.input_PasswordRepeat2.Name = "input_PasswordRepeat2";
             this.input_PasswordRepeat2.Size = new System.Drawing.Size(196, 29);
-            this.input_PasswordRepeat2.TabIndex = 6;
+            this.input_PasswordRepeat2.TabIndex = 11;
             this.input_PasswordRepeat2.UseSystemPasswordChar = true;
             this.input_PasswordRepeat2.TextChanged += new System.EventHandler(this.input_Password2_TextChanged);
             // 
@@ -519,7 +513,7 @@
             this.input_Password2.Location = new System.Drawing.Point(24, 198);
             this.input_Password2.Name = "input_Password2";
             this.input_Password2.Size = new System.Drawing.Size(196, 29);
-            this.input_Password2.TabIndex = 6;
+            this.input_Password2.TabIndex = 10;
             this.input_Password2.UseSystemPasswordChar = true;
             this.input_Password2.TextChanged += new System.EventHandler(this.input_Password2_TextChanged);
             // 
@@ -532,7 +526,7 @@
             this.input_Email2.Location = new System.Drawing.Point(24, 124);
             this.input_Email2.Name = "input_Email2";
             this.input_Email2.Size = new System.Drawing.Size(196, 29);
-            this.input_Email2.TabIndex = 6;
+            this.input_Email2.TabIndex = 9;
             // 
             // lbl_PasswordRepeat2
             // 
@@ -589,7 +583,7 @@
             this.btn_MakeAccount2.Location = new System.Drawing.Point(115, 328);
             this.btn_MakeAccount2.Name = "btn_MakeAccount2";
             this.btn_MakeAccount2.Size = new System.Drawing.Size(105, 26);
-            this.btn_MakeAccount2.TabIndex = 4;
+            this.btn_MakeAccount2.TabIndex = 12;
             this.btn_MakeAccount2.Text = "Create";
             this.btn_MakeAccount2.UseVisualStyleBackColor = false;
             this.btn_MakeAccount2.Click += new System.EventHandler(this.btn_MakeAccount2_Click);
@@ -604,7 +598,7 @@
             this.btn_Back4.Location = new System.Drawing.Point(24, 328);
             this.btn_Back4.Name = "btn_Back4";
             this.btn_Back4.Size = new System.Drawing.Size(80, 26);
-            this.btn_Back4.TabIndex = 3;
+            this.btn_Back4.TabIndex = 13;
             this.btn_Back4.Text = "Back";
             this.btn_Back4.UseVisualStyleBackColor = false;
             this.btn_Back4.Click += new System.EventHandler(this.btn_Back4_Click);

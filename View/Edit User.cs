@@ -17,6 +17,11 @@ namespace View
             this.provider = provider;
             this.user = user;
 
+            foreach (Category category in Enum.GetValues(typeof(Category)))
+            {
+                input_Expertise.Items.Add(category);
+            }
+
             input_FirstName.Text = user.FirstName;
             input_LastName.Text = user.LastName;
             input_Email.Text = user.Email;

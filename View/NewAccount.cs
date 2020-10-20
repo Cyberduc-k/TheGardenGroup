@@ -22,6 +22,11 @@ namespace View
         {
             InitializeComponent();
             this.provider = provider;
+
+            foreach (Category category in Enum.GetValues(typeof(Category)))
+            {
+                input_Category.Items.Add(category);
+            }
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)
