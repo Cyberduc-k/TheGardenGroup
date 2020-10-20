@@ -46,6 +46,7 @@
             this.TicketsDashboard_btnResolve = new System.Windows.Forms.Button();
             this.btn_SubmitTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
+            this.ch_Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,8 @@
             this.ch_DateOfIssueing,
             this.ch_Category,
             this.ch_Subject,
-            this.ch_Priority});
+            this.ch_Priority,
+            this.ch_Status});
             this.lv_Tickets.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.lv_Tickets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
             this.lv_Tickets.FullRowSelect = true;
@@ -274,6 +276,10 @@
             this.TicketsDashboard_btnViewTicket.Visible = false;
             this.TicketsDashboard_btnViewTicket.Click += new System.EventHandler(this.TicketsDashboard_btnViewTicket_Click);
             // 
+            // ch_Status
+            // 
+            this.ch_Status.Text = "Status";
+            // 
             // Tickets_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,5 +322,6 @@
         private System.Windows.Forms.Label lbl_FAqMenu;
         private System.Windows.Forms.Button btn_SubmitTicket;
         private System.Windows.Forms.Button TicketsDashboard_btnViewTicket;
+        private System.Windows.Forms.ColumnHeader ch_Status;
     }
 }

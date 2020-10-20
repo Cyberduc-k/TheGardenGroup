@@ -33,7 +33,8 @@ namespace View
                 ch_DateOfIssueing,
                 ch_Category,
                 ch_Subject,
-                ch_Priority
+                ch_Priority,
+                ch_Status
             });
 
             ITicketService ticketService = provider.GetService<ITicketService>();
@@ -69,8 +70,10 @@ namespace View
         //Fill in the listview
         void FillListViewEmployee(IEnumerable<Ticket> tickets, Category preferredCategory)
         {
+            int nextIndex = 0;
             foreach (Ticket ticket in tickets)
             {
+                //Only the id is stored in the db, so the user has to be added again.
                 ticket.Client = userService.GetSingle(ticket.ClientId);
 
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
@@ -78,13 +81,25 @@ namespace View
                 li.SubItems.Add(ticket.Category.ToString());
                 li.SubItems.Add(ticket.Subject);
                 li.SubItems.Add(ticket.Priority.ToString());
+
+                string status;
+                if (ticket.Solved)
+                    status = "Solved";
+                else
+                    status = "Unsolved";
+
+                li.SubItems.Add(status);
+
                 li.Tag = ticket;
 
-                if (ticket.Category == preferredCategory)
+                if (ticket.Category == preferredCategory && !ticket.Solved)
                 {
                     li.BackColor = Color.FromArgb(95, 194, 129);
                     li.ForeColor = Color.White;
-                    lv_Tickets.Items.Insert(0, li);
+
+                    //Insert the ticket after the previous preferred ticket
+                    lv_Tickets.Items.Insert(nextIndex, li);
+                    nextIndex++;
                 }
                 else
                     lv_Tickets.Items.Add(li);
@@ -95,6 +110,7 @@ namespace View
         {
             foreach (Ticket ticket in tickets)
             {
+                //Only the id is stored in the db, so the user has to be added again.
                 ticket.Client = userService.GetSingle(ticket.ClientId);
 
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
@@ -102,6 +118,14 @@ namespace View
                 li.SubItems.Add(ticket.Category.ToString());
                 li.SubItems.Add(ticket.Subject);
                 li.SubItems.Add(ticket.Priority.ToString());
+
+                string status;
+                if (ticket.Solved)
+                    status = "Solved";
+                else
+                    status = "Unsolved";
+
+                li.SubItems.Add(status);
                 li.Tag = ticket;
 
                 lv_Tickets.Items.Add(li);
