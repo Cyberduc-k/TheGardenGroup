@@ -30,6 +30,17 @@ namespace View
 
             InitializeComponent();
 
+            if (LoggedInUser.Instance.User is Customer && ticket.Solved)
+            {
+                pnl_EditTicketEmployee.Top = 92;
+                lbl_Review.Show();
+                lbl_Score.Show();
+                input_ReviewScore.Show();
+                input_Review.Show();
+                input_ReviewScore.Value = ticket.ReviewScore == 0 ? 5 : ticket.ReviewScore;
+                input_Review.Text = ticket.Review;
+            }
+
             EditTicket_lblTicketID.Text = "Ticket: " + this.ticket.Id;
             EditTicket_lblTicketSubject.Text = this.ticket.Subject;
             EditTicket_lblTicketCategory.Text = this.ticket.Category.ToString();
@@ -86,6 +97,13 @@ namespace View
                 {
                     this.ticket.Description = EditTicket_txtAreaDescription.Text;
                 }
+
+                if (input_Review.Text.Length > 0)
+                {
+                    this.ticket.Review = input_Review.Text;
+                }
+
+                this.ticket.ReviewScore = (byte)input_ReviewScore.Value;
 
                 ticketService.Update(this.ticket);
             }

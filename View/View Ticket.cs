@@ -42,6 +42,15 @@ namespace View
                 ViewTicket_lblStatus.Text = "Unsolved";
                 ViewTicket_txtAreaSolution.Text = "There is no solution given yet";
             }
+
+            if (ticket.Review.Length > 0)
+            {
+                txtAreaReview.Text = ticket.Review;
+                lbl_ReviewScore.Text = $"{ticket.ReviewScore} / 10";
+            } else
+            {
+                txtAreaReview.Text = "This ticket has not been reviewed yet";
+            }
         }
 
         #region OnClicks

@@ -33,6 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_ReviewScore = new System.Windows.Forms.Label();
+            this.lbl_Review = new System.Windows.Forms.Label();
+            this.txtAreaReview = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.ViewTicket_txtAreaSolution = new System.Windows.Forms.TextBox();
             this.ViewTicket_lblDate = new System.Windows.Forms.Label();
@@ -74,6 +77,9 @@
             this.pnl_Login.Controls.Add(this.label3);
             this.pnl_Login.Controls.Add(this.label2);
             this.pnl_Login.Controls.Add(this.label1);
+            this.pnl_Login.Controls.Add(this.lbl_ReviewScore);
+            this.pnl_Login.Controls.Add(this.lbl_Review);
+            this.pnl_Login.Controls.Add(this.txtAreaReview);
             this.pnl_Login.Controls.Add(this.label18);
             this.pnl_Login.Controls.Add(this.ViewTicket_txtAreaSolution);
             this.pnl_Login.Controls.Add(this.ViewTicket_lblDate);
@@ -129,6 +135,37 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "Submitted by";
             // 
+            // lbl_ReviewScore
+            // 
+            this.lbl_ReviewScore.AutoSize = true;
+            this.lbl_ReviewScore.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_ReviewScore.Location = new System.Drawing.Point(704, 344);
+            this.lbl_ReviewScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_ReviewScore.Name = "lbl_ReviewScore";
+            this.lbl_ReviewScore.Size = new System.Drawing.Size(0, 30);
+            this.lbl_ReviewScore.TabIndex = 36;
+            // 
+            // lbl_Review
+            // 
+            this.lbl_Review.AutoSize = true;
+            this.lbl_Review.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_Review.Location = new System.Drawing.Point(614, 344);
+            this.lbl_Review.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Review.Name = "lbl_Review";
+            this.lbl_Review.Size = new System.Drawing.Size(86, 30);
+            this.lbl_Review.TabIndex = 36;
+            this.lbl_Review.Text = "Review:";
+            // 
+            // txtAreaReview
+            // 
+            this.txtAreaReview.Enabled = false;
+            this.txtAreaReview.Location = new System.Drawing.Point(619, 389);
+            this.txtAreaReview.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAreaReview.Multiline = true;
+            this.txtAreaReview.Name = "txtAreaReview";
+            this.txtAreaReview.Size = new System.Drawing.Size(598, 196);
+            this.txtAreaReview.TabIndex = 35;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -147,7 +184,7 @@
             this.ViewTicket_txtAreaSolution.Margin = new System.Windows.Forms.Padding(2);
             this.ViewTicket_txtAreaSolution.Multiline = true;
             this.ViewTicket_txtAreaSolution.Name = "ViewTicket_txtAreaSolution";
-            this.ViewTicket_txtAreaSolution.Size = new System.Drawing.Size(598, 482);
+            this.ViewTicket_txtAreaSolution.Size = new System.Drawing.Size(598, 207);
             this.ViewTicket_txtAreaSolution.TabIndex = 35;
             // 
             // ViewTicket_lblDate
@@ -314,7 +351,7 @@
             this.Controls.Add(this.ViewTicket_btnClose);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "View_Ticket";
-            this.Text = "Resolve_Ticket";
+            this.Text = "View Ticket";
             this.pnl_Login.ResumeLayout(false);
             this.pnl_Login.PerformLayout();
             this.ResumeLayout(false);
@@ -343,5 +380,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_Review;
+        private System.Windows.Forms.TextBox txtAreaReview;
+        private System.Windows.Forms.Label lbl_ReviewScore;
     }
 }

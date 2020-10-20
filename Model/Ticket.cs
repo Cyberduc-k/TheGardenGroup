@@ -24,6 +24,7 @@ namespace Model
         public DateTime DateOfSolving { get; set; }
         public bool Solved { get; set; }
         public string Review { get; set; }
+        public byte ReviewScore { get; set; }
 
         public Ticket() { }
 
