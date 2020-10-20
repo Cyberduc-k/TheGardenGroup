@@ -7,8 +7,7 @@ namespace View
 {
     public partial class Resolve_Ticket : Form
     {
-        private IServiceProvider provider;
-        ITicketService ticketService;
+        private ITicketService ticketService;
         private Ticket ticket;
 
         public Resolve_Ticket(Ticket ticket, IServiceProvider provider)
@@ -19,7 +18,6 @@ namespace View
                 return;
             }
 
-            this.provider = provider;
             this.ticket = ticket;
 
             InitializeComponent();

@@ -16,6 +16,7 @@ namespace View
     public partial class Tickets_Dashboard : Form
     {
         private IServiceProvider provider;
+        private IUserService userService;
         private Ticket selectedTicket;
 
         public Tickets_Dashboard(IServiceProvider provider)
@@ -35,10 +36,8 @@ namespace View
                 ch_Priority
             });
 
-
             ITicketService ticketService = provider.GetService<ITicketService>();
-
-            Category preferredCategory = Category.Computers; //TODO: Remove
+            userService = provider.GetService<IUserService>();
 
             //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
@@ -51,13 +50,13 @@ namespace View
                 TicketsDashboard_btnResolve.Hide();
                 btn_SubmitTicket.Show();
                 TicketsDashboard_btnViewTicket.Show();
-                FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.Client.Id == LoggedInUser.Instance.User.Id));
+                FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id));
             }
             else
             {
                 try
                 {
-                    preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;
+                    Category preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;
                     FillListViewEmployee(ticketService.GetAll(), preferredCategory);
                 }
                 catch (Exception e)
@@ -72,6 +71,8 @@ namespace View
         {
             foreach (Ticket ticket in tickets)
             {
+                ticket.Client = userService.GetSingle(ticket.ClientId);
+
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
 
                 li.SubItems.Add(ticket.Category.ToString());
@@ -94,6 +95,8 @@ namespace View
         {
             foreach (Ticket ticket in tickets)
             {
+                ticket.Client = userService.GetSingle(ticket.ClientId);
+
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToShortDateString());
 
                 li.SubItems.Add(ticket.Category.ToString());

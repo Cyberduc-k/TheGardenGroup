@@ -14,8 +14,12 @@ namespace Model
         public int DaysToSolve { get; set; }
         public string Description { get; set; }
         public string Solution { get; set; }
+        [BsonIgnore]
         public User Client { get; set; }
+        public string ClientId { get; set; }
+        [BsonIgnore]
         public User Handler { get; set; }
+        public string HandlerId { get; set; }
         public DateTime DateOfIssueing { get; set; }
         public DateTime DateOfSolving { get; set; }
         public bool Solved { get; set; }
@@ -33,13 +37,14 @@ namespace Model
             DaysToSolve = daysToSolve;
             Description = description;
             Client = client;
+            ClientId = client.Id;
             DateOfIssueing = dateOfIssueing;
             Solved = false;
         }
 
         //A full ticket
         public Ticket(string id, string subject, Category category, Priority priority, 
-                        int daysToSolve, string description, string solution, User client, User handler, 
+                        int daysToSolve, string description, User client, User handler, string solution, 
                         DateTime dateOfIssueing, DateTime dateOfSolving, bool solved)
         {
             Id = id;
@@ -50,7 +55,9 @@ namespace Model
             Description = description;
             Solution = solution;
             Client = client;
+            ClientId = client.Id;
             Handler = handler;
+            HandlerId = handler.Id;
             DateOfIssueing = dateOfIssueing;
             DateOfSolving = dateOfSolving;
             Solved = solved;
