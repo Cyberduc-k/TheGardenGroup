@@ -54,9 +54,16 @@ namespace View
 
                 Ticket ticket = new Ticket(subject, category, priority, deadline, description, LoggedInUser.Instance.User, DateTime.Now);
                 ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
+                IUserService userService = provider.GetService(typeof(IUserService)) as IUserService;
+
+                //Store that the user submitted a new ticket
+                Customer user = (Customer)LoggedInUser.Instance.User;
+                user.Tickets++;
+                userService.Update(user);
 
                 //Submit the new ticket
                 ticketService.Add(ticket);
+               
                 MessageBox.Show("Your ticket has successfully been added", "Ticket added successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

@@ -81,8 +81,6 @@ namespace View
                 ch_BirthDate,
                 ch_ReviewScore,
                 ch_Tickets,
-                ch_TicketsHelped,
-                ch_TicketsNotHelped
             });
 
             IUserService service = provider.GetService<IUserService>();
@@ -96,9 +94,7 @@ namespace View
                 li.SubItems.Add(employee.Email);
                 li.SubItems.Add(employee.BirthDate.ToShortDateString());
                 li.SubItems.Add(employee.ReviewScore.ToString());
-                li.SubItems.Add(employee.TicketsProcessed.ToString());
-                li.SubItems.Add(employee.TicketsSucceeded.ToString());
-                li.SubItems.Add(employee.TicketsFailed.ToString());
+                li.SubItems.Add(employee.TicketsSolved.ToString());
                 li.Tag = employee;
 
                 lv_Users.Items.Add(li);
