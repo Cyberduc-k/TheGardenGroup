@@ -47,7 +47,7 @@ namespace View
             EditTicket_lblTicketPriority.Text = this.ticket.Priority.ToString();
             EditTicket_lblTicketDeadline.Text = this.ticket.DaysToSolve.ToString() + " days";
             EditTicket_lblTicketDescription.Text = this.ticket.Description;
-            EditTicket_lblName.Text = this.ticket.Client.Name;
+            EditTicket_lblName.Text = this.ticket.Client.Alias;
             EditTicket_lblMail.Text = this.ticket.Client.Email;
 
             FillCategoryCombobox();

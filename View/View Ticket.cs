@@ -23,7 +23,7 @@ namespace View
             ViewTicket_lblSubject.Text = ticket.Subject;
             ViewTicket_lblDescription.Text = ticket.Description;
 
-            ViewTicket_lblName.Text = ticket.Client.Name;
+            ViewTicket_lblName.Text = ticket.Client.Alias;
             ViewTicket_lblMail.Text = ticket.Client.Email;
 
             ViewTicket_lblCategory.Text = ticket.Category.ToString();

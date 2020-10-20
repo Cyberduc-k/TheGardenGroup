@@ -29,7 +29,7 @@ namespace View
             ResolveTicket_lblStatus.Text = ticket.Solved.ToString().ToUpper();
             ResolveTicket_lblDescription.Text = ticket.Description;
 
-            ResolveTicket_lblName.Text = ticket.Client.Name;
+            ResolveTicket_lblName.Text = ticket.Client.Alias;
             ResolveTicket_lblMail.Text = ticket.Client.Email;
 
             ResolveTicket_lblCategory.Text = ticket.Category.ToString();
