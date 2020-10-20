@@ -173,12 +173,6 @@
             this.SubmitTicket_comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SubmitTicket_comboCategory.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SubmitTicket_comboCategory.FormattingEnabled = true;
-            this.SubmitTicket_comboCategory.Items.AddRange(new object[] {
-            "Other",
-            "Printers",
-            "Computers",
-            "Mail",
-            "General"});
             this.SubmitTicket_comboCategory.Location = new System.Drawing.Point(572, 103);
             this.SubmitTicket_comboCategory.Name = "SubmitTicket_comboCategory";
             this.SubmitTicket_comboCategory.Size = new System.Drawing.Size(430, 25);

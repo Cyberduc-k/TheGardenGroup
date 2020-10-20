@@ -22,8 +22,14 @@ namespace View
             InitializeComponent();
             ActivityMeasurement();
 
-            //Make sure a category is selected by default
-            SubmitTicket_comboCategory.SelectedIndex = 0;
+            //Loop through all Categories
+            foreach (Category category in Enum.GetValues(typeof(Category)))
+            {
+                SubmitTicket_comboCategory.Items.Add(category);
+            }
+
+            //Select the last Category available, should be "Other"
+            SubmitTicket_comboCategory.SelectedIndex = Enum.GetValues(typeof(Category)).Length - 1;
         }
 
         public void ActivityMeasurement()
@@ -54,9 +60,16 @@ namespace View
 
                 Ticket ticket = new Ticket(subject, category, priority, deadline, description, LoggedInUser.Instance.User, DateTime.Now);
                 ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
+                IUserService userService = provider.GetService(typeof(IUserService)) as IUserService;
+
+                //Store that the user submitted a new ticket
+                Customer user = (Customer)LoggedInUser.Instance.User;
+                user.Tickets++;
+                userService.Update(user);
 
                 //Submit the new ticket
                 ticketService.Add(ticket);
+               
                 MessageBox.Show("Your ticket has successfully been added", "Ticket added successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

@@ -8,6 +8,6 @@ namespace Model
 {
     public enum Category
     {
-        Printers, Computers, Mail, General, Other
+        Printers, Computers, Mail, General, Internet, Sound, Passwords, Other
     }
 }

@@ -7,6 +7,7 @@ namespace View
 {
     public partial class Resolve_Ticket : Form
     {
+        private IServiceProvider provider;
         private ITicketService ticketService;
         private Ticket ticket;
 
@@ -20,6 +21,7 @@ namespace View
             }
 
             this.ticket = ticket;
+            this.provider = provider;
 
             InitializeComponent();
 
@@ -51,6 +53,10 @@ namespace View
                 ticket.HandlerId = LoggedInUser.Instance.User.Id;
 
                 ticketService.Update(ticket);
+
+                Employee user = (Employee)LoggedInUser.Instance.User;
+                user.TicketsSolved++;
+                (provider.GetService(typeof(IUserService)) as IUserService).Update(user);
 
                 MessageBox.Show("The ticket has successfully been resolved", "Resolved!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

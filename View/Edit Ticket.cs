@@ -58,11 +58,10 @@ namespace View
         {
             EditTicket_cmbCategory.Items.Clear();
 
-            EditTicket_cmbCategory.Items.Add(Category.Printers);
-            EditTicket_cmbCategory.Items.Add(Category.Computers);
-            EditTicket_cmbCategory.Items.Add(Category.Mail);
-            EditTicket_cmbCategory.Items.Add(Category.General);
-            EditTicket_cmbCategory.Items.Add(Category.Other);
+            //Loop through all Categories
+            foreach(Category category in Enum.GetValues(typeof(Category))) {
+                EditTicket_cmbCategory.Items.Add(category);
+            }
         }
 
         private void EditTicket_btnEdit_Click(object sender, EventArgs e)
