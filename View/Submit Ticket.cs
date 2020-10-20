@@ -10,6 +10,7 @@ namespace View
     {
         private IServiceProvider provider;
 
+        //Bools to track if all inputs are correct
         private bool subjectError = true;
         private bool deadlineError = true;
         private bool descriptionError = true;
@@ -20,13 +21,16 @@ namespace View
 
             InitializeComponent();
 
+            //Make sure a category is selected by default
             SubmitTicket_comboCategory.SelectedIndex = 0;
         }
 
+        #region OnClicks
         private void SubmitTicket_btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
+                //Convert all inputs to data
                 string subject = SubmitTicket_txtSubject.Text;
 
                 Enum.TryParse(SubmitTicket_comboCategory.SelectedItem.ToString(), out Category category);
@@ -45,11 +49,13 @@ namespace View
                 Ticket ticket = new Ticket(subject, category, priority, deadline, description, LoggedInUser.Instance.User, DateTime.Now);
                 ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
 
+                //Submit the new ticket
                 ticketService.Add(ticket);
+                MessageBox.Show("Your ticket has successfully been added", "Ticket added successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                ErrorHandler.Instance.HandleError("Something went wrong while adding your ticket, try again please.", "Try again", ex);
+                ErrorHandler.Instance.HandleError("Something went wrong while adding your ticket, try to create a new ticket please.", "Try again", ex);
             }
 
             Close();
@@ -59,7 +65,9 @@ namespace View
         {
             Close();
         }
+        #endregion
 
+        #region InputValidation
         private void SubmitTicket_txtSubject_TextChanged(object sender, EventArgs e)
         {
             if (SubmitTicket_txtSubject.Text == "")
@@ -107,5 +115,6 @@ namespace View
 
             SubmitTicket_btnSubmit.Enabled = !(subjectError || deadlineError || descriptionError);
         }
+        #endregion
     }
 }

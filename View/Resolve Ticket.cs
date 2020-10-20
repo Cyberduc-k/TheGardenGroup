@@ -12,16 +12,18 @@ namespace View
 
         public Resolve_Ticket(Ticket ticket, IServiceProvider provider)
         {
+            //Make sure the ticket can be viewed
             if (ticket.Id == null) 
             {
-                ErrorHandler.Instance.HandleError("The ID cant be null", "Cant be null", new ArgumentNullException());
-                return;
+                ErrorHandler.Instance.HandleError("The ID cant be null, so for now you cant resolve this ticket.", "Cant be null", new ArgumentNullException());
+                Close();
             }
 
             this.ticket = ticket;
 
             InitializeComponent();
 
+            //Show all info of the ticket
             ResolveTicket_lblTicketID.Text = ticket.Id;
             ResolveTicket_lblSubject.Text = ticket.Subject;
             ResolveTicket_lblStatus.Text = ticket.Solved.ToString().ToUpper();
@@ -38,15 +40,24 @@ namespace View
             ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
         }
 
+        #region OnClicks
         private void ResolveTicket_btnResolve_Click(object sender, EventArgs e)
         {
-            ticket.Solution = ResolveTicket_txtAreaSolution.Text;
-            ticket.Solved = true;
-            ticket.Handler = LoggedInUser.Instance.User;
+            try
+            {
+                ticket.Solution = ResolveTicket_txtAreaSolution.Text;
+                ticket.Solved = true;
+                ticket.Handler = LoggedInUser.Instance.User;
 
-            ticketService.Update(ticket);
+                ticketService.Update(ticket);
 
-            MessageBox.Show("The ticket has successfully been resolved", "Resolved!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("The ticket has successfully been resolved", "Resolved!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                ErrorHandler.Instance.HandleError("Something went wrong while trying to solve the ticket, try again please.", "Cant solve ticket", ex);
+            }
+
             Close();
         }
 
@@ -54,10 +65,13 @@ namespace View
         {
             Close();
         }
+        #endregion
 
+        #region InputValidation
         private void ResolveTicket_txtAreaSolution_TextChanged(object sender, EventArgs e)
         {
             ResolveTicket_btnResolve.Enabled = ResolveTicket_txtAreaSolution.Text.Length > 0;
         }
+        #endregion
     }
 }

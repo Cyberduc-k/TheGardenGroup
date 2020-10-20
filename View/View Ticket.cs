@@ -7,16 +7,18 @@ namespace View
 {
     public partial class View_Ticket : Form
     {
-        public View_Ticket(Ticket ticket, IServiceProvider provider)
+        public View_Ticket(Ticket ticket)
         {
+            //Make sure the ticket can be viewed
             if (ticket.Id == null) 
             {
-                ErrorHandler.Instance.HandleError("The ID cant be null", "Cant be null", new ArgumentNullException());
-                return;
+                ErrorHandler.Instance.HandleError("The ID cant be null, so the ticket cant be viewed", "Cant be null", new ArgumentNullException());
+                Close();
             }
 
             InitializeComponent();
 
+            //Show all info of the ticket
             ViewTicket_lblTicketID.Text = "Ticket # " + ticket.Id;
             ViewTicket_lblSubject.Text = ticket.Subject;
             ViewTicket_lblDescription.Text = ticket.Description;
@@ -29,6 +31,7 @@ namespace View
             ViewTicket_lblDeadline.Text = ticket.DaysToSolve.ToString();
             ViewTicket_lblDate.Text = ticket.DateOfIssueing.ToString("dd-MM-yyyy");
 
+            //Set the status of the ticket
             if (ticket.Solved)
             {
                 ViewTicket_lblStatus.Text = "Solved";
@@ -41,9 +44,11 @@ namespace View
             }
         }
 
+        #region OnClicks
         private void ViewTicket_btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
     }
 }

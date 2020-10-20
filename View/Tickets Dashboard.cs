@@ -57,18 +57,17 @@ namespace View
             {
                 try
                 {
-                    Category preferredCategory = ((Employee)LoggedInUser.Instance.User).Expertise;
-                    FillListViewEmployee(ticketService.GetAll(), preferredCategory);
+                    FillListViewEmployee(ticketService.GetAll());
                 }
                 catch (Exception e)
                 {
-                    ErrorHandler.Instance.HandleError("Something went wrong with knowing which kind of account you are using. Please log in as a customer or an employee.", "Unknown user type", e);
+                    ErrorHandler.Instance.HandleError("Something went wrong while trying to show all tickets, for now they are not available.", "Cant show tickets", e);
                 }
             }
         }
 
         //Fill in the listview
-        void FillListViewEmployee(IEnumerable<Ticket> tickets, Category preferredCategory)
+        void FillListViewEmployee(IEnumerable<Ticket> tickets)
         {
             int nextIndex = 0;
             foreach (Ticket ticket in tickets)
@@ -89,10 +88,9 @@ namespace View
                     status = "Unsolved";
 
                 li.SubItems.Add(status);
-
                 li.Tag = ticket;
 
-                if (ticket.Category == preferredCategory && !ticket.Solved)
+                if (ticket.Category == ((Employee)LoggedInUser.Instance.User).Expertise && !ticket.Solved)
                 {
                     li.BackColor = Color.FromArgb(95, 194, 129);
                     li.ForeColor = Color.White;
@@ -267,7 +265,7 @@ namespace View
 
         private void TicketsDashboard_btnViewTicket_Click(object sender, EventArgs e)
         {
-            View_Ticket viewTicket = new View_Ticket(selectedTicket, provider);
+            View_Ticket viewTicket = new View_Ticket(selectedTicket);
 
             viewTicket.StartPosition = FormStartPosition.Manual;
             viewTicket.Location = Location;
