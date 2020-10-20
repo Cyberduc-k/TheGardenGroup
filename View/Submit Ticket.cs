@@ -22,7 +22,7 @@ namespace View
             InitializeComponent();
             ActivityMeasurement();
 
-            //Make sure a category is selected by default
+            //Loop through all Categories
             foreach (Category category in Enum.GetValues(typeof(Category)))
             {
                 SubmitTicket_comboCategory.Items.Add(category);

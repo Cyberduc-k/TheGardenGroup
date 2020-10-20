@@ -58,6 +58,7 @@ namespace View
         {
             EditTicket_cmbCategory.Items.Clear();
 
+            //Loop through all Categories
             foreach(Category category in Enum.GetValues(typeof(Category))) {
                 EditTicket_cmbCategory.Items.Add(category);
             }

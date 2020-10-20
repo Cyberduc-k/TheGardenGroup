@@ -51,6 +51,7 @@ namespace View
         {
             FAQ_comboCategory.Items.Clear();
 
+            //Loop through all Categories
             foreach (Category category in Enum.GetValues(typeof(Category)))
             {
                 FAQ_comboCategory.Items.Add(category);
