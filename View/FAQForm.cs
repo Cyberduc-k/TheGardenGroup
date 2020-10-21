@@ -32,6 +32,7 @@ namespace View
             FillQuestionsCombobox((Category)FAQ_comboCategory.SelectedItem);
         }
 
+        // Diffrent displays for diffrent usertypes
         private void UserDisplay()
         {
             if(user is Customer)
@@ -90,6 +91,7 @@ namespace View
                 string answer = txt_AnswerAdd.Text;
                 Category category = (Category)FAQ_comboCategory.SelectedItem;
 
+                // Making sure both question and solution are filled in
                 if (question != "" && answer != "")
                 {
                     FAQ newQuestion = new FAQ(question, answer, category);
@@ -109,6 +111,7 @@ namespace View
             }
             finally
             {
+                //Clearing textforms and filling treeview again so it is up to date
                 txt_AnswerAdd.Clear();
                 txt_QuestionAdd.Clear();
                 FillTreeView((Category)FAQ_comboCategory.SelectedItem);

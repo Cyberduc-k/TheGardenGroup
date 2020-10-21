@@ -71,6 +71,7 @@ namespace View
             {
                 ITicketService ticketService = provider.GetService<ITicketService>();
 
+                // Only edit if the textfields etc are filled in
                 if (EditTicket_txtSubject.Text != "")
                 {
                     ticket.Subject = EditTicket_txtSubject.Text;

@@ -177,6 +177,7 @@ namespace View
                 return;
             }
 
+            // To seperate edit ticket form
             Edit_Ticket editTicket = new Edit_Ticket(selectedTicket, provider);
 
             editTicket.StartPosition = FormStartPosition.Manual;
