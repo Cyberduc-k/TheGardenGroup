@@ -74,7 +74,14 @@ namespace View
         //Fill in the listview
         void FillListViewEmployee()
         {
-            IEnumerable<Ticket> tickets = ticketService.GetAll();
+            IEnumerable<Ticket> tickets;
+
+            if (filterWithBoth)
+                tickets = ticketService.GetAll();
+            else if (filterWithSolved)
+                tickets = ticketService.GetAllBy(tckt => tckt.Solved);
+            else
+                tickets = ticketService.GetAllBy(tckt => !tckt.Solved);
 
             //Track how many tickets have been added to the front already
             int nextIndex = 0;
@@ -92,17 +99,9 @@ namespace View
 
                 string status;
                 if (ticket.Solved)
-                {
                     status = "Solved";
-                    if (filterWithSolved == false && filterWithBoth == false)
-                        continue;
-                }
                 else
-                {
                     status = "Unsolved";
-                    if (filterWithSolved == true)
-                        continue;
-                }
 
                 li.SubItems.Add(status);
                 li.Tag = ticket;
