@@ -17,7 +17,10 @@ namespace View
     {
         private IServiceProvider provider;
         private IUserService userService;
+        private ITicketService ticketService;
         private Ticket selectedTicket;
+        private bool isCustomer;
+        private bool filterWithSolved = false;
 
         public Tickets_Dashboard(IServiceProvider provider)
         {
@@ -38,12 +41,13 @@ namespace View
                 ch_Status
             });
 
-            ITicketService ticketService = provider.GetService<ITicketService>();
+            ticketService = provider.GetService<ITicketService>();
             userService = provider.GetService<IUserService>();
 
             //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
             {
+                isCustomer = true;
                 lbl_Statistics.Hide();
                 lbl_Users.Hide();
                 lbl_Tickets.Left = 95;
@@ -53,13 +57,14 @@ namespace View
                 btn_SubmitTicket.Show();
                 TicketsDashboard_btnViewTicket.Show();
                 btn_ReviewTicket.Show();
-                FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id));
+                FillListViewCustomer();
             }
             else
             {
                 try
                 {
-                    FillListViewEmployee(ticketService.GetAll());
+                    isCustomer = false;
+                    FillListViewEmployee();
                 }
                 catch (Exception e)
                 {
@@ -69,8 +74,10 @@ namespace View
         }
 
         //Fill in the listview
-        void FillListViewEmployee(IEnumerable<Ticket> tickets)
+        void FillListViewEmployee()
         {
+            IEnumerable<Ticket> tickets = ticketService.GetAll();
+
             int nextIndex = 0;
             foreach (Ticket ticket in tickets)
             {
@@ -86,7 +93,11 @@ namespace View
 
                 string status;
                 if (ticket.Solved)
+                {
                     status = "Solved";
+                    if (filterWithSolved == false)
+                        continue;
+                }
                 else
                     status = "Unsolved";
 
@@ -118,8 +129,10 @@ namespace View
             }
         }
 
-        void FillListViewCustomer(IEnumerable<Ticket> tickets)
+        void FillListViewCustomer()
         {
+            IEnumerable<Ticket> tickets = ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id);
+
             foreach (Ticket ticket in tickets)
             {
                 //Only the id is stored in the db, so the user has to be added again.
@@ -305,6 +318,21 @@ namespace View
             Hide();
             reviewTicket.ShowDialog();
             Show();
+        }
+
+        private void Filter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillAfterFilterChange();
+        }
+
+        private void FillAfterFilterChange()
+        {
+            if (filter.SelectedIndex == 0)
+                filterWithSolved = false;
+            else
+                filterWithSolved = true;
+
+            FillTickets();
         }
     }
 }

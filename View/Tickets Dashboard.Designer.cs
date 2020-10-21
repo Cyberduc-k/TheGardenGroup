@@ -50,6 +50,7 @@
             this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
             this.btn_ReviewTicket = new System.Windows.Forms.Button();
             this.ch_DaysToSolve = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.filter = new System.Windows.Forms.ComboBox();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -322,12 +323,27 @@
             // 
             this.ch_DaysToSolve.Text = "Days to solve";
             // 
+            // filter
+            // 
+            this.filter.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.filter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.filter.FormattingEnabled = true;
+            this.filter.Items.AddRange(new object[] {
+            "Unsolved",
+            "Unsolved + Solved"});
+            this.filter.Location = new System.Drawing.Point(95, 99);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(196, 29);
+            this.filter.TabIndex = 11;
+            this.filter.SelectedIndexChanged += new System.EventHandler(this.Filter_SelectedIndexChanged);
+            // 
             // Tickets_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.filter);
             this.Controls.Add(this.btn_ReviewTicket);
             this.Controls.Add(this.TicketsDashboard_btnViewTicket);
             this.Controls.Add(this.btn_SubmitTicket);
@@ -369,5 +385,6 @@
         private System.Windows.Forms.Button btn_Account;
         private System.Windows.Forms.Button btn_ReviewTicket;
         private System.Windows.Forms.ColumnHeader ch_DaysToSolve;
+        private System.Windows.Forms.ComboBox filter;
     }
 }
