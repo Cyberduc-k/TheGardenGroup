@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_Header = new System.Windows.Forms.Panel();
+            this.btn_Account = new System.Windows.Forms.Button();
             this.lbl_FAqMenu = new System.Windows.Forms.Label();
             this.current_stripe = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.ch_TicketsNotHelped = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_editTicket = new System.Windows.Forms.Button();
             this.btn_deleteTicket = new System.Windows.Forms.Button();
-            this.btn_Account = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,21 @@
             this.panel_Header.Name = "panel_Header";
             this.panel_Header.Size = new System.Drawing.Size(1266, 69);
             this.panel_Header.TabIndex = 0;
+            // 
+            // btn_Account
+            // 
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.Location = new System.Drawing.Point(1078, 21);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.Size = new System.Drawing.Size(80, 27);
+            this.btn_Account.TabIndex = 9;
+            this.btn_Account.Text = "Account";
+            this.btn_Account.UseVisualStyleBackColor = false;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // lbl_FAqMenu
             // 
@@ -221,7 +236,7 @@
             // ch_Occupation
             // 
             this.ch_Occupation.Text = "Occupation";
-            this.ch_Occupation.Width = 204;
+            this.ch_Occupation.Width = 186;
             // 
             // ch_Tickets
             // 
@@ -273,21 +288,6 @@
             this.btn_deleteTicket.Text = "Delete";
             this.btn_deleteTicket.UseVisualStyleBackColor = false;
             this.btn_deleteTicket.Click += new System.EventHandler(this.btn_deleteTicket_Click);
-            // 
-            // btn_Account
-            // 
-            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
-            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btn_Account.ForeColor = System.Drawing.Color.White;
-            this.btn_Account.Location = new System.Drawing.Point(1078, 21);
-            this.btn_Account.Name = "btn_Account";
-            this.btn_Account.Size = new System.Drawing.Size(80, 27);
-            this.btn_Account.TabIndex = 9;
-            this.btn_Account.Text = "Account";
-            this.btn_Account.UseVisualStyleBackColor = false;
-            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // User_Dashboard
             // 
