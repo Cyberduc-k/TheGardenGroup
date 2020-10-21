@@ -62,7 +62,7 @@
             this.ViewTicket_btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewTicket_btnClose.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ViewTicket_btnClose.ForeColor = System.Drawing.Color.White;
-            this.ViewTicket_btnClose.Location = new System.Drawing.Point(1109, 631);
+            this.ViewTicket_btnClose.Location = new System.Drawing.Point(1131, 631);
             this.ViewTicket_btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.ViewTicket_btnClose.Name = "ViewTicket_btnClose";
             this.ViewTicket_btnClose.Size = new System.Drawing.Size(122, 39);
@@ -74,6 +74,7 @@
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_Login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Login.Controls.Add(this.label3);
             this.pnl_Login.Controls.Add(this.label2);
             this.pnl_Login.Controls.Add(this.label1);
@@ -241,6 +242,7 @@
             this.ViewTicket_lblStatus.Size = new System.Drawing.Size(169, 35);
             this.ViewTicket_lblStatus.TabIndex = 30;
             this.ViewTicket_lblStatus.Text = "UNRESOLVED";
+            this.ViewTicket_lblStatus.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label12
             // 
@@ -288,12 +290,11 @@
             // 
             // ViewTicket_lblDescription
             // 
-            this.ViewTicket_lblDescription.AutoSize = true;
             this.ViewTicket_lblDescription.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ViewTicket_lblDescription.Location = new System.Drawing.Point(15, 383);
             this.ViewTicket_lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ViewTicket_lblDescription.Name = "ViewTicket_lblDescription";
-            this.ViewTicket_lblDescription.Size = new System.Drawing.Size(426, 17);
+            this.ViewTicket_lblDescription.Size = new System.Drawing.Size(426, 202);
             this.ViewTicket_lblDescription.TabIndex = 25;
             this.ViewTicket_lblDescription.Text = "Op een of andere manier heb ik mijn scherm gesloopt, het is gebarsten";
             // 
