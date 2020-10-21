@@ -32,21 +32,27 @@ namespace View
 
         private void Tickets_Dashboard_GenInfo(ITicketService ticketService)
         {
-            //Use the count function to get the amount of active tickets
-            lbl_AmountOfActiveTickets.Text = ticketService.Count().ToString();
-
-            //Calculate the amount of tickets that need immediate attention
             IEnumerable<Ticket> tickets = ticketService.GetAll();
+
+            //Calculate the amount of tickets that need immediate attention and get the amount of active tickets (.count is not possible here, because it includes the solved tickets)
             int AmountOfImmediateAttentionTickets = 0;
+            int AmountOfActiveTickets = 0;
 
             foreach (Ticket ticket in tickets)
             {
-                if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve)
+                if (ticket.Solved != true)
                 {
-                    AmountOfImmediateAttentionTickets++;
+                    AmountOfActiveTickets++;
+
+                    if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve)
+                    {
+                        AmountOfImmediateAttentionTickets++;
+                    }
                 }
             }
             lbl_AmountOfImmediateAttentionTickets.Text = AmountOfImmediateAttentionTickets.ToString();
+            lbl_AmountOfActiveTickets.Text = AmountOfActiveTickets.ToString();
+
         }
 
         private void Btn_TicketList_Click(object sender, EventArgs e)
