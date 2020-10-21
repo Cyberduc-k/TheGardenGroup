@@ -43,7 +43,7 @@ namespace View
                 ViewTicket_txtAreaSolution.Text = "There is no solution given yet";
             }
 
-            if (ticket.Review != "")
+            if (ticket.ReviewScore != 0)
             {
                 txtAreaReview.Text = ticket.Review;
                 lbl_ReviewScore.Text = $"{ticket.ReviewScore} / 10";
