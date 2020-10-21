@@ -288,12 +288,11 @@
             // 
             // ViewTicket_lblDescription
             // 
-            this.ViewTicket_lblDescription.AutoSize = true;
             this.ViewTicket_lblDescription.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ViewTicket_lblDescription.Location = new System.Drawing.Point(15, 383);
             this.ViewTicket_lblDescription.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ViewTicket_lblDescription.Name = "ViewTicket_lblDescription";
-            this.ViewTicket_lblDescription.Size = new System.Drawing.Size(426, 17);
+            this.ViewTicket_lblDescription.Size = new System.Drawing.Size(580, 202);
             this.ViewTicket_lblDescription.TabIndex = 25;
             this.ViewTicket_lblDescription.Text = "Op een of andere manier heb ik mijn scherm gesloopt, het is gebarsten";
             // 
