@@ -58,7 +58,7 @@
             // ViewTicket_btnClose
             // 
             this.ViewTicket_btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.ViewTicket_btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.ViewTicket_btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.ViewTicket_btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewTicket_btnClose.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.ViewTicket_btnClose.ForeColor = System.Drawing.Color.White;

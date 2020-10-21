@@ -157,7 +157,7 @@
             // btn_Cancel
             // 
             this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.btn_Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.btn_Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;

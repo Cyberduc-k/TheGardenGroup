@@ -2,6 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace DAL
 
         public EntityBaseRepository(string collectionName) : base()
         {
-            string connectionString = "mongodb+srv://Tymo:ut2NkiYHUVmYpGfh@cluster0.pehwk.azure.mongodb.net/TheGardenGroup?retryWrites=true&w=majority";
+            string connectionString = ConfigurationManager.ConnectionStrings["TheGardenGroupDatabase"].ConnectionString;
             MongoClient client = new MongoClient(connectionString);
 
             databaseName = MongoUrl.Create(connectionString).DatabaseName;
