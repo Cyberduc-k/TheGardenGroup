@@ -55,10 +55,10 @@
             this.lbl_submittedBY = new System.Windows.Forms.Label();
             this.lbl_editInfo = new System.Windows.Forms.Label();
             this.pnl_EditTicket = new System.Windows.Forms.Panel();
-            this.input_Review = new System.Windows.Forms.TextBox();
-            this.lbl_Review = new System.Windows.Forms.Label();
             this.input_ReviewScore = new System.Windows.Forms.NumericUpDown();
             this.lbl_Score = new System.Windows.Forms.Label();
+            this.lbl_Review = new System.Windows.Forms.Label();
+            this.input_Review = new System.Windows.Forms.TextBox();
             this.pnl_EditTicketEmployee = new System.Windows.Forms.Panel();
             this.pnl_EditTicket.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.input_ReviewScore)).BeginInit();
@@ -293,11 +293,11 @@
             // 
             // EditTicket_btnCancel
             // 
-            this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.EditTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.EditTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.White;
             this.EditTicket_btnCancel.Location = new System.Drawing.Point(12, 630);
             this.EditTicket_btnCancel.Name = "EditTicket_btnCancel";
             this.EditTicket_btnCancel.Size = new System.Drawing.Size(122, 39);
@@ -389,30 +389,6 @@
             this.pnl_EditTicket.Size = new System.Drawing.Size(1235, 605);
             this.pnl_EditTicket.TabIndex = 32;
             // 
-            // input_Review
-            // 
-            this.input_Review.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.input_Review.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.input_Review.Location = new System.Drawing.Point(319, 467);
-            this.input_Review.Multiline = true;
-            this.input_Review.Name = "input_Review";
-            this.input_Review.Size = new System.Drawing.Size(607, 111);
-            this.input_Review.TabIndex = 24;
-            this.input_Review.Visible = false;
-            // 
-            // lbl_Review
-            // 
-            this.lbl_Review.AutoSize = true;
-            this.lbl_Review.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Review.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
-            this.lbl_Review.Location = new System.Drawing.Point(315, 436);
-            this.lbl_Review.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_Review.Name = "lbl_Review";
-            this.lbl_Review.Size = new System.Drawing.Size(51, 19);
-            this.lbl_Review.TabIndex = 5;
-            this.lbl_Review.Text = "Review";
-            this.lbl_Review.Visible = false;
-            // 
             // input_ReviewScore
             // 
             this.input_ReviewScore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -450,6 +426,30 @@
             this.lbl_Score.TabIndex = 5;
             this.lbl_Score.Text = "Score";
             this.lbl_Score.Visible = false;
+            // 
+            // lbl_Review
+            // 
+            this.lbl_Review.AutoSize = true;
+            this.lbl_Review.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_Review.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.lbl_Review.Location = new System.Drawing.Point(315, 436);
+            this.lbl_Review.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_Review.Name = "lbl_Review";
+            this.lbl_Review.Size = new System.Drawing.Size(51, 19);
+            this.lbl_Review.TabIndex = 5;
+            this.lbl_Review.Text = "Review";
+            this.lbl_Review.Visible = false;
+            // 
+            // input_Review
+            // 
+            this.input_Review.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.input_Review.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(90)))), ((int)(((byte)(98)))));
+            this.input_Review.Location = new System.Drawing.Point(319, 467);
+            this.input_Review.Multiline = true;
+            this.input_Review.Name = "input_Review";
+            this.input_Review.Size = new System.Drawing.Size(607, 111);
+            this.input_Review.TabIndex = 24;
+            this.input_Review.Visible = false;
             // 
             // pnl_EditTicketEmployee
             // 
