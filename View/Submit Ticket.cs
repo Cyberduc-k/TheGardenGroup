@@ -52,7 +52,7 @@ namespace View
 
                     if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve)
                     {
-                        AmountOfImmediateAttentionTickets++;
+                        AmountOfImmediateAttentionTickets += 2;
                     }
                 }
             }
@@ -60,19 +60,23 @@ namespace View
             //This will make a score based on how much active tickets and immediate attention tickets there are
             //It will also take into account what the average DaysToSolve of all the active tickets is and will add some score if this is low
             //But this will only be in effect if the amount of tickets is greater or equal to 5
-            // | active ticket = 1 | immediate attention ticket = 2 | Average DaysToSolve <= 4 = 2, Average DaysToSolve <= 3 = 4, Average DaysToSolve <= 2 = 10 |
+            // | active ticket = 1 | immediate attention ticket = 3 | Average DaysToSolve <= 4 = 3, Average DaysToSolve <= 3 = 6, Average DaysToSolve <= 2.5 = 9, Average DaysToSolve <= 2 = 12 |
             int TotalActivityScore = AmountOfActiveTickets + AmountOfImmediateAttentionTickets;
 
             System.Diagnostics.Debug.WriteLine(TotalActivityScore);
 
+            System.Diagnostics.Debug.WriteLine(DaysToSolveTotal / AmountOfActiveTickets);
+
             if (AmountOfActiveTickets >= 5)
             {
-                if (DaysToSolveTotal / AmountOfActiveTickets <= 4)
-                    TotalActivityScore += 2;
+                if (DaysToSolveTotal / AmountOfActiveTickets <= 2)
+                    TotalActivityScore += 12;
+                else if (DaysToSolveTotal / AmountOfActiveTickets <= 2.5)
+                    TotalActivityScore += 9;
                 else if (DaysToSolveTotal / AmountOfActiveTickets <= 3)
-                    TotalActivityScore += 4;
-                else if (DaysToSolveTotal / AmountOfActiveTickets <= 2)
-                    TotalActivityScore += 10;
+                    TotalActivityScore += 6;
+                else if (DaysToSolveTotal / AmountOfActiveTickets <= 4)
+                    TotalActivityScore += 3;
             }
 
             System.Diagnostics.Debug.WriteLine(TotalActivityScore);
@@ -81,16 +85,17 @@ namespace View
             if (TotalActivityScore < 8)
             {
                 lbl_Activity.Text = "Low";
-                lbl_Warning.Hide();
+                lbl_Warning.Text = "";
             }
-            else if (TotalActivityScore > 25)
+            else if (TotalActivityScore > 22)
             {
                 lbl_Activity.Text = "High";
+                lbl_Warning.Text = "It seems to be very busy at the moment. This means it will probably take a while for your ticket to be processed. It might also not make the deadline you assign. Sorry for the inconvenience.";
             }
             else
             {
                 lbl_Activity.Text = "Medium";
-                lbl_Warning.Hide();
+                lbl_Warning.Text = "";
             }
             
         }
