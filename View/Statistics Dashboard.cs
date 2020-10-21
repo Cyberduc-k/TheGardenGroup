@@ -65,16 +65,6 @@ namespace View
             dashboard.Show();
         }
 
-        private void Btn_UserList_Click(object sender, EventArgs e)
-        {
-            User_Dashboard dashboard = new User_Dashboard(provider);
-
-            dashboard.StartPosition = FormStartPosition.Manual;
-            dashboard.Location = Location;
-            Close();
-            dashboard.Show();
-        }
-
         private void btn_Logout_Click(object sender, EventArgs e)
         {
             Login login = Application.OpenForms.OfType<Login>().FirstOrDefault();
