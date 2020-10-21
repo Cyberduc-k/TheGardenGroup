@@ -86,7 +86,7 @@
             // 
             this.lbl_Warning.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.lbl_Warning.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Warning.Location = new System.Drawing.Point(636, 493);
+            this.lbl_Warning.Location = new System.Drawing.Point(651, 493);
             this.lbl_Warning.Name = "lbl_Warning";
             this.lbl_Warning.Size = new System.Drawing.Size(185, 67);
             this.lbl_Warning.TabIndex = 40;
