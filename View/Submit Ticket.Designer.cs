@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnl_Login = new System.Windows.Forms.Panel();
+            this.lbl_Warning = new System.Windows.Forms.Label();
+            this.lbl_Activity = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SubmitTicket_lblDescription = new System.Windows.Forms.Label();
             this.SubmitTicket_lblDeadline = new System.Windows.Forms.Label();
             this.SubmitTicket_lblSubject = new System.Windows.Forms.Label();
@@ -47,15 +50,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SubmitTicket_btnCancel = new System.Windows.Forms.Button();
             this.SubmitTicket_btnSubmit = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbl_Activity = new System.Windows.Forms.Label();
-            this.lbl_Warning = new System.Windows.Forms.Label();
             this.pnl_Login.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_Login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Login.Controls.Add(this.lbl_Warning);
             this.pnl_Login.Controls.Add(this.lbl_Activity);
             this.pnl_Login.Controls.Add(this.label7);
@@ -80,6 +81,39 @@
             this.pnl_Login.Name = "pnl_Login";
             this.pnl_Login.Size = new System.Drawing.Size(1244, 607);
             this.pnl_Login.TabIndex = 24;
+            // 
+            // lbl_Warning
+            // 
+            this.lbl_Warning.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_Warning.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Warning.Location = new System.Drawing.Point(636, 493);
+            this.lbl_Warning.Name = "lbl_Warning";
+            this.lbl_Warning.Size = new System.Drawing.Size(185, 67);
+            this.lbl_Warning.TabIndex = 40;
+            this.lbl_Warning.Text = "It seems to be very busy at the moment. This means it will probably take a while " +
+    "for your ticket to be processed. It might also not make the deadline you assign." +
+    " Sorry for the inconvenience.";
+            this.lbl_Warning.Visible = false;
+            // 
+            // lbl_Activity
+            // 
+            this.lbl_Activity.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lbl_Activity.Location = new System.Drawing.Point(571, 507);
+            this.lbl_Activity.Name = "lbl_Activity";
+            this.lbl_Activity.Size = new System.Drawing.Size(72, 27);
+            this.lbl_Activity.TabIndex = 37;
+            this.lbl_Activity.Text = "...";
+            this.lbl_Activity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label7.Location = new System.Drawing.Point(412, 513);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 17);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Expected wait time:";
             // 
             // SubmitTicket_lblDescription
             // 
@@ -285,39 +319,6 @@
             this.SubmitTicket_btnSubmit.Text = "Submit";
             this.SubmitTicket_btnSubmit.UseVisualStyleBackColor = false;
             this.SubmitTicket_btnSubmit.Click += new System.EventHandler(this.SubmitTicket_btnSubmit_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1105, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Activity:";
-            // 
-            // lbl_Activity
-            // 
-            this.lbl_Activity.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Activity.Location = new System.Drawing.Point(1090, 45);
-            this.lbl_Activity.Name = "lbl_Activity";
-            this.lbl_Activity.Size = new System.Drawing.Size(72, 27);
-            this.lbl_Activity.TabIndex = 37;
-            this.lbl_Activity.Text = "...";
-            this.lbl_Activity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_Warning
-            // 
-            this.lbl_Warning.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Warning.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Warning.Location = new System.Drawing.Point(1034, 81);
-            this.lbl_Warning.Name = "lbl_Warning";
-            this.lbl_Warning.Size = new System.Drawing.Size(185, 67);
-            this.lbl_Warning.TabIndex = 40;
-            this.lbl_Warning.Text = "It seems to be very busy at the moment. This means it will probably take a while " +
-    "for your ticket to be processed. It might also not make the deadline you assign." +
-    " Sorry for the inconvenience.";
-            this.lbl_Warning.Visible = false;
             // 
             // Submit_Ticket
             // 
