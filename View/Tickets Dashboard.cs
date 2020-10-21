@@ -195,12 +195,18 @@ namespace View
             {
                 TicketsDashboard_btnResolve.Enabled = false;
                 TicketsDashboard_btnViewTicket.Enabled = false;
+                btn_ReviewTicket.Enabled = false;
+                btn_editTicket.Enabled = false;
+                btn_deleteTicket.Enabled = false;
             }
             else
             {
                 selectedTicket = (Ticket)lv_Tickets.SelectedItems[0].Tag;
                 TicketsDashboard_btnResolve.Enabled = true;
                 TicketsDashboard_btnViewTicket.Enabled = true;
+                btn_ReviewTicket.Enabled = true;
+                btn_editTicket.Enabled = true;
+                btn_deleteTicket.Enabled = true;
             }
         }
 
@@ -315,6 +321,12 @@ namespace View
 
         private void btn_ReviewTicket_Click(object sender, EventArgs e)
         {
+            if (!selectedTicket.Solved)
+            {
+                MessageBox.Show("You cannot review a ticket that has not been solved yet", "Cannot review", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Review_Ticket reviewTicket = new Review_Ticket(selectedTicket, provider);
 
             reviewTicket.StartPosition = FormStartPosition.Manual;
