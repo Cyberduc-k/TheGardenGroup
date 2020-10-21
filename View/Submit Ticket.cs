@@ -60,8 +60,10 @@ namespace View
             //This will make a score based on how much active tickets and immediate attention tickets there are
             //It will also take into account what the average DaysToSolve of all the active tickets is and will add some score if this is low
             //But this will only be in effect if the amount of tickets is greater or equal to 5
-            // | active ticket = 1 | immediate attention ticket = 2 | Average DaysToSolve <= 4 = 2, Average DaysToSolve <= 3 = 4, Average DaysToSolve <= 2 = 8 |
+            // | active ticket = 1 | immediate attention ticket = 2 | Average DaysToSolve <= 4 = 2, Average DaysToSolve <= 3 = 4, Average DaysToSolve <= 2 = 10 |
             int TotalActivityScore = AmountOfActiveTickets + AmountOfImmediateAttentionTickets;
+
+            System.Diagnostics.Debug.WriteLine(TotalActivityScore);
 
             if (AmountOfActiveTickets >= 5)
             {
@@ -70,16 +72,18 @@ namespace View
                 else if (DaysToSolveTotal / AmountOfActiveTickets <= 3)
                     TotalActivityScore += 4;
                 else if (DaysToSolveTotal / AmountOfActiveTickets <= 2)
-                    TotalActivityScore += 8;
+                    TotalActivityScore += 10;
             }
-            
+
+            System.Diagnostics.Debug.WriteLine(TotalActivityScore);
+
             //Edit the activity label based on the score
-            if (TotalActivityScore <= 8)
+            if (TotalActivityScore < 8)
             {
                 lbl_Activity.Text = "Low";
                 lbl_Warning.Hide();
             }
-            else if (TotalActivityScore >= 30)
+            else if (TotalActivityScore > 25)
             {
                 lbl_Activity.Text = "High";
             }
