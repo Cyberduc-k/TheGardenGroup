@@ -147,7 +147,11 @@ namespace View
 
                 string status;
                 if (ticket.Solved)
+                {
                     status = "Solved";
+                    if (filterWithSolved == false)
+                        continue;
+                }
                 else
                     status = "Unsolved";
 
