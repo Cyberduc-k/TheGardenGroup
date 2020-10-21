@@ -349,6 +349,7 @@ namespace View
             Show();
         }
 
+        //Solved/Unsolved box change
         private void Filter_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillAfterFilterChange();
