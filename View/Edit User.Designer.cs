@@ -108,7 +108,7 @@
             this.input_BirthDate.Location = new System.Drawing.Point(244, 48);
             this.input_BirthDate.Name = "input_BirthDate";
             this.input_BirthDate.Size = new System.Drawing.Size(196, 29);
-            this.input_BirthDate.TabIndex = 6;
+            this.input_BirthDate.TabIndex = 5;
             // 
             // input_Expertise
             // 
@@ -124,7 +124,7 @@
             this.input_Expertise.Location = new System.Drawing.Point(244, 124);
             this.input_Expertise.Name = "input_Expertise";
             this.input_Expertise.Size = new System.Drawing.Size(196, 29);
-            this.input_Expertise.TabIndex = 5;
+            this.input_Expertise.TabIndex = 6;
             this.input_Expertise.Visible = false;
             // 
             // lbl_Expertise
@@ -149,7 +149,7 @@
             this.btn_Save.Location = new System.Drawing.Point(244, 328);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(196, 30);
-            this.btn_Save.TabIndex = 3;
+            this.btn_Save.TabIndex = 8;
             this.btn_Save.Text = "Save";
             this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
@@ -164,7 +164,7 @@
             this.btn_Cancel.Location = new System.Drawing.Point(24, 328);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(196, 30);
-            this.btn_Cancel.TabIndex = 3;
+            this.btn_Cancel.TabIndex = 9;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -253,7 +253,7 @@
             this.input_DisplayName.Location = new System.Drawing.Point(24, 276);
             this.input_DisplayName.Name = "input_DisplayName";
             this.input_DisplayName.Size = new System.Drawing.Size(196, 29);
-            this.input_DisplayName.TabIndex = 1;
+            this.input_DisplayName.TabIndex = 4;
             this.input_DisplayName.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // input_Email
@@ -263,7 +263,7 @@
             this.input_Email.Location = new System.Drawing.Point(24, 200);
             this.input_Email.Name = "input_Email";
             this.input_Email.Size = new System.Drawing.Size(196, 29);
-            this.input_Email.TabIndex = 1;
+            this.input_Email.TabIndex = 3;
             this.input_Email.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // input_LastName
@@ -273,7 +273,7 @@
             this.input_LastName.Location = new System.Drawing.Point(24, 124);
             this.input_LastName.Name = "input_LastName";
             this.input_LastName.Size = new System.Drawing.Size(196, 29);
-            this.input_LastName.TabIndex = 1;
+            this.input_LastName.TabIndex = 2;
             this.input_LastName.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // input_Occupation
@@ -283,7 +283,7 @@
             this.input_Occupation.Location = new System.Drawing.Point(244, 200);
             this.input_Occupation.Name = "input_Occupation";
             this.input_Occupation.Size = new System.Drawing.Size(196, 29);
-            this.input_Occupation.TabIndex = 1;
+            this.input_Occupation.TabIndex = 7;
             this.input_Occupation.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // input_Company
@@ -293,7 +293,7 @@
             this.input_Company.Location = new System.Drawing.Point(244, 124);
             this.input_Company.Name = "input_Company";
             this.input_Company.Size = new System.Drawing.Size(196, 29);
-            this.input_Company.TabIndex = 1;
+            this.input_Company.TabIndex = 6;
             this.input_Company.TextChanged += new System.EventHandler(this.input_TextChanged);
             // 
             // Edit_User

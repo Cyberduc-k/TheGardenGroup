@@ -91,6 +91,7 @@
             // btn_TicketList
             // 
             this.btn_TicketList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_TicketList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.btn_TicketList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TicketList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TicketList.ForeColor = System.Drawing.Color.White;
