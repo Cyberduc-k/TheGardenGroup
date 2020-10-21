@@ -177,6 +177,7 @@ namespace View
                 return;
             }
 
+            // To seperate edit ticket form
             Edit_Ticket editTicket = new Edit_Ticket(selectedTicket, provider);
 
             editTicket.StartPosition = FormStartPosition.Manual;
@@ -348,6 +349,7 @@ namespace View
             Show();
         }
 
+        //Solved/Unsolved box change
         private void Filter_SelectedIndexChanged(object sender, EventArgs e)
         {
             FillAfterFilterChange();
