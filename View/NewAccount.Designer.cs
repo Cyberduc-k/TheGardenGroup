@@ -590,11 +590,11 @@
             // 
             // btn_Back4
             // 
-            this.btn_Back4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.btn_Back4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.btn_Back4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Back4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btn_Back4.ForeColor = System.Drawing.Color.Black;
+            this.btn_Back4.ForeColor = System.Drawing.Color.White;
             this.btn_Back4.Location = new System.Drawing.Point(24, 328);
             this.btn_Back4.Name = "btn_Back4";
             this.btn_Back4.Size = new System.Drawing.Size(80, 26);

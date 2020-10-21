@@ -77,7 +77,7 @@
             this.ResolveTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.ResolveTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResolveTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.ResolveTicket_btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.ResolveTicket_btnCancel.ForeColor = System.Drawing.Color.White;
             this.ResolveTicket_btnCancel.Location = new System.Drawing.Point(14, 631);
             this.ResolveTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.ResolveTicket_btnCancel.Name = "ResolveTicket_btnCancel";
@@ -90,6 +90,7 @@
             // pnl_Login
             // 
             this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_Login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Login.Controls.Add(this.ResolveTicket_lblSolution);
             this.pnl_Login.Controls.Add(this.label3);
             this.pnl_Login.Controls.Add(this.label2);

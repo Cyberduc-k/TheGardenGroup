@@ -74,6 +74,7 @@
             // pnl_ViewTicket
             // 
             this.pnl_ViewTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_ViewTicket.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_ViewTicket.Controls.Add(this.label3);
             this.pnl_ViewTicket.Controls.Add(this.label2);
             this.pnl_ViewTicket.Controls.Add(this.label1);

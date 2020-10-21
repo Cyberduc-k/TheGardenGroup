@@ -19,7 +19,7 @@ namespace View
             InitializeComponent();
 
             //Show all info of the ticket
-            ViewTicket_lblTicketID.Text = "Ticket # " + ticket.Id;
+            ViewTicket_lblTicketID.Text = "Ticket #" + ticket.Id;
             ViewTicket_lblSubject.Text = ticket.Subject;
             ViewTicket_lblDescription.Text = ticket.Description;
 

@@ -26,7 +26,7 @@ namespace View
             InitializeComponent();
 
             //Show all info of the ticket
-            ResolveTicket_lblTicketID.Text = ticket.Id;
+            ResolveTicket_lblTicketID.Text = "Ticket #" + ticket.Id;
             ResolveTicket_lblSubject.Text = ticket.Subject;
             ResolveTicket_lblStatus.Text = ticket.Solved.ToString().ToUpper();
             ResolveTicket_lblDescription.Text = ticket.Description;

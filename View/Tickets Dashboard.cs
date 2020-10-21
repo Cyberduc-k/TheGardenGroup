@@ -226,6 +226,8 @@ namespace View
             resolveForm.Location = Location;
             Hide();
             resolveForm.ShowDialog();
+
+            FillTickets();
             Show();
         }
 
@@ -341,6 +343,8 @@ namespace View
             reviewTicket.Location = Location;
             Hide();
             reviewTicket.ShowDialog();
+
+            FillTickets();
             Show();
         }
 
