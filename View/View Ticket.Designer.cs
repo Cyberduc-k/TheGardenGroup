@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.ViewTicket_btnClose = new System.Windows.Forms.Button();
-            this.pnl_Login = new System.Windows.Forms.Panel();
+            this.pnl_ViewTicket = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.ViewTicket_lblMail = new System.Windows.Forms.Label();
             this.ViewTicket_lblName = new System.Windows.Forms.Label();
             this.ViewTicket_lblTicketID = new System.Windows.Forms.Label();
-            this.pnl_Login.SuspendLayout();
+            this.pnl_ViewTicket.SuspendLayout();
             this.SuspendLayout();
             // 
             // ViewTicket_btnClose
@@ -71,36 +71,36 @@
             this.ViewTicket_btnClose.UseVisualStyleBackColor = false;
             this.ViewTicket_btnClose.Click += new System.EventHandler(this.ViewTicket_btnCancel_Click);
             // 
-            // pnl_Login
+            // pnl_ViewTicket
             // 
-            this.pnl_Login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.pnl_Login.Controls.Add(this.label3);
-            this.pnl_Login.Controls.Add(this.label2);
-            this.pnl_Login.Controls.Add(this.label1);
-            this.pnl_Login.Controls.Add(this.lbl_ReviewScore);
-            this.pnl_Login.Controls.Add(this.lbl_Review);
-            this.pnl_Login.Controls.Add(this.txtAreaReview);
-            this.pnl_Login.Controls.Add(this.label18);
-            this.pnl_Login.Controls.Add(this.ViewTicket_txtAreaSolution);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblDate);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblDeadline);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblPriority);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblCategory);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblStatus);
-            this.pnl_Login.Controls.Add(this.label12);
-            this.pnl_Login.Controls.Add(this.label11);
-            this.pnl_Login.Controls.Add(this.label10);
-            this.pnl_Login.Controls.Add(this.label9);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblDescription);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblSubject);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblMail);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblName);
-            this.pnl_Login.Controls.Add(this.ViewTicket_lblTicketID);
-            this.pnl_Login.Location = new System.Drawing.Point(9, 9);
-            this.pnl_Login.Margin = new System.Windows.Forms.Padding(0);
-            this.pnl_Login.Name = "pnl_Login";
-            this.pnl_Login.Size = new System.Drawing.Size(1244, 608);
-            this.pnl_Login.TabIndex = 23;
+            this.pnl_ViewTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_ViewTicket.Controls.Add(this.label3);
+            this.pnl_ViewTicket.Controls.Add(this.label2);
+            this.pnl_ViewTicket.Controls.Add(this.label1);
+            this.pnl_ViewTicket.Controls.Add(this.lbl_ReviewScore);
+            this.pnl_ViewTicket.Controls.Add(this.lbl_Review);
+            this.pnl_ViewTicket.Controls.Add(this.txtAreaReview);
+            this.pnl_ViewTicket.Controls.Add(this.label18);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_txtAreaSolution);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblDate);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblDeadline);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblPriority);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblCategory);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblStatus);
+            this.pnl_ViewTicket.Controls.Add(this.label12);
+            this.pnl_ViewTicket.Controls.Add(this.label11);
+            this.pnl_ViewTicket.Controls.Add(this.label10);
+            this.pnl_ViewTicket.Controls.Add(this.label9);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblDescription);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblSubject);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblMail);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblName);
+            this.pnl_ViewTicket.Controls.Add(this.ViewTicket_lblTicketID);
+            this.pnl_ViewTicket.Location = new System.Drawing.Point(9, 9);
+            this.pnl_ViewTicket.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_ViewTicket.Name = "pnl_ViewTicket";
+            this.pnl_ViewTicket.Size = new System.Drawing.Size(1244, 608);
+            this.pnl_ViewTicket.TabIndex = 23;
             // 
             // label3
             // 
@@ -347,20 +347,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.pnl_Login);
+            this.Controls.Add(this.pnl_ViewTicket);
             this.Controls.Add(this.ViewTicket_btnClose);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "View_Ticket";
             this.Text = "View Ticket";
-            this.pnl_Login.ResumeLayout(false);
-            this.pnl_Login.PerformLayout();
+            this.pnl_ViewTicket.ResumeLayout(false);
+            this.pnl_ViewTicket.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button ViewTicket_btnClose;
-        private System.Windows.Forms.Panel pnl_Login;
+        private System.Windows.Forms.Panel pnl_ViewTicket;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox ViewTicket_txtAreaSolution;
         private System.Windows.Forms.Label ViewTicket_lblDate;
