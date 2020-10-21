@@ -378,6 +378,7 @@
             // pnl_EditTicket
             // 
             this.pnl_EditTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_EditTicket.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_EditTicket.Controls.Add(this.input_ReviewScore);
             this.pnl_EditTicket.Controls.Add(this.lbl_editTicket);
             this.pnl_EditTicket.Controls.Add(this.lbl_Score);

@@ -76,6 +76,7 @@
             // pnl_EditAccountCustomer
             // 
             this.pnl_EditAccountCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_EditAccountCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_EditAccountCustomer.Controls.Add(this.input_BirthDate);
             this.pnl_EditAccountCustomer.Controls.Add(this.input_Expertise);
             this.pnl_EditAccountCustomer.Controls.Add(this.lbl_Expertise);
@@ -155,10 +156,11 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.btn_Cancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.Location = new System.Drawing.Point(24, 328);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(196, 30);

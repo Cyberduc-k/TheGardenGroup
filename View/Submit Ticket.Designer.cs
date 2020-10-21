@@ -134,9 +134,9 @@
             this.SubmitTicket_lblDeadline.ForeColor = System.Drawing.Color.Red;
             this.SubmitTicket_lblDeadline.Location = new System.Drawing.Point(572, 214);
             this.SubmitTicket_lblDeadline.Name = "SubmitTicket_lblDeadline";
-            this.SubmitTicket_lblDeadline.Size = new System.Drawing.Size(103, 12);
+            this.SubmitTicket_lblDeadline.Size = new System.Drawing.Size(202, 12);
             this.SubmitTicket_lblDeadline.TabIndex = 33;
-            this.SubmitTicket_lblDeadline.Text = "Please enter a number";
+            this.SubmitTicket_lblDeadline.Text = "Please enter a valid number between 1 and 7";
             this.SubmitTicket_lblDeadline.Visible = false;
             // 
             // SubmitTicket_lblSubject
@@ -294,7 +294,7 @@
             this.SubmitTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SubmitTicket_btnCancel.ForeColor = System.Drawing.Color.White;
-            this.SubmitTicket_btnCancel.Location = new System.Drawing.Point(13, 631);
+            this.SubmitTicket_btnCancel.Location = new System.Drawing.Point(9, 631);
             this.SubmitTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitTicket_btnCancel.Name = "SubmitTicket_btnCancel";
             this.SubmitTicket_btnCancel.Size = new System.Drawing.Size(122, 39);

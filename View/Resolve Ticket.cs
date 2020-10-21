@@ -26,7 +26,7 @@ namespace View
             InitializeComponent();
 
             //Show all info of the ticket
-            ResolveTicket_lblTicketID.Text = ticket.Id;
+            ResolveTicket_lblTicketID.Text = "Ticket #" + ticket.Id;
             ResolveTicket_lblSubject.Text = ticket.Subject;
             ResolveTicket_lblStatus.Text = ticket.Solved.ToString().ToUpper();
             ResolveTicket_lblDescription.Text = ticket.Description;
@@ -56,6 +56,8 @@ namespace View
 
                 Employee user = (Employee)LoggedInUser.Instance.User;
                 user.TicketsSolved++;
+
+                //Update the solved tickets of the user
                 (provider.GetService(typeof(IUserService)) as IUserService).Update(user);
 
                 MessageBox.Show("The ticket has successfully been resolved", "Resolved!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -75,6 +77,7 @@ namespace View
         #endregion
 
         #region InputValidation
+        //Make sure a solution is provided
         private void ResolveTicket_txtAreaSolution_TextChanged(object sender, EventArgs e)
         {
             ResolveTicket_btnResolve.Enabled = ResolveTicket_txtAreaSolution.Text.Length > 0;

@@ -57,7 +57,7 @@
             // 
             // ViewTicket_btnClose
             // 
-            this.ViewTicket_btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.ViewTicket_btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.ViewTicket_btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
             this.ViewTicket_btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewTicket_btnClose.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -74,6 +74,7 @@
             // pnl_ViewTicket
             // 
             this.pnl_ViewTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.pnl_ViewTicket.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_ViewTicket.Controls.Add(this.label3);
             this.pnl_ViewTicket.Controls.Add(this.label2);
             this.pnl_ViewTicket.Controls.Add(this.label1);
