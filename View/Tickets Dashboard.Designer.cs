@@ -30,6 +30,7 @@
         {
             this.lv_Tickets = new System.Windows.Forms.ListView();
             this.ch_DateOfIssueing = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ch_DaysToSolve = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_Category = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_Subject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_Priority = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -49,7 +50,6 @@
             this.btn_SubmitTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
             this.btn_ReviewTicket = new System.Windows.Forms.Button();
-            this.ch_DaysToSolve = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.filter = new System.Windows.Forms.ComboBox();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -84,6 +84,10 @@
             // 
             this.ch_DateOfIssueing.Text = "Date of issueing";
             this.ch_DateOfIssueing.Width = 160;
+            // 
+            // ch_DaysToSolve
+            // 
+            this.ch_DaysToSolve.Text = "Days to solve";
             // 
             // ch_Category
             // 
@@ -319,10 +323,6 @@
             this.btn_ReviewTicket.Visible = false;
             this.btn_ReviewTicket.Click += new System.EventHandler(this.btn_ReviewTicket_Click);
             // 
-            // ch_DaysToSolve
-            // 
-            this.ch_DaysToSolve.Text = "Days to solve";
-            // 
             // filter
             // 
             this.filter.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
@@ -330,6 +330,7 @@
             this.filter.FormattingEnabled = true;
             this.filter.Items.AddRange(new object[] {
             "Unsolved",
+            "Solved",
             "Unsolved + Solved"});
             this.filter.Location = new System.Drawing.Point(95, 99);
             this.filter.Name = "filter";

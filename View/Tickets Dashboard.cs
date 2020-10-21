@@ -21,6 +21,7 @@ namespace View
         private Ticket selectedTicket;
         private bool isCustomer;
         private bool filterWithSolved = false;
+        private bool filterWithBoth = false;
 
         public Tickets_Dashboard(IServiceProvider provider)
         {
@@ -95,11 +96,15 @@ namespace View
                 if (ticket.Solved)
                 {
                     status = "Solved";
-                    if (filterWithSolved == false)
+                    if (filterWithSolved == false && filterWithBoth == false)
                         continue;
                 }
                 else
+                {
                     status = "Unsolved";
+                    if (filterWithSolved == true)
+                        continue;
+                }
 
                 li.SubItems.Add(status);
                 li.Tag = ticket;
@@ -149,11 +154,15 @@ namespace View
                 if (ticket.Solved)
                 {
                     status = "Solved";
-                    if (filterWithSolved == false)
+                    if (filterWithSolved == false && filterWithBoth == false)
                         continue;
                 }
                 else
+                {
                     status = "Unsolved";
+                    if (filterWithSolved == true)
+                        continue;
+                }
 
                 li.SubItems.Add(status);
                 li.Tag = ticket;
@@ -332,9 +341,20 @@ namespace View
         private void FillAfterFilterChange()
         {
             if (filter.SelectedIndex == 0)
+            {
                 filterWithSolved = false;
-            else
+                filterWithBoth = false;
+            }
+            else if (filter.SelectedIndex == 1)
+            {
                 filterWithSolved = true;
+                filterWithBoth = false;
+            }
+            else
+            {
+                filterWithSolved = false;
+                filterWithBoth = true;
+            }
 
             FillTickets();
         }
