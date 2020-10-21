@@ -294,7 +294,7 @@
             // EditTicket_btnCancel
             // 
             this.EditTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
-            this.EditTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.EditTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.EditTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.EditTicket_btnCancel.ForeColor = System.Drawing.Color.White;
