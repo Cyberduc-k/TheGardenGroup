@@ -133,7 +133,18 @@ namespace View
 
         void FillListViewCustomer()
         {
-            IEnumerable<Ticket> tickets = ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id);
+            IEnumerable<Ticket> tickets;
+
+            if (filterWithSolved)
+            {
+                tickets = ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id && ticket.Solved);
+            } else if (filterWithBoth)
+            {
+                tickets = ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id);
+            } else
+            {
+                tickets = ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id && !ticket.Solved);
+            }
 
             foreach (Ticket ticket in tickets)
             {
@@ -149,17 +160,9 @@ namespace View
 
                 string status;
                 if (ticket.Solved)
-                {
                     status = "Solved";
-                    if (filterWithSolved == false && filterWithBoth == false)
-                        continue;
-                }
                 else
-                {
                     status = "Unsolved";
-                    if (filterWithSolved == true)
-                        continue;
-                }
 
                 li.SubItems.Add(status);
                 li.Tag = ticket;
