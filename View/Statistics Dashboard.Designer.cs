@@ -35,7 +35,6 @@
             this.btn_TicketList = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Btn_UserList = new System.Windows.Forms.Button();
             this.panel_Header = new System.Windows.Forms.Panel();
             this.lbl_FAqMenu = new System.Windows.Forms.Label();
             this.current_stripe = new System.Windows.Forms.Panel();
@@ -120,18 +119,6 @@
             this.label4.Text = "This is the amount of tickets that have surpassed the given wait time. Which mean" +
     "s these tickets need to be processed ASAP.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Btn_UserList
-            // 
-            this.Btn_UserList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.Btn_UserList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_UserList.Location = new System.Drawing.Point(530, 152);
-            this.Btn_UserList.Name = "Btn_UserList";
-            this.Btn_UserList.Size = new System.Drawing.Size(191, 36);
-            this.Btn_UserList.TabIndex = 7;
-            this.Btn_UserList.Text = "User list";
-            this.Btn_UserList.UseVisualStyleBackColor = false;
-            this.Btn_UserList.Click += new System.EventHandler(this.Btn_UserList_Click);
             // 
             // panel_Header
             // 
@@ -255,7 +242,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.btn_Account);
             this.Controls.Add(this.panel_Header);
-            this.Controls.Add(this.Btn_UserList);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_TicketList);
@@ -283,7 +269,6 @@
         private System.Windows.Forms.Button btn_TicketList;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Btn_UserList;
         private System.Windows.Forms.Panel panel_Header;
         private System.Windows.Forms.Panel current_stripe;
         private System.Windows.Forms.Button btn_Logout;
