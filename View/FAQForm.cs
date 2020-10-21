@@ -24,7 +24,7 @@ namespace View
         {
             this.provider = provider;
             InitializeComponent();
-            user = LoggedInUser.Instance.User;
+            user = LoggedInUser.Instance.User;           
 
             UserDisplay();
             FillCategoryCombobox();
@@ -37,7 +37,7 @@ namespace View
             if(user is Customer)
             {
                 pnl_EditFAQ.Hide();
-                treeView_FAQ.Left= 490;
+                treeView_FAQ.Left= 450;
 
                 lbl_Statistics.Hide();
                 lbl_Users.Hide();
