@@ -100,6 +100,7 @@
             // ch_Status
             // 
             this.ch_Status.Text = "Status";
+            this.ch_Status.Width = 100;
             // 
             // panel_Header
             // 
