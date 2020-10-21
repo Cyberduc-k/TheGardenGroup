@@ -19,7 +19,6 @@ namespace View
         private IUserService userService;
         private ITicketService ticketService;
         private Ticket selectedTicket;
-        private bool isCustomer;
         private bool filterWithSolved = false;
         private bool filterWithBoth = false;
 
@@ -48,7 +47,6 @@ namespace View
             //Check if the logged in user is an employee or a customer and give the according amount of information to fill in the listview
             if (LoggedInUser.Instance.User is Customer)
             {
-                isCustomer = true;
                 lbl_Statistics.Hide();
                 lbl_Users.Hide();
                 lbl_Tickets.Left = 95;
@@ -64,7 +62,6 @@ namespace View
             {
                 try
                 {
-                    isCustomer = false;
                     FillListViewEmployee();
                 }
                 catch (Exception e)
@@ -79,6 +76,7 @@ namespace View
         {
             IEnumerable<Ticket> tickets = ticketService.GetAll();
 
+            //Track how many tickets have been added to the front already
             int nextIndex = 0;
             foreach (Ticket ticket in tickets)
             {
@@ -200,6 +198,7 @@ namespace View
 
         private void lv_Tickets_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Only allow button clicks when there is an item selected
             if (lv_Tickets.SelectedItems.Count <= 0)
             {
                 TicketsDashboard_btnResolve.Enabled = false;

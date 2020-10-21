@@ -134,9 +134,9 @@
             this.SubmitTicket_lblDeadline.ForeColor = System.Drawing.Color.Red;
             this.SubmitTicket_lblDeadline.Location = new System.Drawing.Point(572, 214);
             this.SubmitTicket_lblDeadline.Name = "SubmitTicket_lblDeadline";
-            this.SubmitTicket_lblDeadline.Size = new System.Drawing.Size(103, 12);
+            this.SubmitTicket_lblDeadline.Size = new System.Drawing.Size(202, 12);
             this.SubmitTicket_lblDeadline.TabIndex = 33;
-            this.SubmitTicket_lblDeadline.Text = "Please enter a number";
+            this.SubmitTicket_lblDeadline.Text = "Please enter a valid number between 1 and 7";
             this.SubmitTicket_lblDeadline.Visible = false;
             // 
             // SubmitTicket_lblSubject

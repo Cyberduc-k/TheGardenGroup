@@ -73,7 +73,7 @@
             // 
             // ResolveTicket_btnCancel
             // 
-            this.ResolveTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.ResolveTicket_btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(95)))), ((int)(((byte)(95)))));
             this.ResolveTicket_btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
             this.ResolveTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResolveTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);

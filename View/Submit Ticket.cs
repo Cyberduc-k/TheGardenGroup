@@ -92,6 +92,7 @@ namespace View
         }
 
         #region OnClicks
+        //Submit new ticket
         private void SubmitTicket_btnSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -141,6 +142,7 @@ namespace View
         #endregion
 
         #region InputValidation
+        //Make sure a subject is given
         private void SubmitTicket_txtSubject_TextChanged(object sender, EventArgs e)
         {
             if (SubmitTicket_txtSubject.Text == "")
@@ -157,9 +159,12 @@ namespace View
             SubmitTicket_btnSubmit.Enabled = !(subjectError || deadlineError || descriptionError);
         }
 
+        //Make sure the deadline is valid
         private void SubmitTicket_txtDeadline_TextChanged(object sender, EventArgs e)
         {
-            if (SubmitTicket_txtDeadline.Text == "" || !int.TryParse(SubmitTicket_txtDeadline.Text, out _))
+            int deadline;
+            if (SubmitTicket_txtDeadline.Text == "" || !int.TryParse(SubmitTicket_txtDeadline.Text, out deadline) 
+                                                    || deadline < 1 || deadline > 7)
             {
                 deadlineError = true;
                 SubmitTicket_lblDeadline.Show();
@@ -173,6 +178,7 @@ namespace View
             SubmitTicket_btnSubmit.Enabled = !(subjectError || deadlineError || descriptionError);
         }
 
+        //Make sure a description is given
         private void SubmitTicket_txtAreaDescription_TextChanged(object sender, EventArgs e)
         {
             if (SubmitTicket_txtAreaDescription.Text == "")
