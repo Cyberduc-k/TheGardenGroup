@@ -31,6 +31,7 @@ namespace View
 
             InitializeComponent();
 
+            // If the user is a customer and the ticket is solved then show the review editor.
             if (LoggedInUser.Instance.User is Customer && ticket.Solved)
             {
                 pnl_EditTicketEmployee.Top = 92;
@@ -129,6 +130,7 @@ namespace View
             }
         }
 
+        // update the ticket Handler's review score by taking the average of all his handled tickets.
         private void UpdateReviewSCore(ITicketService ticketService)
         {
             IUserService userService = provider.GetService<IUserService>();

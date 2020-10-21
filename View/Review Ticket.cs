@@ -70,6 +70,7 @@ namespace View
             }
         }
 
+        // update the ticket Handler's review score by taking the average of all his handled tickets.
         private void UpdateReviewSCore(ITicketService ticketService)
         {
             IUserService userService = provider.GetService<IUserService>();

@@ -28,6 +28,7 @@ namespace View
             input_DisplayName.Text = user.Alias;
             input_BirthDate.Value = user.BirthDate;
 
+            // display different inputs when the user is an employee
             if (user is Employee employee)
             {
                 lbl_Company.Hide();
@@ -77,6 +78,7 @@ namespace View
             service.Update(user);
         }
 
+        // validate the inputs, make sure they all have a value
         private void input_TextChanged(object sender, EventArgs e)
         {
             if (input_FirstName.Text.Length == 0 || input_LastName.Text.Length == 0 || input_Email.Text.Length == 0 || input_DisplayName.Text.Length == 0)
