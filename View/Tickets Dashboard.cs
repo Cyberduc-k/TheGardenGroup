@@ -96,7 +96,7 @@ namespace View
                 //Tickets that reached the time limit
                 if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve && !ticket.Solved)
                 {
-                    li.BackColor = Color.FromArgb(235, 79, 51);
+                    li.BackColor = Color.FromArgb(194, 95, 95);
                     li.ForeColor = Color.White;
 
                     //Insert the ticket after the previous preferred ticket

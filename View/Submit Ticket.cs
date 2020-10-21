@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using Service;
+using System.Collections.Generic;
 
 namespace View
 {
@@ -34,7 +35,60 @@ namespace View
 
         public void ActivityMeasurement()
         {
+            ITicketService ticketService = provider.GetService(typeof(ITicketService)) as ITicketService;
+            IEnumerable<Ticket> tickets = ticketService.GetAll();
 
+            //Calculate the amount of tickets that need immediate attention, get the amount of active tickets and add up all the DaysToSolve of the active tickets
+            int AmountOfImmediateAttentionTickets = 0;
+            int AmountOfActiveTickets = 0;
+            int DaysToSolveTotal = 0;
+
+            foreach (Ticket ticket in tickets)
+            {
+                if (ticket.Solved != true)
+                {
+                    AmountOfActiveTickets++;
+                    DaysToSolveTotal += ticket.DaysToSolve;
+
+                    if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve)
+                    {
+                        AmountOfImmediateAttentionTickets++;
+                    }
+                }
+            }
+
+            //This will make a score based on how much active tickets and immediate attention tickets there are
+            //It will also take into account what the average DaysToSolve of all the active tickets is and will add some score if this is low
+            //But this will only be in effect if the amount of tickets is greater or equal to 5
+            // | active ticket = 1 | immediate attention ticket = 2 | Average DaysToSolve <= 4 = 2, Average DaysToSolve <= 3 = 4, Average DaysToSolve <= 2 = 8 |
+            int TotalActivityScore = AmountOfActiveTickets + AmountOfImmediateAttentionTickets;
+
+            if (AmountOfActiveTickets >= 5)
+            {
+                if (DaysToSolveTotal / AmountOfActiveTickets <= 4)
+                    TotalActivityScore += 2;
+                else if (DaysToSolveTotal / AmountOfActiveTickets <= 3)
+                    TotalActivityScore += 4;
+                else if (DaysToSolveTotal / AmountOfActiveTickets <= 2)
+                    TotalActivityScore += 8;
+            }
+            
+            //Edit the activity label based on the score
+            if (TotalActivityScore <= 8)
+            {
+                lbl_Activity.Text = "Low";
+                lbl_Warning.Hide();
+            }
+            else if (TotalActivityScore >= 30)
+            {
+                lbl_Activity.Text = "High";
+            }
+            else
+            {
+                lbl_Activity.Text = "Medium";
+                lbl_Warning.Hide();
+            }
+            
         }
 
         #region OnClicks
