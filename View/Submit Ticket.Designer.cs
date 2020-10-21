@@ -294,7 +294,7 @@
             this.SubmitTicket_btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitTicket_btnCancel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SubmitTicket_btnCancel.ForeColor = System.Drawing.Color.White;
-            this.SubmitTicket_btnCancel.Location = new System.Drawing.Point(13, 631);
+            this.SubmitTicket_btnCancel.Location = new System.Drawing.Point(9, 631);
             this.SubmitTicket_btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitTicket_btnCancel.Name = "SubmitTicket_btnCancel";
             this.SubmitTicket_btnCancel.Size = new System.Drawing.Size(122, 39);
