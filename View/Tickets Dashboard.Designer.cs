@@ -336,6 +336,7 @@
             this.filter.Name = "filter";
             this.filter.Size = new System.Drawing.Size(196, 29);
             this.filter.TabIndex = 11;
+            this.filter.Text = "Unsolved";
             this.filter.SelectedIndexChanged += new System.EventHandler(this.Filter_SelectedIndexChanged);
             // 
             // Tickets_Dashboard
