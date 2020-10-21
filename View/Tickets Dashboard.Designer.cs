@@ -37,6 +37,7 @@
             this.panel_Header = new System.Windows.Forms.Panel();
             this.lbl_FAqMenu = new System.Windows.Forms.Label();
             this.current_stripe = new System.Windows.Forms.Panel();
+            this.btn_Account = new System.Windows.Forms.Button();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.lbl_Users = new System.Windows.Forms.Label();
             this.lbl_Tickets = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@
             this.TicketsDashboard_btnResolve = new System.Windows.Forms.Button();
             this.btn_SubmitTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
-            this.btn_Account = new System.Windows.Forms.Button();
+            this.btn_ReviewTicket = new System.Windows.Forms.Button();
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -136,6 +137,21 @@
             this.current_stripe.Name = "current_stripe";
             this.current_stripe.Size = new System.Drawing.Size(79, 5);
             this.current_stripe.TabIndex = 4;
+            // 
+            // btn_Account
+            // 
+            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_Account.ForeColor = System.Drawing.Color.White;
+            this.btn_Account.Location = new System.Drawing.Point(1078, 20);
+            this.btn_Account.Name = "btn_Account";
+            this.btn_Account.Size = new System.Drawing.Size(80, 27);
+            this.btn_Account.TabIndex = 3;
+            this.btn_Account.Text = "Account";
+            this.btn_Account.UseVisualStyleBackColor = false;
+            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
             // 
             // btn_Logout
             // 
@@ -282,20 +298,22 @@
             this.TicketsDashboard_btnViewTicket.Visible = false;
             this.TicketsDashboard_btnViewTicket.Click += new System.EventHandler(this.TicketsDashboard_btnViewTicket_Click);
             // 
-            // btn_Account
+            // btn_ReviewTicket
             // 
-            this.btn_Account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
-            this.btn_Account.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
-            this.btn_Account.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Account.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.btn_Account.ForeColor = System.Drawing.Color.White;
-            this.btn_Account.Location = new System.Drawing.Point(1078, 20);
-            this.btn_Account.Name = "btn_Account";
-            this.btn_Account.Size = new System.Drawing.Size(80, 27);
-            this.btn_Account.TabIndex = 3;
-            this.btn_Account.Text = "Account";
-            this.btn_Account.UseVisualStyleBackColor = false;
-            this.btn_Account.Click += new System.EventHandler(this.btn_Account_Click);
+            this.btn_ReviewTicket.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(194)))), ((int)(((byte)(129)))));
+            this.btn_ReviewTicket.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(92)))), ((int)(((byte)(35)))));
+            this.btn_ReviewTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ReviewTicket.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.btn_ReviewTicket.ForeColor = System.Drawing.Color.White;
+            this.btn_ReviewTicket.Location = new System.Drawing.Point(624, 627);
+            this.btn_ReviewTicket.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ReviewTicket.Name = "btn_ReviewTicket";
+            this.btn_ReviewTicket.Size = new System.Drawing.Size(97, 32);
+            this.btn_ReviewTicket.TabIndex = 10;
+            this.btn_ReviewTicket.Text = "Review Ticket";
+            this.btn_ReviewTicket.UseVisualStyleBackColor = false;
+            this.btn_ReviewTicket.Visible = false;
+            this.btn_ReviewTicket.Click += new System.EventHandler(this.btn_ReviewTicket_Click);
             // 
             // Tickets_Dashboard
             // 
@@ -303,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btn_ReviewTicket);
             this.Controls.Add(this.TicketsDashboard_btnViewTicket);
             this.Controls.Add(this.btn_SubmitTicket);
             this.Controls.Add(this.TicketsDashboard_btnResolve);
@@ -341,5 +360,6 @@
         private System.Windows.Forms.Button TicketsDashboard_btnViewTicket;
         private System.Windows.Forms.ColumnHeader ch_Status;
         private System.Windows.Forms.Button btn_Account;
+        private System.Windows.Forms.Button btn_ReviewTicket;
     }
 }

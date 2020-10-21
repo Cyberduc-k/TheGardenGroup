@@ -51,6 +51,7 @@ namespace View
                 TicketsDashboard_btnResolve.Hide();
                 btn_SubmitTicket.Show();
                 TicketsDashboard_btnViewTicket.Show();
+                btn_ReviewTicket.Show();
                 FillListViewCustomer(ticketService.GetAllBy(ticket => ticket.ClientId == LoggedInUser.Instance.User.Id));
             }
             else
@@ -278,6 +279,17 @@ namespace View
             editUser.StartPosition = FormStartPosition.Manual;
             editUser.Location = Location;
             editUser.ShowDialog();
+            Show();
+        }
+
+        private void btn_ReviewTicket_Click(object sender, EventArgs e)
+        {
+            Review_Ticket reviewTicket = new Review_Ticket(selectedTicket, provider);
+
+            reviewTicket.StartPosition = FormStartPosition.Manual;
+            reviewTicket.Location = Location;
+            Hide();
+            reviewTicket.ShowDialog();
             Show();
         }
     }
