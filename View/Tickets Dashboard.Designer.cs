@@ -49,6 +49,7 @@
             this.btn_SubmitTicket = new System.Windows.Forms.Button();
             this.TicketsDashboard_btnViewTicket = new System.Windows.Forms.Button();
             this.btn_ReviewTicket = new System.Windows.Forms.Button();
+            this.ch_DaysToSolve = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel_Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.lv_Tickets.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lv_Tickets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ch_DateOfIssueing,
+            this.ch_DaysToSolve,
             this.ch_Category,
             this.ch_Subject,
             this.ch_Priority,
@@ -90,7 +92,7 @@
             // ch_Subject
             // 
             this.ch_Subject.Text = "Subject";
-            this.ch_Subject.Width = 500;
+            this.ch_Subject.Width = 450;
             // 
             // ch_Priority
             // 
@@ -100,6 +102,7 @@
             // ch_Status
             // 
             this.ch_Status.Text = "Status";
+            this.ch_Status.Width = 100;
             // 
             // panel_Header
             // 
@@ -315,6 +318,10 @@
             this.btn_ReviewTicket.Visible = false;
             this.btn_ReviewTicket.Click += new System.EventHandler(this.btn_ReviewTicket_Click);
             // 
+            // ch_DaysToSolve
+            // 
+            this.ch_DaysToSolve.Text = "Days to solve";
+            // 
             // Tickets_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,5 +368,6 @@
         private System.Windows.Forms.ColumnHeader ch_Status;
         private System.Windows.Forms.Button btn_Account;
         private System.Windows.Forms.Button btn_ReviewTicket;
+        private System.Windows.Forms.ColumnHeader ch_DaysToSolve;
     }
 }

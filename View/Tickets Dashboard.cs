@@ -31,6 +31,7 @@ namespace View
             lv_Tickets.Clear();
             lv_Tickets.Columns.AddRange(new ColumnHeader[] {
                 ch_DateOfIssueing,
+                ch_DaysToSolve,
                 ch_Category,
                 ch_Subject,
                 ch_Priority,
@@ -78,6 +79,7 @@ namespace View
 
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToString("dd-MM-yyyy"));
 
+                li.SubItems.Add(ticket.DaysToSolve.ToString());
                 li.SubItems.Add(ticket.Category.ToString());
                 li.SubItems.Add(ticket.Subject);
                 li.SubItems.Add(ticket.Priority.ToString());
@@ -91,7 +93,18 @@ namespace View
                 li.SubItems.Add(status);
                 li.Tag = ticket;
 
-                if (ticket.Category == ((Employee)LoggedInUser.Instance.User).Expertise && !ticket.Solved)
+                //Tickets that reached the time limit
+                if ((DateTime.Now - ticket.DateOfIssueing).TotalDays > ticket.DaysToSolve && !ticket.Solved)
+                {
+                    li.BackColor = Color.FromArgb(235, 79, 51);
+                    li.ForeColor = Color.White;
+
+                    //Insert the ticket after the previous preferred ticket
+                    lv_Tickets.Items.Insert(nextIndex, li);
+                    nextIndex++;
+                }
+                //Preffered category
+                else if (ticket.Category == ((Employee)LoggedInUser.Instance.User).Expertise && !ticket.Solved)
                 {
                     li.BackColor = Color.FromArgb(95, 194, 129);
                     li.ForeColor = Color.White;
@@ -114,6 +127,7 @@ namespace View
 
                 ListViewItem li = new ListViewItem(ticket.DateOfIssueing.ToString("dd-MM-yyyy"));
 
+                li.SubItems.Add(ticket.DaysToSolve.ToString());
                 li.SubItems.Add(ticket.Category.ToString());
                 li.SubItems.Add(ticket.Subject);
                 li.SubItems.Add(ticket.Priority.ToString());
